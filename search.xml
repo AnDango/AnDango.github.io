@@ -6,45 +6,38 @@
     <entry>
       <title><![CDATA[【日志】2016.9 利用Hexo搭建GitHub个人主页]]></title>
       <url>http://yoursite.com/2016/09/24/%E3%80%90%E6%97%A5%E5%BF%97%E3%80%912016-9-%E5%88%A9%E7%94%A8Hexo%E6%90%AD%E5%BB%BAGitHub%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/</url>
-      <content type="html"><![CDATA[<p>###这是一个markdown语法学习日志</p>
-<p>#一级标题</p>
-<p>##二级标题</p>
-<p>###三级标题</p>
-<p>####四级标题</p>
-<p>#####五级标题</p>
-<hr>
-<p>###无序列表</p>
-<ul>
+      <content type="html"><![CDATA[<h3 id="这是一个markdown语法学习日志"><a href="#这是一个markdown语法学习日志" class="headerlink" title="这是一个markdown语法学习日志"></a>这是一个markdown语法学习日志</h3><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><hr>
+<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><ul>
 <li>1</li>
 <li>2</li>
 <li>3</li>
 </ul>
-<p>###有序列表</p>
-<ol>
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><ol>
 <li>1</li>
 <li>2</li>
 <li>3</li>
 </ol>
 <hr>
-<p>###引用</p>
-<blockquote>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><blockquote>
 <p>//引用测试</p>
 </blockquote>
 <hr>
-<p>###网页链接与图片链接<br><a href="http://markdownpad.com/" target="_blank" rel="external">markdown</a></p>
+<h3 id="网页链接与图片链接"><a href="#网页链接与图片链接" class="headerlink" title="网页链接与图片链接"></a>网页链接与图片链接</h3><p><a href="http://markdownpad.com/" target="_blank" rel="external">markdown</a></p>
 <p><img src="http://markdownpad.com/img/markdownpad2-weblogo.png" alt="markdown logo"></p>
 <hr>
-<p>###粗体（bold）与斜体（italic）<br><strong>加粗文本</strong></p>
+<h3 id="粗体（bold）与斜体（italic）"><a href="#粗体（bold）与斜体（italic）" class="headerlink" title="粗体（bold）与斜体（italic）"></a>粗体（bold）与斜体（italic）</h3><p><strong>加粗文本</strong></p>
 <p><em>倾斜文本</em></p>
 <hr>
-<p>###表格（原生不支持）</p>
+<h3 id="表格（原生不支持）"><a href="#表格（原生不支持）" class="headerlink" title="表格（原生不支持）"></a>表格（原生不支持）</h3><hr>
+<h3 id="代码段方法1：Tab键缩进4个空格（推荐）（别忘记还要加一个空格）"><a href="#代码段方法1：Tab键缩进4个空格（推荐）（别忘记还要加一个空格）" class="headerlink" title="代码段方法1：Tab键缩进4个空格（推荐）（别忘记还要加一个空格）"></a>代码段方法1：Tab键缩进4个空格（推荐）（别忘记还要加一个空格）</h3><pre><code>System.out.println(&quot;Keep Coding.&quot;);
+</code></pre><h3 id="代码段方法2：使用一对··"><a href="#代码段方法2：使用一对··" class="headerlink" title="代码段方法2：使用一对··"></a>代码段方法2：使用一对··</h3><p><code>System.out.println(&quot;Keep Coding.&quot;);</code></p>
 <hr>
-<p>###代码段方法1：Tab键缩进4个空格<br>    System.out.println(“Keep Coding.”);</p>
-<p>###代码段方法2：使用一对··<br><code>System.out.println(&quot;Keep Coding.&quot;);</code></p>
+<h3 id="分割线方法1：—"><a href="#分割线方法1：—" class="headerlink" title="分割线方法1：—"></a>分割线方法1：—</h3><h3 id="分割线方法2："><a href="#分割线方法2：" class="headerlink" title="分割线方法2：*"></a>分割线方法2：<em>*</em></h3><hr>
 <hr>
-<p>###分割线方法1：—</p>
-<h2 id="分割线方法2："><a href="#分割线方法2：" class="headerlink" title="###分割线方法2：*"></a>###分割线方法2：<em>*</em></h2><hr>
 <hr>
+<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h3><blockquote>
+<p>标准的markdown标记后面都要加上空格，否则无法解析出markdown语法。</p>
+</blockquote>
 ]]></content>
     </entry>
     
