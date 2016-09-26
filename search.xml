@@ -40,13 +40,13 @@
 <a id="more"></a>
 <h3 id="粗体（bold）与斜体（italic）"><a href="#粗体（bold）与斜体（italic）" class="headerlink" title="粗体（bold）与斜体（italic）"></a>粗体（bold）与斜体（italic）</h3><p><strong>加粗文本</strong></p>
 <p><em>倾斜文本</em></p>
-<h3 id="代码段方法1：Tab键缩进4个空格（代码块）"><a href="#代码段方法1：Tab键缩进4个空格（代码块）" class="headerlink" title="代码段方法1：Tab键缩进4个空格（代码块）"></a>代码段方法1：Tab键缩进4个空格（代码块）</h3><pre><code>System.out.println(&quot;Keep Coding.&quot;);
-</code></pre><h3 id="代码段方法2：使用一对··（行内代码块）"><a href="#代码段方法2：使用一对··（行内代码块）" class="headerlink" title="代码段方法2：使用一对··（行内代码块）"></a>代码段方法2：使用一对··（行内代码块）</h3><p><code>System.out.println(&quot;Keep Coding.&quot;);</code></p>
+<h3 id="代码块：Tab键缩进4个空格"><a href="#代码块：Tab键缩进4个空格" class="headerlink" title="代码块：Tab键缩进4个空格"></a>代码块：Tab键缩进4个空格</h3><pre><code>System.out.println(&quot;Keep Coding.&quot;);
+</code></pre><h3 id="行内代码块：使用一对"><a href="#行内代码块：使用一对" class="headerlink" title="行内代码块：使用一对``"></a>行内代码块：使用一对``</h3><p><code>System.out.println(&quot;Keep Coding.&quot;);</code></p>
 <p>输出“坚持写代码”：<code>System.out.println(&quot;Keep Coding.&quot;);</code></p>
 <blockquote>
 <p>输出“坚持写代码”：<code>System.out.println(&quot;Keep Coding.&quot;);</code></p>
 </blockquote>
-<h3 id="分割线方法1：3个"><a href="#分割线方法1：3个" class="headerlink" title="分割线方法1：3个-"></a>分割线方法1：3个-</h3><h3 id="分割线方法2：3个"><a href="#分割线方法2：3个" class="headerlink" title="分割线方法2：3个*"></a>分割线方法2：3个*</h3><h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><blockquote>
+<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><blockquote>
 <p>标准的markdown标记后面都要加上<strong>空格</strong>，否则无法解析出markdown语法。</p>
 </blockquote>
 <hr>
