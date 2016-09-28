@@ -5,23 +5,45 @@
     
     <entry>
       <title><![CDATA[Use an External-link Player in Hexo - Fixed]]></title>
-      <url>http://yoursite.com/2016/09/27/2016.9.27%20Attainments03%20Use%20an%20External-link%20Player%20in%20Hexo%20-%20Fixed/</url>
+      <url>http://yoursite.com/%5Bobject%20Object%5D/2016.9.27%20Attainments03%20Use%20an%20External-link%20Player%20in%20Hexo%20-%20Fixed/</url>
       <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在前一篇文章中，我尝试通过类似于下面这种方式来在我的Hexo页面中添加外链播放器：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">iframe</span> </span></div><div class="line">    <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> </div><div class="line">    <span class="attr">width</span>=<span class="string">298</span> <span class="attr">height</span>=<span class="string">52</span> </div><div class="line">    <span class="attr">src</span>=<span class="string">"http://music.163.com/outchain/player?type=2&amp;id=29744802&amp;auto=0&amp;height=32"</span>&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>在本地服务器端口<code>http://localhost:4000/</code>中测试时是完全正常的。<br>但是很可惜，由于</p>
 <blockquote>
-<p>gh-pages强制访问https，而<del>网易云音乐的外链播放器不支持https</del>（知乎的小说家，诶）通过插入html标签的方式全都是不支持https访问的。</p>
+<p>gh-pages强制访问https，而<del>网易云音乐的外链播放器不支持https</del>（知乎的小说家，诶）通过插入Html语言的方式中大部分是不支持https访问的。</p>
 </blockquote>
 <p>所以导致部署到GitHub后不能正常播放。</p>
-<p>具体的原理呢？<del>你就不深究一下吗</del></p>
+<p>具体的原理待补充。</p>
+<a id="more"></a>
 <h1 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h1><h2 id="参考提议1"><a href="#参考提议1" class="headerlink" title="参考提议1"></a>参考提议1</h2><p><a href="https://www.zhihu.com/question/50741481/answer/122554583" target="_blank" rel="external">知乎解答 @唐门很太</a></p>
 <ol>
 <li>安装<a href="https://github.com/grzhan/hexo-tag-aplayer" target="_blank" rel="external">GitHub - grzhan/hexo-tag-aplayer: Embed aplayer in Hexo posts/pages</a>插件；</li>
 <li>调用<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">GitHub - YUX-IO/163music-APlayer-you-get-docker: A Flask Music Project. Demo:</a><br>项目。<br>这边第2个项目我还没有成功“调用”到它的API。于是放弃了。</li>
 </ol>
-<h2 id="参考提议2"><a href="#参考提议2" class="headerlink" title="参考提议2"></a>参考提议2</h2><p><a href="http://login926.top/2016/07/20/HexoMedia/" target="_blank" rel="external">Hexo博客中插入音乐/视频</a><br>无意中看到这位博主的文章，里面很详细地展示了若干种在页面中插入音频/视频的方法，推荐一读。<del>（其实我在前一篇文章中也用教训全部展示过了）</del><br>需要注意的是，这些提到的方法中，在网页中插入html标签的方法统统是不支持https访问的。（video标签除外。<del>但是video标签生成的播放器实在是太丑了</del>）<br>小结（还是引用这位博主的）：</p>
-<table><br>    <thead><br>        <tr><br>            <th>项目</th><br>            <th>使用难度</th><br>            <th>是否支持https</th><br>            <th>是否使用 html5</th><br>        </tr><br>    </thead><br>    <tbody><br>        <tr><br>            <td>插入 html 语言</td><br>            <td>小</td><br>            <td>大部分不支持</td><br>            <td>大部分使用 Flash</td><br>        </tr><br>        <tr><br>            <td>使用 Hexo 插件</td><br>            <td>中等</td><br>            <td>支持</td><br>            <td>使用 html5</td><br>        </tr><br>    </tbody><br></table>
-
-
+<h2 id="参考提议2"><a href="#参考提议2" class="headerlink" title="参考提议2"></a>参考提议2</h2><p><a href="http://login926.top/2016/07/20/HexoMedia/" target="_blank" rel="external">Hexo博客中插入音乐/视频</a><br>无意中看到这位博主的文章，里面很详细地展示了若干种在页面中插入音频/视频的方法，推荐一读。<del>（其实我在前一篇文章中也用教训全部展示过了）</del><br>需要注意的是，这些提到的方法中，在网页中插入html标签的方法统统是不支持https访问的。（video标签除外。<del>但是video标签生成的播放器实在是太丑了</del>）<br>小结：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">项目</th>
+<th style="text-align:center">使用难度</th>
+<th style="text-align:center">是否支持https</th>
+<th style="text-align:center">是否使用html5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">插入Html语言</td>
+<td style="text-align:center">简单</td>
+<td style="text-align:center">大部分不支持</td>
+<td style="text-align:center">否，多为使用flash</td>
+</tr>
+<tr>
+<td style="text-align:left">使用Hexo插件</td>
+<td style="text-align:center">中等</td>
+<td style="text-align:center">支持</td>
+<td style="text-align:center">是</td>
+</tr>
+</tbody>
+</table>
 <p>于是我愉快地决定采用两款插件基于 <code>DIYgod</code> 编写的 <code>html5</code> 播放器 <code>APlayer</code> 和 <code>DPlayer</code> 。</p>
 <p><a href="https://github.com/grzhan/hexo-tag-aplayer#upstream-issue" target="_blank" rel="external">hexo-tag-aplayer</a><br><a href="https://github.com/NextMoe/hexo-tag-dplayer" target="_blank" rel="external">hexo-tag-dplayer</a></p>
 <h1 id="hexo-tag-aplayer"><a href="#hexo-tag-aplayer" class="headerlink" title="hexo-tag-aplayer"></a>hexo-tag-aplayer</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>安装<code>hexo-tag-aplayer</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save hexo-tag-aplayer</div></pre></td></tr></table></figure></p>
@@ -73,9 +95,10 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Use an External-link Player in Hexo - Error]]></title>
-      <url>http://yoursite.com/2016/09/26/2016.9.26%20Attainments02%20Use%20an%20External-link%20Player%20in%20Hexo%20-%20Error/</url>
-      <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h1 id="先睹为快"><a href="#先睹为快" class="headerlink" title="先睹为快"></a>先睹为快</h1><p>曲目：TARI TARI 心之旋律 钢琴独奏版<br>演奏者：豆沙团子AnDango（这只up主就是博主本人欢迎来勾搭<del>调教</del>）</p>
+      <title><![CDATA[Use an External-link Player in Hexo - Failed]]></title>
+      <url>http://yoursite.com/%5Bobject%20Object%5D/2016.9.26%20Attainments02%20Use%20an%20External-link%20Player%20in%20Hexo%20-%20Failed/</url>
+      <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p><strong>说明：这是一次失败的尝试。</strong></p>
+<h1 id="先睹为快"><a href="#先睹为快" class="headerlink" title="先睹为快"></a>先睹为快</h1><p>曲目：TARI TARI 心之旋律 钢琴独奏版<br>演奏者：豆沙团子AnDango（这只up主就是博主本人欢迎来勾搭<del>调教</del>）</p>
 <embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="http://static.hdslb.com/miniloader.swf" flashvars="aid=5974935&page=1" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"><br>
 
 <a id="more"></a>
@@ -87,8 +110,8 @@
 <h1 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h1><p>肖邦练习曲 Op.25 No.5 in E minor</p>
 <embed src="http://music.163.com/style/swf/widget.swf?sid=29744802&type=2&auto=0&width=320&height=66" width="340" height="86" allownetworking="all"><br>
 
-<p>代码如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">embed</span> </span></div><div class="line">    <span class="attr">src</span>=<span class="string">"http://music.163.com/style/swf/widget.swf?sid=29744802&amp;type=2&amp;auto=0&amp;width=320&amp;height=66"</span> </div><div class="line">    <span class="attr">width</span>=<span class="string">"340"</span> <span class="attr">height</span>=<span class="string">"86"</span>  <span class="attr">allowNetworking</span>=<span class="string">"all"</span>&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">embed</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 注意，这里的auto字段表明了在打开页面时是否自动开始播放。为0时否，为1时是。 --&gt;</span></div></pre></td></tr></table></figure></p>
-<h1 id="选择什么标签？"><a href="#选择什么标签？" class="headerlink" title="选择什么标签？"></a>选择什么标签？</h1><h2 id="embed和iframe标签"><a href="#embed和iframe标签" class="headerlink" title="embed和iframe标签"></a>embed和iframe标签</h2><p>在这里，我发现使用外链播放器是有2种方式的！<br><a href="http://music.163.com/#/outchain/1/1678955/m/how" target="_blank" rel="external">网易云音乐-外链播放器插件使用教程</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">embed</span> </span></div><div class="line">    <span class="attr">src</span>=<span class="string">"http://music.163.com/style/swf/widget.swf?sid=29744802&amp;type=2&amp;auto=0&amp;width=320&amp;height=66"</span> </div><div class="line">    <span class="attr">width</span>=<span class="string">"340"</span> <span class="attr">height</span>=<span class="string">"86"</span>  <span class="attr">allowNetworking</span>=<span class="string">"all"</span>&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">embed</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 注意，这里的auto字段表明了在打开页面时是否自动开始播放。为0时否，为1时是。 --&gt;</span></div></pre></td></tr></table></figure>
+<h1 id="选择什么标签？"><a href="#选择什么标签？" class="headerlink" title="选择什么标签？"></a>选择什么标签？</h1><h2 id="embed和iframe标签"><a href="#embed和iframe标签" class="headerlink" title="embed和iframe标签"></a>embed和iframe标签</h2><p><a href="http://music.163.com/#/outchain/1/1678955/m/how" target="_blank" rel="external">网易云音乐-外链播放器插件使用教程</a></p>
 <h3 id="方式1-embed标签（就是我上面插入视频和音频用的方式）"><a href="#方式1-embed标签（就是我上面插入视频和音频用的方式）" class="headerlink" title="方式1 embed标签（就是我上面插入视频和音频用的方式）"></a>方式1 embed标签（就是我上面插入视频和音频用的方式）</h3><blockquote>
 <p>优点：可以适用大部分的博客，如网易、新浪博客等<br>缺点：<strong>无法自己调整插件的高度、宽度</strong></p>
 </blockquote>
@@ -97,15 +120,20 @@
 </blockquote>
 <p>总结一下，对于Hexo来说，嵌入两种标签的方式都是支持的。此时iframe标签就有它的优势了：<strong>可以修改播放器的高度和宽度</strong>。</p>
 <h3 id="使用iframe标签的方式插入一遍上面的视频和音频。"><a href="#使用iframe标签的方式插入一遍上面的视频和音频。" class="headerlink" title="使用iframe标签的方式插入一遍上面的视频和音频。"></a>使用iframe标签的方式插入一遍上面的视频和音频。</h3><p>可以随意地修改视频/音频播放器的高度和宽度。</p>
-<p><iframe height="400" width="400" src="http://static.hdslb.com/miniloader.swf?aid=5974935&page=1" frameborder="0" allowfullscreen><br></iframe><br>代码如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">iframe</span>   </span></div><div class="line">    <span class="attr">height</span>=<span class="string">400</span> <span class="attr">width</span>=<span class="string">400</span>   </div><div class="line">    <span class="attr">src</span>=<span class="string">"http://static.hdslb.com/miniloader.swf?aid=5974935&amp;page=1"</span>   </div><div class="line">    <span class="attr">frameborder</span>=<span class="string">0</span> <span class="attr">allowfullscreen</span>&gt;  </div><div class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="http://music.163.com/outchain/player?type=2&id=29744802&auto=0&height=32"><br></iframe><br>代码如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">iframe</span> </span></div><div class="line">    <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> </div><div class="line">    <span class="attr">width</span>=<span class="string">298</span> <span class="attr">height</span>=<span class="string">52</span> </div><div class="line">    <span class="attr">src</span>=<span class="string">"http://music.163.com/outchain/player?type=2&amp;id=29744802&amp;auto=0&amp;height=32"</span>&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h2 id="video标签"><a href="#video标签" class="headerlink" title="video标签"></a>video标签</h2><video width="480" height="320" controls><br><source src="http://mvvideo2.meitudata.com/56ea1220d2ca92407.mp4"><br></video>
+<iframe height="400" width="400" src="http://static.hdslb.com/miniloader.swf?aid=5974935&page=1" frameborder="0" allowfullscreen><br></iframe>  
 
-<p>使用video标签必须指向的是根目录的一个文件。<br>代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;video width=&quot;480&quot; height=&quot;320&quot; controls&gt;</div><div class="line">&lt;source src=&quot;http://mvvideo2.meitudata.com/56ea1220d2ca92407.mp4&quot;&gt;</div><div class="line">&lt;/video&gt;</div></pre></td></tr></table></figure></p>
-<h2 id="直接添加js代码"><a href="#直接添加js代码" class="headerlink" title="直接添加js代码"></a>直接添加js代码</h2><script type="text/javascript" src="http://www.xiami.com/widget/player-single?uid=32329501&sid=1776238762&mode=js"></script>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">iframe</span>   </span></div><div class="line">    <span class="attr">height</span>=<span class="string">400</span> <span class="attr">width</span>=<span class="string">400</span>   </div><div class="line">    <span class="attr">src</span>=<span class="string">"http://static.hdslb.com/miniloader.swf?aid=5974935&amp;page=1"</span>   </div><div class="line">    <span class="attr">frameborder</span>=<span class="string">0</span> <span class="attr">allowfullscreen</span>&gt;  </div><div class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></div></pre></td></tr></table></figure>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="298" height="52" src="http://music.163.com/outchain/player?type=2&id=29744802&auto=0&height=32"><br></iframe>
 
-<p>代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.xiami.com/widget/player-single?uid=32329501&amp;sid=1776238762&amp;mode=js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure></p>
-<h1 id="以上大部分实现方案在部署之后不可见"><a href="#以上大部分实现方案在部署之后不可见" class="headerlink" title="以上大部分实现方案在部署之后不可见"></a>以上大部分实现方案在部署之后不可见</h1><p>如何解决的？请阅读下一篇文章。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">iframe</span> </span></div><div class="line">    <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> </div><div class="line">    <span class="attr">width</span>=<span class="string">298</span> <span class="attr">height</span>=<span class="string">52</span> </div><div class="line">    <span class="attr">src</span>=<span class="string">"http://music.163.com/outchain/player?type=2&amp;id=29744802&amp;auto=0&amp;height=32"</span>&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="其他方式"><a href="#其他方式" class="headerlink" title="其他方式"></a>其他方式</h2><h3 id="video标签"><a href="#video标签" class="headerlink" title="video标签"></a>video标签</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;video width=&quot;480&quot; height=&quot;320&quot; controls&gt;</div><div class="line">&lt;source src=&quot;http://mvvideo2.meitudata.com/56ea1220d2ca92407.mp4&quot;&gt;</div><div class="line">&lt;/video&gt;</div></pre></td></tr></table></figure>
+<h3 id="直接添加js代码"><a href="#直接添加js代码" class="headerlink" title="直接添加js代码"></a>直接添加js代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.xiami.com/widget/player-single?uid=32329501&amp;sid=1776238762&amp;mode=js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h1 id="本地调试"><a href="#本地调试" class="headerlink" title="本地调试"></a>本地调试</h1><p>最后，附上我在本地服务器端口调试时可以正常播放的截图。</p>
+<img src="/[object%20Object]/2016.9.26%20Attainments02%20Use%20an%20External-link%20Player%20in%20Hexo%20-%20Failed/screenshot1.jpg" alt="使用embed插入的视频播放器" title="使用embed插入的视频播放器">
+<img src="/[object%20Object]/2016.9.26%20Attainments02%20Use%20an%20External-link%20Player%20in%20Hexo%20-%20Failed/screenshot2.jpg" alt="使用embed插入的音频播放器" title="使用embed插入的音频播放器">
+<img src="/[object%20Object]/2016.9.26%20Attainments02%20Use%20an%20External-link%20Player%20in%20Hexo%20-%20Failed/screenshot3.jpg" alt="使用iframe插入的音频播放器" title="使用iframe插入的音频播放器">
+<img src="/[object%20Object]/2016.9.26%20Attainments02%20Use%20an%20External-link%20Player%20in%20Hexo%20-%20Failed/screenshot4.jpg" alt="使用iframe插入的音频播放器" title="使用iframe插入的音频播放器">
+<h1 id="后续解决方案"><a href="#后续解决方案" class="headerlink" title="后续解决方案"></a>后续解决方案</h1><p>请参见后一篇文章 <a href="/Attainments/2016.9.27 Attainments03 Use an External-link Player in Hexo - Fixed">Use an External-link Player in Hexo - Fixed</a> 。</p>
 <hr>
 <p><strong>感谢阅读，有任何意见或建议欢迎私信我或在评论区留言哦。</strong></p>
 ]]></content>
@@ -113,8 +141,9 @@
     
     <entry>
       <title><![CDATA[WeChatApp Introduction and Demo]]></title>
-      <url>http://yoursite.com/2016/09/26/2016.9.26%20Retweet01%20'WeChatApp'%20Demo/</url>
-      <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h1 id="何为小程序？"><a href="#何为小程序？" class="headerlink" title="何为小程序？"></a>何为小程序？</h1><h2 id="推荐博文"><a href="#推荐博文" class="headerlink" title="推荐博文"></a>推荐博文</h2><p><a href="http://blog.csdn.net/yulianlin/article/details/52621413" target="_blank" rel="external">从程序员的角度分析微信小程序</a></p>
+      <url>http://yoursite.com/%5Bobject%20Object%5D/2016.9.26%20Retweet01%20'WeChatApp'%20Demo/</url>
+      <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h1 id="何为小程序？"><a href="#何为小程序？" class="headerlink" title="何为小程序？"></a>何为小程序？</h1><h2 id="推荐博文"><a href="#推荐博文" class="headerlink" title="推荐博文"></a>推荐博文</h2><blockquote><p>作为一个并不是资深的程序员。 从程序员的角度分析一下微信小程序，欢迎指点。</p>
+<footer><strong>于连林520wcf</strong><cite><a href="http://blog.csdn.net/yulianlin/article/details/52621413" target="_blank" rel="external">从程序员的角度分析微信小程序</a></cite></footer></blockquote>
 <h2 id="小程序的实现原理？？？"><a href="#小程序的实现原理？？？" class="headerlink" title="小程序的实现原理？？？"></a>小程序的实现原理？？？</h2><blockquote>
 <p>小程序原理就是用JS调用底层native组件，和React Native非常类似。恰恰又证明了，凡是能用JS开发的最终都会用JS开发。</p>
 </blockquote>
@@ -129,7 +158,7 @@
     
     <entry>
       <title><![CDATA[Introduction to Markdown]]></title>
-      <url>http://yoursite.com/2016/09/24/2016.9.24%20Attainments01%20Introduction%20to%20Markdown/</url>
+      <url>http://yoursite.com/%5Bobject%20Object%5D/2016.9.24%20Attainments01%20Introduction%20to%20Markdown/</url>
       <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h1 id="Markdown标记语言入门"><a href="#Markdown标记语言入门" class="headerlink" title="Markdown标记语言入门"></a>Markdown标记语言入门</h1><h2 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><ul>
 <li>1</li>
 <li>2</li>
@@ -143,8 +172,8 @@
 <h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><blockquote>
 <p>引用测试</p>
 </blockquote>
-<h3 id="网页链接与图片链接"><a href="#网页链接与图片链接" class="headerlink" title="网页链接与图片链接"></a>网页链接与图片链接</h3><p><a href="http://markdownpad.com/" target="_blank" rel="external">markdown</a></p>
-<p><img src="http://markdownpad.com/img/markdownpad2-weblogo.png" alt="markdown logo"></p>
+<h3 id="网页链接与图片链接（Markdown语法方式）"><a href="#网页链接与图片链接（Markdown语法方式）" class="headerlink" title="网页链接与图片链接（Markdown语法方式）"></a>网页链接与图片链接（Markdown语法方式）</h3><p><a href="http://markdownpad.com/" target="_blank" rel="external">Markdown</a></p>
+<p><img src="http://markdownpad.com/img/markdownpad2-weblogo.png" alt="Markdown logo"></p>
 <a id="more"></a>
 <h3 id="粗体（bold）与斜体（italic）"><a href="#粗体（bold）与斜体（italic）" class="headerlink" title="粗体（bold）与斜体（italic）"></a>粗体（bold）与斜体（italic）</h3><p><strong>加粗文本</strong></p>
 <p><em>倾斜文本</em></p>
@@ -155,10 +184,10 @@
 <p>输出“坚持写代码”：<code>System.out.println(&quot;Keep Coding.&quot;);</code></p>
 </blockquote>
 <h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><blockquote>
-<p>标准的markdown标记后面都要加上<strong>空格</strong>，否则无法解析出markdown语法。</p>
+<p>标准的Markdown标记后面都要加上<strong>空格</strong>，否则无法解析。</p>
 </blockquote>
 <hr>
-<h2 id="进阶语法"><a href="#进阶语法" class="headerlink" title="进阶语法"></a>进阶语法</h2><h3 id="组合使用引用和列表"><a href="#组合使用引用和列表" class="headerlink" title="组合使用引用和列表"></a>组合使用引用和列表</h3><p>我们可以使用markdown做什么？</p>
+<h2 id="进阶语法"><a href="#进阶语法" class="headerlink" title="进阶语法"></a>进阶语法</h2><h3 id="组合使用引用和列表"><a href="#组合使用引用和列表" class="headerlink" title="组合使用引用和列表"></a>组合使用引用和列表</h3><p>我们可以使用Markdown做什么？</p>
 <blockquote>
 <ul>
 <li>整理知识，学习笔记</li>
@@ -166,34 +195,105 @@
 <li>撰写发布技术文稿（代码支持）</li>
 <li>撰写发布学术论文（LaTeX 公式支持）</li>
 </ul>
+<ol>
+<li>整理知识，学习笔记</li>
+<li>发布日记，杂文，所见所想</li>
+<li>撰写发布技术文稿（代码支持）</li>
+<li>撰写发布学术论文（LaTeX 公式支持）</li>
+</ol>
 </blockquote>
-<h3 id="删除线（-lt-gt-“雾”）"><a href="#删除线（-lt-gt-“雾”）" class="headerlink" title="删除线（&lt;=&gt;“雾”）"></a>删除线（&lt;=&gt;“雾”）</h3><p>使用 ~~ 表示删除线。</p>
-<p><del>一本正经地胡说八道。（雾）</del></p>
-<h3 id="LaTeX-公式（先在主题配置文件中设置mathjax字段）"><a href="#LaTeX-公式（先在主题配置文件中设置mathjax字段）" class="headerlink" title="LaTeX 公式（先在主题配置文件中设置mathjax字段）"></a>LaTeX 公式（先在主题配置文件中设置mathjax字段）</h3><p>$ 表示行内公式： </p>
+<h3 id="删除线（画风突变）"><a href="#删除线（画风突变）" class="headerlink" title="删除线（画风突变）"></a>删除线（<del>画风突变</del>）</h3><p>使用一对<code>~~</code>表示删除线。两个<code>~~</code>之间的内容就是删除线标记的内容。</p>
+<p>欢迎来勾搭<del>调教</del>博主。<del>滑稽脸</del></p>
+<h3 id="LaTeX-公式（需要先在主题配置文件中配置mathjax字段）"><a href="#LaTeX-公式（需要先在主题配置文件中配置mathjax字段）" class="headerlink" title="LaTeX 公式（需要先在主题配置文件中配置mathjax字段）"></a>LaTeX 公式（需要先在主题配置文件中配置mathjax字段）</h3><p>$ 表示行内公式： </p>
 <p>质能守恒方程可以用一个很简洁的方程式 $E=mc^2$ 来表达。</p>
 <p>$$ 表示整行公式：</p>
 <p>$$\sum_{i=1}^n a_i=0$$</p>
 <p>$$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2 $$</p>
-<h3 id="高亮代码块！"><a href="#高亮代码块！" class="headerlink" title="高亮代码块！"></a>高亮代码块！</h3><p>支持41种编程语言的语法高亮的显示+行号显示。</p>
+<h3 id="高亮代码块"><a href="#高亮代码块" class="headerlink" title="高亮代码块"></a>高亮代码块</h3><p>支持41种编程语言的语法高亮+行号显示。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[language] [title] [url] [link text] code snippet</div></pre></td></tr></table></figure></p>
 <p>非代码示例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo apt-get install vim-gnome</div></pre></td></tr></table></figure></p>
-<p>Java 示例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//定义方法完成成绩排序并输出前自定义名数的功能</span></div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] scores , <span class="keyword">int</span> number)</span></span>&#123;</div><div class="line">	Arrays.sort(scores);</div><div class="line">	<span class="keyword">int</span> flag = <span class="number">0</span>;<span class="comment">//保存有效成绩个数</span></div><div class="line">	<span class="keyword">for</span> ( <span class="keyword">int</span> i = scores.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i-- ) &#123; </div><div class="line">		<span class="keyword">if</span>(scores[i]&gt;<span class="number">100</span> || scores[i]&lt;<span class="number">0</span> )&#123;</div><div class="line">			System.out.println(<span class="string">"该成绩（"</span>+ scores[i] +<span class="string">"分）无效！"</span>);</div><div class="line">			<span class="keyword">continue</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span>&#123;</div><div class="line">			flag++;</div><div class="line">			<span class="keyword">if</span>(flag &lt;= number)</div><div class="line">			    System.out.println(<span class="string">"这是第"</span> + (scores.length - i -<span class="number">1</span>) + <span class="string">"名的成绩："</span>+scores[i]);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>JavaScript 示例：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line">* nth element in the fibonacci series.</div><div class="line">* @param n &gt;= 0</div><div class="line">* @return the nth element, &gt;= 0.</div><div class="line">*/</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fib</span>(<span class="params">n</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">1</span>, b = <span class="number">1</span>;</div><div class="line">  <span class="keyword">var</span> tmp;</div><div class="line">  <span class="keyword">while</span> (--n &gt;= <span class="number">0</span>) &#123;</div><div class="line">    tmp = a;</div><div class="line">    a += b;</div><div class="line">    b = tmp;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> a;</div><div class="line">&#125;</div><div class="line"><span class="built_in">document</span>.write(fib(<span class="number">10</span>));</div></pre></td></tr></table></figure></p>
-<h3 id="内嵌Html标签"><a href="#内嵌Html标签" class="headerlink" title="内嵌Html标签"></a>内嵌Html标签</h3><p>Markdown语法中可以嵌套Html标签，譬如，你可以用Html写一个纵跨两行的表格。</p>
-<table><br>    <tr><br>        <td rowspan="2">值班人员</td><br>        <td>星期一</td><br>        <td>星期二</td><br>        <td>星期三</td><br>    </tr><br>    <tr><br>        <td>李强</td><br>        <td>张明</td><br>        <td>王平</td><br>    </tr><br></table>
-
-<p>代码如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span> <span class="attr">rowspan</span>=<span class="string">"2"</span>&gt;</span>值班人员<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>星期一<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>星期二<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>星期三<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>李强<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>张明<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>王平<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h3 id="关于扩展语法的说明"><a href="#关于扩展语法的说明" class="headerlink" title="关于扩展语法的说明"></a>关于扩展语法的说明</h3><p>Hexo似乎没有支持更多的markdown扩展语法，例如流程图、序列图、表格、Todo列表、注脚等等。<br>Cmd Markdown支持很丰富的markdown扩展语法。推荐学习使用。<br><a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">Cmd Markdown 编辑阅读器</a></p>
+<p>Java语言示例：<br><figure class="highlight java"><figcaption><span>定义方法完成成绩排序并输出前自定义名数的功能</span><a href="http://……" target="_blank" rel="external">假装有链接</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] scores , <span class="keyword">int</span> number)</span></span>&#123;</div><div class="line">	Arrays.sort(scores);</div><div class="line">	<span class="keyword">int</span> flag = <span class="number">0</span>;<span class="comment">//保存有效成绩个数</span></div><div class="line">	<span class="keyword">for</span> ( <span class="keyword">int</span> i = scores.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i-- ) &#123; </div><div class="line">		<span class="keyword">if</span>(scores[i]&gt;<span class="number">100</span> || scores[i]&lt;<span class="number">0</span> )&#123;</div><div class="line">			System.out.println(<span class="string">"该成绩（"</span>+ scores[i] +<span class="string">"分）无效！"</span>);</div><div class="line">			<span class="keyword">continue</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span>&#123;</div><div class="line">			flag++;</div><div class="line">			<span class="keyword">if</span>(flag &lt;= number)</div><div class="line">			    System.out.println(<span class="string">"这是第"</span> + (scores.length - i -<span class="number">1</span>) + <span class="string">"名的成绩："</span>+scores[i]);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>JavaScript语言示例：<br><figure class="highlight javascript"><figcaption><span>斐波那契数列</span><a href="http://……" target="_blank" rel="external">假装有链接2</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line">* nth element in the fibonacci series.</div><div class="line">* @param n &gt;= 0</div><div class="line">* @return the nth element, &gt;= 0.</div><div class="line">*/</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fib</span>(<span class="params">n</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> a = <span class="number">1</span>, b = <span class="number">1</span>;</div><div class="line">  <span class="keyword">var</span> tmp;</div><div class="line">  <span class="keyword">while</span> (--n &gt;= <span class="number">0</span>) &#123;</div><div class="line">    tmp = a;</div><div class="line">    a += b;</div><div class="line">    b = tmp;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> a;</div><div class="line">&#125;</div><div class="line"><span class="built_in">document</span>.write(fib(<span class="number">10</span>));</div></pre></td></tr></table></figure></p>
+<h3 id="内嵌Html标签"><a href="#内嵌Html标签" class="headerlink" title="内嵌Html标签"></a>内嵌Html标签</h3><p>Markdown语法中可以嵌套Html标签，譬如，可以用table标签来写一个纵跨两行的表格。<br><figure class="highlight html"><figcaption><span>一个纵跨两行的表格</span><a href="http://……" target="_blank" rel="external">假装有链接3</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span> <span class="attr">rowspan</span>=<span class="string">"2"</span>&gt;</span>值班人员<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>星期一<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>星期二<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>星期三<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>李强<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>张明<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>王平<span class="tag">&lt;/<span class="name">td</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>也可以使用<code>video</code>/<code>embed</code>/<code>iframe</code>/<code>script</code>标签来插入音频和视频。关于这个问题，我在后面的文章 <a href="/Attainments/2016.9.26 Attainments02 Use an External-link Player in Hexo - Failed">Use an External-link Player in Hexo - Failed</a> 和 <a href="/Attainments/2016.9.27 Attainments03 Use an External-link Player in Hexo - Fixed">Use an External-link Player in Hexo - Fixed</a> 中做出了详细的讨论。</p>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><ul>
+<li>最上面1行是表格<strong>第1行</strong>的值。</li>
+<li>第2行的冒号位置决定表格内文本的对齐方式。有水平居中、水平靠左对齐、水平靠右对齐三种。</li>
+<li>切记<strong>表格要与上面的文本内容空一行</strong>，否则无法解析。</li>
+<li>每列的宽度是根据对应列里最长的文本来决定的。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">链接</th>
+<th style="text-align:center">结果</th>
+<th style="text-align:right">原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">文本内容</td>
+<td style="text-align:center"><strong><code>是</code></strong></td>
+<td style="text-align:right">同协议同域名同端口</td>
+</tr>
+<tr>
+<td style="text-align:left">文本内容</td>
+<td style="text-align:center"><strong><code>是</code></strong></td>
+<td style="text-align:right">同协议同域名同端口</td>
+</tr>
+<tr>
+<td style="text-align:left">文本内容</td>
+<td style="text-align:center"><strong><code>是</code></strong></td>
+<td style="text-align:right">同协议同域名同端口</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">| 链接 | 结果 | 原因 |</div><div class="line">|:-----|:---:|----------:|</div><div class="line">|文本内容| **`是`** |同协议同域名同端口|</div><div class="line">|文本内容| **`是`** |同协议同域名同端口|</div><div class="line">|文本内容| **`是`** |同协议同域名同端口|</div></pre></td></tr></table></figure>
+<h3 id="关于其他扩展语法"><a href="#关于其他扩展语法" class="headerlink" title="关于其他扩展语法"></a>关于其他扩展语法</h3><p>Hexo似乎没有支持更多的Markdown扩展语法，例如流程图、序列图、Todo列表、注脚等等。<br>Cmd Markdown支持很丰富的Markdown扩展语法。推荐学习使用。<br><a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">Cmd Markdown 编辑阅读器</a></p>
 <hr>
-<h1 id="有趣又强大的Hexo内置标签插件"><a href="#有趣又强大的Hexo内置标签插件" class="headerlink" title="有趣又强大的Hexo内置标签插件"></a>有趣又强大的Hexo内置标签插件</h1><h2 id="文本居中的引用"><a href="#文本居中的引用" class="headerlink" title="文本居中的引用"></a>文本居中的引用</h2><blockquote class="blockquote-center"><p>居中文本</p>
+<h1 id="有趣又强大的Hexo内置标签插件"><a href="#有趣又强大的Hexo内置标签插件" class="headerlink" title="有趣又强大的Hexo内置标签插件"></a>有趣又强大的Hexo内置标签插件</h1><h2 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h2><h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><blockquote>
+<ul>
+<li>作用：在文章中插入引言，可包含作者、来源和标题。</li>
+<li>别号：quote<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% blockquote [author[, source]] [link] [source_link_title] %&#125;</div><div class="line">content</div><div class="line">&#123;% endblockquote %&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
 </blockquote>
-<h2 id="更科学地在博客中引用资源"><a href="#更科学地在博客中引用资源" class="headerlink" title="更科学地在博客中引用资源"></a>更科学地在博客中引用资源</h2><p>在站点配置文件中，把<code>post_asset_folder</code>字段的值设置为<code>true</code>。<br>通过<strong>相对路径引用的标签插件</strong>来把<strong>资源文件夹</strong>中的音频/图片文件引入到页面中。</p>
+<h3 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h3><h4 id="没有提供参数，则只输出普通的-blockquote"><a href="#没有提供参数，则只输出普通的-blockquote" class="headerlink" title="没有提供参数，则只输出普通的 blockquote"></a>没有提供参数，则只输出普通的 blockquote</h4><blockquote><p>测试文字测试文字测试文字测试文字测试文字测试文字测试文字。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% blockquote %&#125;</div><div class="line">测试文字测试文字测试文字测试文字测试文字测试文字测试文字。</div><div class="line">&#123;% endblockquote %&#125;</div></pre></td></tr></table></figure>
+<h4 id="引用书上的句子"><a href="#引用书上的句子" class="headerlink" title="引用书上的句子"></a>引用书上的句子</h4><blockquote><p>引用书上的文字测试。</p>
+<footer><strong>作者名</strong><cite>书名</cite></footer></blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% blockquote 作者名, 书名 %&#125;</div><div class="line">引用书上的文字测试。</div><div class="line">&#123;% endblockquote %&#125;</div></pre></td></tr></table></figure>
+<h4 id="引用Twitter-Weibo"><a href="#引用Twitter-Weibo" class="headerlink" title="引用Twitter/Weibo"></a>引用Twitter/Weibo</h4><blockquote><p>被删减的蕾姆糖</p>
+<footer><strong>@二次元娘</strong><cite><a href="http://weibo.com/ttarticle/p/show?id=2309404012440596679026" target="_blank" rel="external">weibo.com/ttarticle/p/show?id=2309404012440596679026</a></cite></footer></blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% blockquote @作者 https://…… %&#125;</div><div class="line">推文/微博内容测试文字。</div><div class="line">&#123;% endblockquote %&#125;</div></pre></td></tr></table></figure>
+<h4 id="引用网络上的文章"><a href="#引用网络上的文章" class="headerlink" title="引用网络上的文章"></a>引用网络上的文章</h4><blockquote><p>Markdown 是一种轻量级的「标记语言」，它的优点很多，目前也被越来越多的写作爱好者，撰稿者广泛使用。看到这里请不要被「标记」、「语言」所迷惑，Markdown 的语法十分简单。</p>
+<footer><strong>Te_Lee</strong><cite><a href="http://www.jianshu.com/p/1e402922ee32" target="_blank" rel="external">Markdown——入门指南</a></cite></footer></blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% blockquote 作者名 http://…… 文章标题 %&#125;</div><div class="line">引用网络上的文章内容测试。</div><div class="line">&#123;% endblockquote %&#125;</div></pre></td></tr></table></figure>
+<h4 id="引用居中文本"><a href="#引用居中文本" class="headerlink" title="引用居中文本"></a>引用居中文本</h4><blockquote class="blockquote-center"><p>居中文本居中文本居中文本居中文本。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% centerquote %&#125;</div><div class="line">居中文本居中文本居中文本居中文本。</div><div class="line">&#123;% endcenterquote %&#125;</div></pre></td></tr></table></figure>
+<h2 id="代码块（与反引号代码块的功能完全等价）"><a href="#代码块（与反引号代码块的功能完全等价）" class="headerlink" title="代码块（与反引号代码块的功能完全等价）"></a>代码块（与反引号代码块的功能完全等价）</h2><blockquote>
+<ul>
+<li>作用：在文章中插入代码。</li>
+<li>别名：code<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% codeblock [title] [lang:language] [url] [link text] %&#125;</div><div class="line">code snippet</div><div class="line">&#123;% endcodeblock %&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<h3 id="样例-1"><a href="#样例-1" class="headerlink" title="样例"></a>样例</h3><h4 id="普通的代码块"><a href="#普通的代码块" class="headerlink" title="普通的代码块"></a>普通的代码块</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">System.out.println(&quot;Test Code.&quot;);</div></pre></td></tr></table></figure>
+<h4 id="指定语言的代码块（不显示语言类型，但根据不同语言的关键字设置调整代码颜色）"><a href="#指定语言的代码块（不显示语言类型，但根据不同语言的关键字设置调整代码颜色）" class="headerlink" title="指定语言的代码块（不显示语言类型，但根据不同语言的关键字设置调整代码颜色）"></a>指定语言的代码块（不显示语言类型，但根据不同语言的关键字设置调整代码颜色）</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">System.out.println(<span class="string">"Test Code."</span>);</div></pre></td></tr></table></figure>
+<h4 id="附加说明的代码块"><a href="#附加说明的代码块" class="headerlink" title="附加说明的代码块"></a>附加说明的代码块</h4><figure class="highlight plain"><figcaption><span>使用Java在控制台打印</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">System.out.println(&quot;Test Code.&quot;);</div></pre></td></tr></table></figure>
+<h4 id="附加说明和网址的代码块"><a href="#附加说明和网址的代码块" class="headerlink" title="附加说明和网址的代码块"></a>附加说明和网址的代码块</h4><figure class="highlight plain"><figcaption><span>_.compact</span><a href="http://underscorejs.org/#compact" target="_blank" rel="external">Underscore.js</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">_.compact([0, 1, false, 2, &apos;&apos;, 3]);</div><div class="line">=&gt; [1, 2, 3]</div></pre></td></tr></table></figure>
+<h2 id="更科学地在博客中使用图片资源"><a href="#更科学地在博客中使用图片资源" class="headerlink" title="更科学地在博客中使用图片资源"></a>更科学地在博客中使用图片资源</h2><p>在站点配置文件中，把<code>post_asset_folder</code>字段的值设置为<code>true</code>。<br>通过<strong>相对路径引用的标签插件</strong>来把<strong>资源文件夹</strong>中的图片文件引入到页面中。</p>
 <blockquote>
-<p>当资源文件管理功能打开后，Hexo将会在你每一次通过<code>hexo new [layout] &lt;title&gt;</code>命令创建新文章时自动创建一个文件夹。这个资源文件夹将会有与这个 markdown 文件一样的名字。将所有与你的文章有关的资源放在这个关联文件夹中之后，你可以通过相对路径来引用它们，这样你就得到了一个更简单而且方便得多的工作流。</p>
-<p>正确的引用图片方式是使用下列的标签插件<strong>而不是 markdown</strong>！<br><code></code></p>
+<p>当资源文件管理功能打开后，Hexo将会在你每一次通过<code>hexo new [layout] &lt;title&gt;</code>命令创建新文章时自动创建一个文件夹。这个资源文件夹将会有与这个 Markdown 文件一样的名字。将所有与你的文章有关的资源放在这个关联文件夹中之后，你可以通过相对路径来引用它们，这样你就得到了一个更简单而且方便得多的工作流。</p>
+<p>正确的引用图片方式是使用下列的标签插件<strong>而不是Markdown原生标记</strong>！<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% asset_img example.jpg This is an example image %&#125;</div></pre></td></tr></table></figure></p>
 <p>通过这种方式，图片将会同时出现在文章和主页以及归档页中。</p>
 </blockquote>
-<h2 id="突破容器宽度限制的图片"><a href="#突破容器宽度限制的图片" class="headerlink" title="突破容器宽度限制的图片"></a>突破容器宽度限制的图片</h2><h3 id="测试图片"><a href="#测试图片" class="headerlink" title="测试图片"></a>测试图片</h3><img src="FullSizeImageTest.jpg" class="full-image" alt="alt" title="面码">
-<h3 id="对比正常图片"><a href="#对比正常图片" class="headerlink" title="对比正常图片"></a>对比正常图片</h3><img src="/2016/09/24/2016.9.24%20Attainments01%20Introduction%20to%20Markdown/FullSizeImageTest.jpg" alt="面码" title="面码">
+<p>另外，如果把<code>asset_img</code>标签替换为与之语法相似的<code>aplayer</code>和<code>dplayer</code>标签，即可实现把音频/视频文件引入到页面中。再次说明，具体可以参见我后面的文章 <a href="/Attainments/2016.9.26 Attainments02 Use an External-link Player in Hexo - Failed">Use an External-link Player in Hexo - Failed</a> 和 <a href="/Attainments/2016.9.27 Attainments03 Use an External-link Player in Hexo - Fixed">Use an External-link Player in Hexo - Fixed</a> 。</p>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="正常图片"><a href="#正常图片" class="headerlink" title="正常图片"></a>正常图片</h3><img src="/[object%20Object]/2016.9.24%20Attainments01%20Introduction%20to%20Markdown/FullSizeImageTest.jpg" alt="面码" title="面码">
+<h3 id="突破容器宽度限制的图片"><a href="#突破容器宽度限制的图片" class="headerlink" title="突破容器宽度限制的图片"></a>突破容器宽度限制的图片</h3><img src="FullSizeImageTest.jpg" class="full-image" alt="alt" title="面码">
+<h3 id="自定义高度和宽度的图片"><a href="#自定义高度和宽度的图片" class="headerlink" title="自定义高度和宽度的图片"></a>自定义高度和宽度的图片</h3><h2 id="更多标签"><a href="#更多标签" class="headerlink" title="更多标签"></a>更多标签</h2><blockquote><p>标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。</p>
+<footer><strong>Hexo文档</strong><cite><a href="https://hexo.io/zh-cn/docs/tag-plugins.html" target="_blank" rel="external">标签插件（Tag Plugins）</a></cite></footer></blockquote>
 <hr>
 <p><strong>感谢阅读，有任何意见或建议欢迎私信我或在评论区留言哦。</strong></p>
 ]]></content>

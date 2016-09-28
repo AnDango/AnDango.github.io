@@ -280,7 +280,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/09/27/2016.9.27 Attainments03 Use an External-link Player in Hexo - Fixed/" itemprop="url">
+                <a class="post-title-link" href="/[object Object]/2016.9.27 Attainments03 Use an External-link Player in Hexo - Fixed/" itemprop="url">
                   Use an External-link Player in Hexo - Fixed
                 </a>
               
@@ -315,18 +315,6 @@
 
                 
                 
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Attainments/Front-end/" itemprop="url" rel="index">
-                    <span itemprop="name">Front-end</span>
-                  </a>
-                </span>
-
-                
-                
 
               
             </span>
@@ -336,8 +324,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/09/27/2016.9.27 Attainments03 Use an External-link Player in Hexo - Fixed/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/27/2016.9.27 Attainments03 Use an External-link Player in Hexo - Fixed/" itemprop="commentsCount"></span>
+                <a href="/[object Object]/2016.9.27 Attainments03 Use an External-link Player in Hexo - Fixed/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="[object Object]/2016.9.27 Attainments03 Use an External-link Player in Hexo - Fixed/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -361,208 +349,15 @@
 
       
         
-          
-            <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在前一篇文章中，我尝试通过类似于下面这种方式来在我的Hexo页面中添加外链播放器：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">iframe</span> </span></div><div class="line">    <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> </div><div class="line">    <span class="attr">width</span>=<span class="string">298</span> <span class="attr">height</span>=<span class="string">52</span> </div><div class="line">    <span class="attr">src</span>=<span class="string">"http://music.163.com/outchain/player?type=2&amp;id=29744802&amp;auto=0&amp;height=32"</span>&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></div></pre></td></tr></table></figure></p>
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在前一篇文章中，我尝试通过类似于下面这种方式来在我的Hexo页面中添加外链播放器：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">iframe</span> </div><div class="line">    <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> </div><div class="line">    <span class="attr">width</span>=<span class="string">298</span> <span class="attr">height</span>=<span class="string">52</span> </div><div class="line">    <span class="attr">src</span>=<span class="string">"http://music.163.com/outchain/player?type=2&amp;id=29744802&amp;auto=0&amp;height=32"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>在本地服务器端口<code>http://localhost:4000/</code>中测试时是完全正常的。<br>但是很可惜，由于</p>
 <blockquote>
-<p>gh-pages强制访问https，而<del>网易云音乐的外链播放器不支持https</del>（知乎的小说家，诶）通过插入html标签的方式全都是不支持https访问的。</p>
+<p>gh-pages强制访问https，而<del>网易云音乐的外链播放器不支持https</del>（知乎的小说家，诶）通过插入Html语言的方式中大部分是不支持https访问的。</p>
 </blockquote>
 <p>所以导致部署到GitHub后不能正常播放。</p>
-<p>具体的原理呢？<del>你就不深究一下吗</del></p>
-<h1 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h1><h2 id="参考提议1"><a href="#参考提议1" class="headerlink" title="参考提议1"></a>参考提议1</h2><p><a href="https://www.zhihu.com/question/50741481/answer/122554583" target="_blank" rel="external">知乎解答 @唐门很太</a></p>
-<ol>
-<li>安装<a href="https://github.com/grzhan/hexo-tag-aplayer" target="_blank" rel="external">GitHub - grzhan/hexo-tag-aplayer: Embed aplayer in Hexo posts/pages</a>插件；</li>
-<li>调用<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">GitHub - YUX-IO/163music-APlayer-you-get-docker: A Flask Music Project. Demo:</a><br>项目。<br>这边第2个项目我还没有成功“调用”到它的API。于是放弃了。</li>
-</ol>
-<h2 id="参考提议2"><a href="#参考提议2" class="headerlink" title="参考提议2"></a>参考提议2</h2><p><a href="http://login926.top/2016/07/20/HexoMedia/" target="_blank" rel="external">Hexo博客中插入音乐/视频</a><br>无意中看到这位博主的文章，里面很详细地展示了若干种在页面中插入音频/视频的方法，推荐一读。<del>（其实我在前一篇文章中也用教训全部展示过了）</del><br>需要注意的是，这些提到的方法中，在网页中插入html标签的方法统统是不支持https访问的。（video标签除外。<del>但是video标签生成的播放器实在是太丑了</del>）<br>小结（还是引用这位博主的）：</p>
-<table><br>    <thead><br>        <tr><br>            <th>项目</th><br>            <th>使用难度</th><br>            <th>是否支持https</th><br>            <th>是否使用 html5</th><br>        </tr><br>    </thead><br>    <tbody><br>        <tr><br>            <td>插入 html 语言</td><br>            <td>小</td><br>            <td>大部分不支持</td><br>            <td>大部分使用 Flash</td><br>        </tr><br>        <tr><br>            <td>使用 Hexo 插件</td><br>            <td>中等</td><br>            <td>支持</td><br>            <td>使用 html5</td><br>        </tr><br>    </tbody><br></table>
-
-
-<p>于是我愉快地决定采用两款插件基于 <code>DIYgod</code> 编写的 <code>html5</code> 播放器 <code>APlayer</code> 和 <code>DPlayer</code> 。</p>
-<p><a href="https://github.com/grzhan/hexo-tag-aplayer#upstream-issue" target="_blank" rel="external">hexo-tag-aplayer</a><br><a href="https://github.com/NextMoe/hexo-tag-dplayer" target="_blank" rel="external">hexo-tag-dplayer</a></p>
-<h1 id="hexo-tag-aplayer"><a href="#hexo-tag-aplayer" class="headerlink" title="hexo-tag-aplayer"></a>hexo-tag-aplayer</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>安装<code>hexo-tag-aplayer</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save hexo-tag-aplayer</div></pre></td></tr></table></figure></p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>使用aplayer<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% aplayer title author url [picture_url, narrow, autoplay, width:xxx, lrc:xxx] %&#125;</div></pre></td></tr></table></figure></p>
-<blockquote>
-<ul>
-<li>title : music title 音乐标题</li>
-<li>author: music author 音乐作者</li>
-<li>url: music file url 音乐文件url</li>
-<li>picture_url: optional, music picture url 可选，音乐封面图片文件url</li>
-<li>narrow: optional, narrow style 可选</li>
-<li>autoplay: optional, autoplay music, not supported by mobile browsers 可选，自动播放</li>
-<li>width:xxx: optional, prefix width:, player’s width (default: 100%) 可选，前缀宽度，播放器宽度</li>
-<li>lrc:xxx: optional, prefix lrc:, LRC file url 可选，前缀歌词，歌词文件url</li>
-</ul>
-</blockquote>
-<p>另外，也可以使用<code>aplayerlrc</code>标签来显示歌词。（本文对歌词暂时不做测试）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% aplayerlrc &quot;title&quot; &quot;author&quot; &quot;url&quot; &quot;autoplay&quot; %&#125;</div><div class="line">[00:00.00]lrc here</div><div class="line">&#123;% endaplayerlrc %&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>音频文件插入效果如下：<br>资源文件夹下的音频文件测试<br><div id="aplayer0" class="aplayer" style="margin-bottom: 20px;"></div><script>var aplayer0 = new APlayer({element: document.getElementById("aplayer0"),narrow: false,autoplay: false,showlrc: 0,music : {title: "黑键变白键",author: "周杰伦",url: "黑键变白键.mp3",pic: ""}});aplayer0.init();</script></p>
-<p>通过https访问的音频文件测试<br><div id="aplayer1" class="aplayer" style="margin-bottom: 20px;"></div><script>var aplayer1 = new APlayer({element: document.getElementById("aplayer1"),narrow: false,autoplay: false,showlrc: 0,music : {title: "晴天",author: "刘瑞琦",url: "http://p2.music.126.net/oxP2XaJFDscDuGhGnO7beA==/7768049650386454.mp3",pic: "http://p4.music.126.net/obZy1mbYWFJtbyr26Q6Smg==/7749357952693832.jpg"}});aplayer1.init();</script></p>
-<h1 id="hexo-tag-dplayer"><a href="#hexo-tag-dplayer" class="headerlink" title="hexo-tag-dplayer"></a>hexo-tag-dplayer</h1><h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><p>安装<code>hexo-tag-aplayer</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-tag-dplayer --save</div></pre></td></tr></table></figure></p>
-<h2 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h2><p>使用aplayer<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% dplayer key=value ... %&#125;</div></pre></td></tr></table></figure></p>
-<p>其中，字段key可以是：</p>
-<blockquote>
-<ul>
-<li>‘autoplay’: autoplay video, not supported by mobile browsers 自动播放</li>
-<li>‘theme’: theme color, default: #b7daff 主体颜色（默认为浅蓝色）</li>
-<li>‘loop’: loop play music, default: true 循环播放（默认为是）</li>
-<li>‘lang’: language, <code>zh</code> for Chinese, <code>en</code> for English, default: Navigator language 语言</li>
-<li>‘screenshot’:  enable screenshot function, default: false, NOTICE: if set it to true, video and video poster must enable Cross-Origin 是否允许截图</li>
-<li>‘hotkey’: binding hot key, including left right and Space, default: true 绑定快捷键控制播放器（默认为是）</li>
-<li>‘preload’: ‘auto’, the way to load music, can be ‘none’ ‘metadata’ ‘auto’, default: ‘auto’ 预装载</li>
-<li>‘url’: Required, video url 视频url</li>
-<li>‘pic’: video cover picture 视频封面文件url</li>
-<li>‘api’: DPlayer danmaku backend url dplayer的弹幕文件后端url</li>
-<li>‘id’: see <a href="https://github.com/DIYgod/DPlayer" target="_blank" rel="external">https://github.com/DIYgod/DPlayer</a></li>
-<li>‘token’: see <a href="https://github.com/DIYgod/DPlayer" target="_blank" rel="external">https://github.com/DIYgod/DPlayer</a></li>
-<li>‘maximum’: maximum quantity of danmaku 弹幕最大数量</li>
-<li>‘width’ maximum width of the dplayer wraper 播放器最大宽度</li>
-<li>‘height’ maximum height of the dplayer wraper, you can use this like “height=233px” 播放器最大高度</li>
-</ul>
-</blockquote>
-<p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;% dplayer &quot;url=http://devtest.qiniudn.com/若能绽放光芒.mp4&quot; &quot;api=http://dplayer.daoapp.io&quot; &quot;pic=http://devtest.qiniudn.com/若能绽放光芒.png&quot; &quot;id=9E2E3368B56CDBB4&quot; &quot;loop=yes&quot; &quot;theme=#FADFA3&quot; &quot;autoplay=false&quot; &quot;token=tokendemo&quot; %&#125;</div><div class="line">&#123;% dplayer &quot;url=http://devtest.qiniudn.com/若能绽放光芒.mp4&quot; &quot;api=http://dplayer.donot.help/dplayerpy&quot; &quot;pic=http://devtest.qiniudn.com/若能绽放光芒.png&quot; &quot;id=2622668&quot; &quot;loop=yes&quot; &quot;theme=#FADFA3&quot; &quot;autoplay=false&quot; &quot;width=233px&quot; %&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h2><p>视频文件插入效果如下：<br>资源文件夹下的视频文件测试<br><div id="dplayer0" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer0 = new DPlayer({"element":document.getElementById("dplayer0"),"video":{"url":"test.mp4"}});</script></p>
-<p>通过https访问的视频文件测试<br><div id="dplayer1" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer1 = new DPlayer({"element":document.getElementById("dplayer1"),"autoplay":false,"theme":"#FADFA3","loop":true,"video":{"url":"http://devtest.qiniudn.com/若能绽放光芒.mp4","pic":"http://devtest.qiniudn.com/若能绽放光芒.png"},"danmaku":{"api":"http://dplayer.daoapp.io","id":"9E2E3368B56CDBB4","token":"tokendemo"}});</script></p>
-<p>也完全可以去掉弹幕<br><div id="dplayer2" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer2 = new DPlayer({"element":document.getElementById("dplayer2"),"autoplay":false,"theme":"#FADFA3","loop":true,"video":{"url":"http://devtest.qiniudn.com/若能绽放光芒.mp4","pic":"http://devtest.qiniudn.com/若能绽放光芒.png"}});</script></p>
-<hr>
-<p><strong>感谢阅读，有任何意见或建议欢迎私信我或在评论区留言哦。</strong></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/26/2016.9.26 Attainments02 Use an External-link Player in Hexo - Error/" itemprop="url">
-                  Use an External-link Player in Hexo - Error
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-26T22:43:21+08:00" content="2016-09-26">
-              2016-09-26
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Attainments/" itemprop="url" rel="index">
-                    <span itemprop="name">Attainments</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Attainments/Front-end/" itemprop="url" rel="index">
-                    <span itemprop="name">Front-end</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/26/2016.9.26 Attainments02 Use an External-link Player in Hexo - Error/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/26/2016.9.26 Attainments02 Use an External-link Player in Hexo - Error/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="先睹为快"><a href="#先睹为快" class="headerlink" title="先睹为快"></a>先睹为快</h1><p>曲目：TARI TARI 心之旋律 钢琴独奏版<br>演奏者：豆沙团子AnDango（这只up主就是博主本人欢迎来勾搭<del>调教</del>）</p>
-<embed 
-    height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" 
-    src="http://static.hdslb.com/miniloader.swf" 
-    flashvars="aid=5974935&page=1" 
-    pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"><br></embed>
+<p>具体的原理待补充。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/09/26/2016.9.26 Attainments02 Use an External-link Player in Hexo - Error/#more" rel="contents">
+            <a class="btn" href="/[object Object]/2016.9.27 Attainments03 Use an External-link Player in Hexo - Fixed/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -613,7 +408,135 @@
             
               
                 
-                <a class="post-title-link" href="/2016/09/26/2016.9.26 Retweet01 'WeChatApp' Demo/" itemprop="url">
+                <a class="post-title-link" href="/[object Object]/2016.9.26 Attainments02 Use an External-link Player in Hexo - Failed/" itemprop="url">
+                  Use an External-link Player in Hexo - Failed
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-26T22:43:21+08:00" content="2016-09-26">
+              2016-09-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Attainments/" itemprop="url" rel="index">
+                    <span itemprop="name">Attainments</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/[object Object]/2016.9.26 Attainments02 Use an External-link Player in Hexo - Failed/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="[object Object]/2016.9.26 Attainments02 Use an External-link Player in Hexo - Failed/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><strong>说明：这是一次失败的尝试。</strong></p>
+<h1 id="先睹为快"><a href="#先睹为快" class="headerlink" title="先睹为快"></a>先睹为快</h1><p>曲目：TARI TARI 心之旋律 钢琴独奏版<br>演奏者：豆沙团子AnDango（这只up主就是博主本人欢迎来勾搭<del>调教</del>）</p>
+<embed 
+    height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" 
+    src="http://static.hdslb.com/miniloader.swf" 
+    flashvars="aid=5974935&page=1" 
+    pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"><br></embed>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/[object Object]/2016.9.26 Attainments02 Use an External-link Player in Hexo - Failed/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/[object Object]/2016.9.26 Retweet01 'WeChatApp' Demo/" itemprop="url">
                   WeChatApp Introduction and Demo
                 </a>
               
@@ -669,8 +592,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/09/26/2016.9.26 Retweet01 'WeChatApp' Demo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/26/2016.9.26 Retweet01 'WeChatApp' Demo/" itemprop="commentsCount"></span>
+                <a href="/[object Object]/2016.9.26 Retweet01 'WeChatApp' Demo/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="[object Object]/2016.9.26 Retweet01 'WeChatApp' Demo/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -694,12 +617,13 @@
 
       
         
-          <h1 id="何为小程序？"><a href="#何为小程序？" class="headerlink" title="何为小程序？"></a>何为小程序？</h1><h2 id="推荐博文"><a href="#推荐博文" class="headerlink" title="推荐博文"></a>推荐博文</h2><p><a href="http://blog.csdn.net/yulianlin/article/details/52621413">从程序员的角度分析微信小程序</a></p>
+          <h1 id="何为小程序？"><a href="#何为小程序？" class="headerlink" title="何为小程序？"></a>何为小程序？</h1><h2 id="推荐博文"><a href="#推荐博文" class="headerlink" title="推荐博文"></a>推荐博文</h2><blockquote><p>作为一个并不是资深的程序员。 从程序员的角度分析一下微信小程序，欢迎指点。</p>
+<footer><strong>于连林520wcf</strong><cite><a href="http://blog.csdn.net/yulianlin/article/details/52621413">从程序员的角度分析微信小程序</a></cite></footer></blockquote>
 <h2 id="小程序的实现原理？？？"><a href="#小程序的实现原理？？？" class="headerlink" title="小程序的实现原理？？？"></a>小程序的实现原理？？？</h2><blockquote>
 <p>小程序原理就是用JS调用底层native组件，和React Native非常类似。恰恰又证明了，凡是能用JS开发的最终都会用JS开发。</p>
 </blockquote>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/09/26/2016.9.26 Retweet01 'WeChatApp' Demo/#more" rel="contents">
+            <a class="btn" href="/[object Object]/2016.9.26 Retweet01 'WeChatApp' Demo/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -750,7 +674,7 @@
             
               
                 
-                <a class="post-title-link" href="/2016/09/24/2016.9.24 Attainments01 Introduction to Markdown/" itemprop="url">
+                <a class="post-title-link" href="/[object Object]/2016.9.24 Attainments01 Introduction to Markdown/" itemprop="url">
                   Introduction to Markdown
                 </a>
               
@@ -794,8 +718,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/09/24/2016.9.24 Attainments01 Introduction to Markdown/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/24/2016.9.24 Attainments01 Introduction to Markdown/" itemprop="commentsCount"></span>
+                <a href="/[object Object]/2016.9.24 Attainments01 Introduction to Markdown/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="[object Object]/2016.9.24 Attainments01 Introduction to Markdown/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -832,10 +756,10 @@
 <h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><blockquote>
 <p>引用测试</p>
 </blockquote>
-<h3 id="网页链接与图片链接"><a href="#网页链接与图片链接" class="headerlink" title="网页链接与图片链接"></a>网页链接与图片链接</h3><p><a href="http://markdownpad.com/">markdown</a></p>
-<p><img src="http://markdownpad.com/img/markdownpad2-weblogo.png" alt="markdown logo"></p>
+<h3 id="网页链接与图片链接（Markdown语法方式）"><a href="#网页链接与图片链接（Markdown语法方式）" class="headerlink" title="网页链接与图片链接（Markdown语法方式）"></a>网页链接与图片链接（Markdown语法方式）</h3><p><a href="http://markdownpad.com/">Markdown</a></p>
+<p><img src="http://markdownpad.com/img/markdownpad2-weblogo.png" alt="Markdown logo"></p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/09/24/2016.9.24 Attainments01 Introduction to Markdown/#more" rel="contents">
+            <a class="btn" href="/[object Object]/2016.9.24 Attainments01 Introduction to Markdown/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -914,7 +838,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
