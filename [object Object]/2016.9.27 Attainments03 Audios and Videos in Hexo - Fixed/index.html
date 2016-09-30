@@ -81,7 +81,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.0.1" />
 
 
 
@@ -90,13 +90,13 @@
 
 <meta name="description" content="前言在前一篇文章中，我尝试通过类似于下面这种方式来在我的Hexo页面中添加外链播放器：12345&amp;lt;iframe     frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot;     width=298 height=52     src=&quot;http://music.163.com/outchain/player?type=2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Use an External-link Player in Hexo - Fixed">
-<meta property="og:url" content="http://yoursite.com/[object Object]/2016.9.27 Attainments03 Use an External-link Player in Hexo - Fixed/index.html">
+<meta property="og:title" content="Audios and Videos in Hexo - Fixed">
+<meta property="og:url" content="http://yoursite.com/[object Object]/2016.9.27 Attainments03 Audios and Videos in Hexo - Fixed/index.html">
 <meta property="og:site_name" content="AnDango's Home">
 <meta property="og:description" content="前言在前一篇文章中，我尝试通过类似于下面这种方式来在我的Hexo页面中添加外链播放器：12345&amp;lt;iframe     frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot;     width=298 height=52     src=&quot;http://music.163.com/outchain/player?type=2">
 <meta property="og:updated_time" content="2016-09-27T05:30:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Use an External-link Player in Hexo - Fixed">
+<meta name="twitter:title" content="Audios and Videos in Hexo - Fixed">
 <meta name="twitter:description" content="前言在前一篇文章中，我尝试通过类似于下面这种方式来在我的Hexo页面中添加外链播放器：12345&amp;lt;iframe     frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot;     width=298 height=52     src=&quot;http://music.163.com/outchain/player?type=2">
 
 
@@ -115,7 +115,7 @@
   };
 </script>
 
-  <title> Use an External-link Player in Hexo - Fixed | AnDango's Home </title>
+  <title> Audios and Videos in Hexo - Fixed | AnDango's Home </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -278,7 +278,7 @@
             
             
               
-                Use an External-link Player in Hexo - Fixed
+                Audios and Videos in Hexo - Fixed
               
             
           </h1>
@@ -320,8 +320,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/[object Object]/2016.9.27 Attainments03 Use an External-link Player in Hexo - Fixed/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="[object Object]/2016.9.27 Attainments03 Use an External-link Player in Hexo - Fixed/" itemprop="commentsCount"></span>
+                <a href="/[object Object]/2016.9.27 Attainments03 Audios and Videos in Hexo - Fixed/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="[object Object]/2016.9.27 Attainments03 Audios and Videos in Hexo - Fixed/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -404,8 +404,8 @@
 </ul>
 </blockquote>
 <p>另外，也可以使用<code>aplayerlrc</code>标签来显示歌词。（本文对歌词暂时不做测试）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% aplayerlrc &quot;title&quot; &quot;author&quot; &quot;url&quot; &quot;autoplay&quot; %&#125;</div><div class="line">[00:00.00]lrc here</div><div class="line">&#123;% endaplayerlrc %&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>音频文件插入效果如下：<br>资源文件夹下的音频文件测试<br><div id="aplayer0" class="aplayer" style="margin-bottom: 20px;"></div><script>var aplayer0 = new APlayer({element: document.getElementById("aplayer0"),narrow: false,autoplay: false,showlrc: 0,music : {title: "黑键变白键",author: "周杰伦",url: "黑键变白键.mp3",pic: ""}});aplayer0.init();</script></p>
-<p>通过https访问的音频文件测试<br><div id="aplayer1" class="aplayer" style="margin-bottom: 20px;"></div><script>var aplayer1 = new APlayer({element: document.getElementById("aplayer1"),narrow: false,autoplay: false,showlrc: 0,music : {title: "晴天",author: "刘瑞琦",url: "http://p2.music.126.net/oxP2XaJFDscDuGhGnO7beA==/7768049650386454.mp3",pic: "http://p4.music.126.net/obZy1mbYWFJtbyr26Q6Smg==/7749357952693832.jpg"}});aplayer1.init();</script></p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>音频文件插入效果如下：<br>资源文件夹下的音频文件测试<br><div id="aplayer1" class="aplayer" style="margin-bottom: 20px;"></div><script>var aplayer1 = new APlayer({element: document.getElementById("aplayer1"),narrow: false,autoplay: false,showlrc: 0,music : {title: "黑键变白键",author: "周杰伦",url: "黑键变白键.mp3",pic: ""}});aplayer1.init();</script></p>
+<p>通过https访问的音频文件测试<br><div id="aplayer2" class="aplayer" style="margin-bottom: 20px;"></div><script>var aplayer2 = new APlayer({element: document.getElementById("aplayer2"),narrow: false,autoplay: false,showlrc: 0,music : {title: "晴天",author: "刘瑞琦",url: "http://p2.music.126.net/oxP2XaJFDscDuGhGnO7beA==/7768049650386454.mp3",pic: "http://p4.music.126.net/obZy1mbYWFJtbyr26Q6Smg==/7749357952693832.jpg"}});aplayer2.init();</script></p>
 <h1 id="hexo-tag-dplayer"><a href="#hexo-tag-dplayer" class="headerlink" title="hexo-tag-dplayer"></a>hexo-tag-dplayer</h1><h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><p>安装<code>hexo-tag-aplayer</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-tag-dplayer --save</div></pre></td></tr></table></figure></p>
 <h2 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h2><p>使用aplayer<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% dplayer key=value ... %&#125;</div></pre></td></tr></table></figure></p>
 <p>其中，字段key可以是：</p>
@@ -429,9 +429,9 @@
 </ul>
 </blockquote>
 <p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;% dplayer &quot;url=http://devtest.qiniudn.com/若能绽放光芒.mp4&quot; &quot;api=http://dplayer.daoapp.io&quot; &quot;pic=http://devtest.qiniudn.com/若能绽放光芒.png&quot; &quot;id=9E2E3368B56CDBB4&quot; &quot;loop=yes&quot; &quot;theme=#FADFA3&quot; &quot;autoplay=false&quot; &quot;token=tokendemo&quot; %&#125;</div><div class="line">&#123;% dplayer &quot;url=http://devtest.qiniudn.com/若能绽放光芒.mp4&quot; &quot;api=http://dplayer.donot.help/dplayerpy&quot; &quot;pic=http://devtest.qiniudn.com/若能绽放光芒.png&quot; &quot;id=2622668&quot; &quot;loop=yes&quot; &quot;theme=#FADFA3&quot; &quot;autoplay=false&quot; &quot;width=233px&quot; %&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h2><p>视频文件插入效果如下：<br>资源文件夹下的视频文件测试<br><div id="dplayer0" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer0 = new DPlayer({"element":document.getElementById("dplayer0"),"video":{"url":"test.mp4"}});</script></p>
-<p>通过https访问的视频文件测试<br><div id="dplayer1" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer1 = new DPlayer({"element":document.getElementById("dplayer1"),"autoplay":false,"theme":"#FADFA3","loop":true,"video":{"url":"http://devtest.qiniudn.com/若能绽放光芒.mp4","pic":"http://devtest.qiniudn.com/若能绽放光芒.png"},"danmaku":{"api":"http://dplayer.daoapp.io","id":"9E2E3368B56CDBB4","token":"tokendemo"}});</script></p>
-<p>也完全可以去掉弹幕<br><div id="dplayer2" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer2 = new DPlayer({"element":document.getElementById("dplayer2"),"autoplay":false,"theme":"#FADFA3","loop":true,"video":{"url":"http://devtest.qiniudn.com/若能绽放光芒.mp4","pic":"http://devtest.qiniudn.com/若能绽放光芒.png"}});</script></p>
+<h2 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h2><p>视频文件插入效果如下：<br>资源文件夹下的视频文件测试<br><div id="dplayer1" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer1 = new DPlayer({"element":document.getElementById("dplayer1"),"video":{"url":"test.mp4"}});</script></p>
+<p>通过https访问的视频文件测试<br><div id="dplayer2" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer2 = new DPlayer({"element":document.getElementById("dplayer2"),"autoplay":false,"theme":"#FADFA3","loop":true,"video":{"url":"http://devtest.qiniudn.com/若能绽放光芒.mp4","pic":"http://devtest.qiniudn.com/若能绽放光芒.png"},"danmaku":{"api":"http://dplayer.daoapp.io","id":"9E2E3368B56CDBB4","token":"tokendemo"}});</script></p>
+<p>也完全可以去掉弹幕<br><div id="dplayer3" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer3 = new DPlayer({"element":document.getElementById("dplayer3"),"autoplay":false,"theme":"#FADFA3","loop":true,"video":{"url":"http://devtest.qiniudn.com/若能绽放光芒.mp4","pic":"http://devtest.qiniudn.com/若能绽放光芒.png"}});</script></p>
 <hr>
 <p><strong>感谢阅读，有任何意见或建议欢迎私信我或在评论区留言哦。</strong></p>
 
@@ -470,13 +470,17 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/[object Object]/2016.9.26 Attainments02 Use an External-link Player in Hexo - Failed/" rel="next" title="Use an External-link Player in Hexo - Failed">
-                <i class="fa fa-chevron-left"></i> Use an External-link Player in Hexo - Failed
+              <a href="/[object Object]/2016.9.26 Attainments02 Audios and Videos in Hexo - Failed/" rel="next" title="Audios and Videos in Hexo - Failed">
+                <i class="fa fa-chevron-left"></i> Audios and Videos in Hexo - Failed
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/[object Object]/2016.10.1 Attainments04 Image Hosting Service/" rel="prev" title="Image Hosting Service">
+                Image Hosting Service <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -491,10 +495,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="[object Object]/2016.9.27 Attainments03 Use an External-link Player in Hexo - Fixed/"
-     data-title="Use an External-link Player in Hexo - Fixed"
+        <div class="ds-share flat" data-thread-key="[object Object]/2016.9.27 Attainments03 Audios and Videos in Hexo - Fixed/"
+     data-title="Audios and Videos in Hexo - Fixed"
      data-content=""
-     data-url="http://yoursite.com/[object Object]/2016.9.27 Attainments03 Use an External-link Player in Hexo - Fixed/">
+     data-url="http://yoursite.com/[object Object]/2016.9.27 Attainments03 Audios and Videos in Hexo - Fixed/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -521,8 +525,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="[object Object]/2016.9.27 Attainments03 Use an External-link Player in Hexo - Fixed/"
-           data-title="Use an External-link Player in Hexo - Fixed" data-url="http://yoursite.com/[object Object]/2016.9.27 Attainments03 Use an External-link Player in Hexo - Fixed/">
+      <div class="ds-thread" data-thread-key="[object Object]/2016.9.27 Attainments03 Audios and Videos in Hexo - Fixed/"
+           data-title="Audios and Videos in Hexo - Fixed" data-url="http://yoursite.com/[object Object]/2016.9.27 Attainments03 Audios and Videos in Hexo - Fixed/">
       </div>
     
   </div>
@@ -567,7 +571,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -584,7 +588,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -644,12 +648,12 @@
           <div class="links-of-blogroll motion-element links-of-blogroll-inline">
             <div class="links-of-blogroll-title">
               <i class="fa  fa-fw fa-globe"></i>
-              博主的黑历史
+              友情链接
             </div>
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://space.bilibili.com/16883265" title="戳这里啦~" target="_blank">戳这里啦~</a>
+                  <a href="http://space.bilibili.com/16883265" title="博主的黑历史" target="_blank">博主的黑历史</a>
                 </li>
               
             </ul>

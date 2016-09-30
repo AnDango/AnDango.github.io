@@ -81,7 +81,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.0.1" />
 
 
 
@@ -280,8 +280,8 @@
             
               
                 
-                <a class="post-title-link" href="/[object Object]/2016.9.27 Attainments03 Use an External-link Player in Hexo - Fixed/" itemprop="url">
-                  Use an External-link Player in Hexo - Fixed
+                <a class="post-title-link" href="/[object Object]/2016.10.1 Attainments04 Image Hosting Service/" itemprop="url">
+                  Image Hosting Service
                 </a>
               
             
@@ -294,8 +294,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-27T12:37:21+08:00" content="2016-09-27">
-              2016-09-27
+            <time itemprop="dateCreated" datetime="2016-10-01T01:16:21+08:00" content="2016-10-01">
+              2016-10-01
             </time>
           </span>
 
@@ -324,8 +324,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/[object Object]/2016.9.27 Attainments03 Use an External-link Player in Hexo - Fixed/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="[object Object]/2016.9.27 Attainments03 Use an External-link Player in Hexo - Fixed/" itemprop="commentsCount"></span>
+                <a href="/[object Object]/2016.10.1 Attainments04 Image Hosting Service/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="[object Object]/2016.10.1 Attainments04 Image Hosting Service/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -349,15 +349,12 @@
 
       
         
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在前一篇文章中，我尝试通过类似于下面这种方式来在我的Hexo页面中添加外链播放器：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">iframe</span> </div><div class="line">    <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> </div><div class="line">    <span class="attr">width</span>=<span class="string">298</span> <span class="attr">height</span>=<span class="string">52</span> </div><div class="line">    <span class="attr">src</span>=<span class="string">"http://music.163.com/outchain/player?type=2&amp;id=29744802&amp;auto=0&amp;height=32"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>在本地服务器端口<code>http://localhost:4000/</code>中测试时是完全正常的。<br>但是很可惜，由于</p>
-<blockquote>
-<p>gh-pages强制访问https，而<del>网易云音乐的外链播放器不支持https</del>（知乎的小说家，诶）通过插入Html语言的方式中大部分是不支持https访问的。</p>
-</blockquote>
-<p>所以导致部署到GitHub后不能正常播放。</p>
-<p>具体的原理待补充。</p>
+          <h1 id="什么是“网络相册”？"><a href="#什么是“网络相册”？" class="headerlink" title="什么是“网络相册”？"></a>什么是“网络相册”？</h1><h2 id="维基百科描述"><a href="#维基百科描述" class="headerlink" title="维基百科描述"></a>维基百科描述</h2><blockquote><p>网络相册，或叫在线相册，为运行、储存以及翻阅、分享于互联网的相册，由于在线相册不是实质的相册并且容易搜索、查阅以及保管，目前大部分照片为储存于在线相册中。<br>此外，用户还可以使用自己的网络空间以搭建自己的在线相册。由于Flickr这一机制的成功，越来越多的网站开始创建自己的在线相册以获取流量。另外，Flickr推行的利用TAG的内容管理机制也越来越多的被接受以及应用。<br>一般可外链的相册会给免费用户提供较少的月流量，成为付费用户之后，可外链流量将获得提升；也有网站专门提供免费外链服务（此类网站又称图床），不限流量。国外著名的可外链相册有Picasa、Flickr、photobucket、Imageshack；中国大陆的可外链相册有又拍网、Tu6等。</p>
+<footer><strong>维基百科</strong><cite><a href="https://en.wikipedia.org/wiki/Image_hosting_service">网络相册</a></cite></footer></blockquote>
+<h1 id="为什么要使用网络相册（以下称为图床）？"><a href="#为什么要使用网络相册（以下称为图床）？" class="headerlink" title="为什么要使用网络相册（以下称为图床）？"></a>为什么要使用网络相册（以下称为图床）？</h1><p>其实，对于只写写Hexo博客的我（我们）来说，图床并不是必须的，毕竟博主完全可以把不是很大的图片/音频/视频文件丢到<code>/source</code>下面或者每篇文章对应的相对路径下面。<br>但是，<strong>日积月累，这些文件所占用的空间还是很可观的</strong>。</p>
+<p>考虑到需要更快的访问速度，同时也为了便于博客的迁移，图床是一个推荐的解决方案。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/[object Object]/2016.9.27 Attainments03 Use an External-link Player in Hexo - Fixed/#more" rel="contents">
+            <a class="btn" href="/[object Object]/2016.10.1 Attainments04 Image Hosting Service/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -408,8 +405,136 @@
             
               
                 
-                <a class="post-title-link" href="/[object Object]/2016.9.26 Attainments02 Use an External-link Player in Hexo - Failed/" itemprop="url">
-                  Use an External-link Player in Hexo - Failed
+                <a class="post-title-link" href="/[object Object]/2016.9.27 Attainments03 Audios and Videos in Hexo - Fixed/" itemprop="url">
+                  Audios and Videos in Hexo - Fixed
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-27T12:37:21+08:00" content="2016-09-27">
+              2016-09-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Attainments/" itemprop="url" rel="index">
+                    <span itemprop="name">Attainments</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/[object Object]/2016.9.27 Attainments03 Audios and Videos in Hexo - Fixed/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="[object Object]/2016.9.27 Attainments03 Audios and Videos in Hexo - Fixed/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在前一篇文章中，我尝试通过类似于下面这种方式来在我的Hexo页面中添加外链播放器：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">iframe</span> </div><div class="line">    <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> </div><div class="line">    <span class="attr">width</span>=<span class="string">298</span> <span class="attr">height</span>=<span class="string">52</span> </div><div class="line">    <span class="attr">src</span>=<span class="string">"http://music.163.com/outchain/player?type=2&amp;id=29744802&amp;auto=0&amp;height=32"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>在本地服务器端口<code>http://localhost:4000/</code>中测试时是完全正常的。<br>但是很可惜，由于</p>
+<blockquote>
+<p>gh-pages强制访问https，而<del>网易云音乐的外链播放器不支持https</del>（知乎的小说家，诶）通过插入Html语言的方式中大部分是不支持https访问的。</p>
+</blockquote>
+<p>所以导致部署到GitHub后不能正常播放。</p>
+<p>具体的原理待补充。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/[object Object]/2016.9.27 Attainments03 Audios and Videos in Hexo - Fixed/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/[object Object]/2016.9.26 Attainments02 Audios and Videos in Hexo - Failed/" itemprop="url">
+                  Audios and Videos in Hexo - Failed
                 </a>
               
             
@@ -452,8 +577,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/[object Object]/2016.9.26 Attainments02 Use an External-link Player in Hexo - Failed/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="[object Object]/2016.9.26 Attainments02 Use an External-link Player in Hexo - Failed/" itemprop="commentsCount"></span>
+                <a href="/[object Object]/2016.9.26 Attainments02 Audios and Videos in Hexo - Failed/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="[object Object]/2016.9.26 Attainments02 Audios and Videos in Hexo - Failed/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -477,7 +602,7 @@
 
       
         
-          <p><strong>说明：这是一次失败的尝试。</strong></p>
+          <p><strong>前方<del>高能</del>打脸：这是一次失败的尝试！！！</strong></p>
 <h1 id="先睹为快"><a href="#先睹为快" class="headerlink" title="先睹为快"></a>先睹为快</h1><p>曲目：TARI TARI 心之旋律 钢琴独奏版<br>演奏者：豆沙团子AnDango（这只up主就是博主本人欢迎来勾搭<del>调教</del>）</p>
 <embed 
     height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" 
@@ -485,7 +610,7 @@
     flashvars="aid=5974935&page=1" 
     pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"><br></embed>
           <div class="post-more-link text-center">
-            <a class="btn" href="/[object Object]/2016.9.26 Attainments02 Use an External-link Player in Hexo - Failed/#more" rel="contents">
+            <a class="btn" href="/[object Object]/2016.9.26 Attainments02 Audios and Videos in Hexo - Failed/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -830,7 +955,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -847,7 +972,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -907,12 +1032,12 @@
           <div class="links-of-blogroll motion-element links-of-blogroll-inline">
             <div class="links-of-blogroll-title">
               <i class="fa  fa-fw fa-globe"></i>
-              博主的黑历史
+              友情链接
             </div>
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://space.bilibili.com/16883265" title="戳这里啦~" target="_blank">戳这里啦~</a>
+                  <a href="http://space.bilibili.com/16883265" title="博主的黑历史" target="_blank">博主的黑历史</a>
                 </li>
               
             </ul>
