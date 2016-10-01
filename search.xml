@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[Image Hosting Service]]></title>
-      <url>http://yoursite.com/%5Bobject%20Object%5D/2016.10.1%20Attainments04%20Image%20Hosting%20Service/</url>
+      <url>http://yoursite.com/2016/10/01/2016.10.1%20Attainments04%20Image%20Hosting%20Service/</url>
       <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h1 id="什么是“网络相册”？"><a href="#什么是“网络相册”？" class="headerlink" title="什么是“网络相册”？"></a>什么是“网络相册”？</h1><h2 id="维基百科描述"><a href="#维基百科描述" class="headerlink" title="维基百科描述"></a>维基百科描述</h2><blockquote><p>网络相册，或叫在线相册，为运行、储存以及翻阅、分享于互联网的相册，由于在线相册不是实质的相册并且容易搜索、查阅以及保管，目前大部分照片为储存于在线相册中。<br>此外，用户还可以使用自己的网络空间以搭建自己的在线相册。由于Flickr这一机制的成功，越来越多的网站开始创建自己的在线相册以获取流量。另外，Flickr推行的利用TAG的内容管理机制也越来越多的被接受以及应用。<br>一般可外链的相册会给免费用户提供较少的月流量，成为付费用户之后，可外链流量将获得提升；也有网站专门提供免费外链服务（此类网站又称图床），不限流量。国外著名的可外链相册有Picasa、Flickr、photobucket、Imageshack；中国大陆的可外链相册有又拍网、Tu6等。</p>
 <footer><strong>维基百科</strong><cite><a href="https://en.wikipedia.org/wiki/Image_hosting_service" target="_blank" rel="external">网络相册</a></cite></footer></blockquote>
 <h1 id="为什么要使用网络相册（以下称为图床）？"><a href="#为什么要使用网络相册（以下称为图床）？" class="headerlink" title="为什么要使用网络相册（以下称为图床）？"></a>为什么要使用网络相册（以下称为图床）？</h1><p>其实，对于只写写Hexo博客的我（我们）来说，图床并不是必须的，毕竟博主完全可以把不是很大的图片/音频/视频文件丢到<code>/source</code>下面或者每篇文章对应的相对路径下面。<br>但是，<strong>日积月累，这些文件所占用的空间还是很可观的</strong>。</p>
@@ -14,8 +14,8 @@
 <h1 id="推荐"><a href="#推荐" class="headerlink" title="推荐"></a>推荐</h1><p>七牛，实名认证后，总空间10GB+每个月10GB流量+每个月<code>PUT/DELETE</code>10万次请求+每个月<code>GET</code>100万次请求。<br><a href="http://www.qiniu.com/" target="_blank" rel="external">七牛</a></p>
 <h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>以下测试用例全部通过https访问。<br><del>还是熟悉的用例。</del></p>
 <h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="http://oebw3bs16.bkt.clouddn.com/%E9%9D%A2%E7%A0%81.jpg" alt="面码"></p>
-<h2 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h2><div id="aplayer0" class="aplayer" style="margin-bottom: 20px;"></div><script>var aplayer0 = new APlayer({element: document.getElementById("aplayer0"),narrow: false,autoplay: false,showlrc: 0,music : {title: "黑键变白键",author: "周杰伦",url: "http://oebw3bs16.bkt.clouddn.com/%E9%BB%91%E9%94%AE%E5%8F%98%E7%99%BD%E9%94%AE.mp3",pic: ""}});aplayer0.init();</script>
-<h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><div id="dplayer0" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer0 = new DPlayer({"element":document.getElementById("dplayer0"),"autoplay":false,"theme":"#FADFA3","loop":false,"video":{"url":"http://oebw3bs16.bkt.clouddn.com/%E5%90%9B%E5%98%98%233%E8%8A%82%E9%80%89.mp4"}});</script>
+<h2 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h2><div id="aplayer1" class="aplayer" style="margin-bottom: 20px;"></div><script>var aplayer1 = new APlayer({element: document.getElementById("aplayer1"),narrow: false,autoplay: false,showlrc: 0,music : {title: "黑键变白键",author: "周杰伦",url: "http://oebw3bs16.bkt.clouddn.com/%E9%BB%91%E9%94%AE%E5%8F%98%E7%99%BD%E9%94%AE.mp3",pic: ""}});aplayer1.init();</script>
+<h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><div id="dplayer3" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer3 = new DPlayer({"element":document.getElementById("dplayer3"),"autoplay":false,"theme":"#FADFA3","loop":false,"video":{"url":"http://oebw3bs16.bkt.clouddn.com/%E5%90%9B%E5%98%98%233%E8%8A%82%E9%80%89.mp4"}});</script>
 <hr>
 <p><strong>感谢阅读，有任何意见或建议欢迎私信我或在评论区留言哦。</strong></p>
 ]]></content>
@@ -23,7 +23,7 @@
     
     <entry>
       <title><![CDATA[Audios and Videos in Hexo - Fixed]]></title>
-      <url>http://yoursite.com/%5Bobject%20Object%5D/2016.9.27%20Attainments03%20Audios%20and%20Videos%20in%20Hexo%20-%20Fixed/</url>
+      <url>http://yoursite.com/2016/09/27/2016.9.27%20Attainments03%20Audios%20and%20Videos%20in%20Hexo%20-%20Fixed/</url>
       <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在前一篇文章中，我尝试通过类似于下面这种方式来在我的Hexo页面中添加外链播放器：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">iframe</span> </span></div><div class="line">    <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> </div><div class="line">    <span class="attr">width</span>=<span class="string">298</span> <span class="attr">height</span>=<span class="string">52</span> </div><div class="line">    <span class="attr">src</span>=<span class="string">"http://music.163.com/outchain/player?type=2&amp;id=29744802&amp;auto=0&amp;height=32"</span>&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>在本地服务器端口<code>http://localhost:4000/</code>中测试时是完全正常的。<br>但是很可惜，由于</p>
 <blockquote>
@@ -79,8 +79,7 @@
 </ul>
 </blockquote>
 <p>另外，也可以使用<code>aplayerlrc</code>标签来显示歌词。（本文对歌词暂时不做测试）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% aplayerlrc &quot;title&quot; &quot;author&quot; &quot;url&quot; &quot;autoplay&quot; %&#125;</div><div class="line">[00:00.00]lrc here</div><div class="line">&#123;% endaplayerlrc %&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>音频文件插入效果如下：<br>资源文件夹下的音频文件测试<br><div id="aplayer1" class="aplayer" style="margin-bottom: 20px;"></div><script>var aplayer1 = new APlayer({element: document.getElementById("aplayer1"),narrow: false,autoplay: false,showlrc: 0,music : {title: "黑键变白键",author: "周杰伦",url: "黑键变白键.mp3",pic: ""}});aplayer1.init();</script></p>
-<p>通过https访问的音频文件测试<br><div id="aplayer2" class="aplayer" style="margin-bottom: 20px;"></div><script>var aplayer2 = new APlayer({element: document.getElementById("aplayer2"),narrow: false,autoplay: false,showlrc: 0,music : {title: "晴天",author: "刘瑞琦",url: "http://p2.music.126.net/oxP2XaJFDscDuGhGnO7beA==/7768049650386454.mp3",pic: "http://p4.music.126.net/obZy1mbYWFJtbyr26Q6Smg==/7749357952693832.jpg"}});aplayer2.init();</script></p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>通过https访问的音频文件测试<br><div id="aplayer0" class="aplayer" style="margin-bottom: 20px;"></div><script>var aplayer0 = new APlayer({element: document.getElementById("aplayer0"),narrow: false,autoplay: false,showlrc: 0,music : {title: "晴天",author: "刘瑞琦",url: "http://p2.music.126.net/oxP2XaJFDscDuGhGnO7beA==/7768049650386454.mp3",pic: "http://p4.music.126.net/obZy1mbYWFJtbyr26Q6Smg==/7749357952693832.jpg"}});aplayer0.init();</script></p>
 <h1 id="hexo-tag-dplayer"><a href="#hexo-tag-dplayer" class="headerlink" title="hexo-tag-dplayer"></a>hexo-tag-dplayer</h1><h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><p>安装<code>hexo-tag-aplayer</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-tag-dplayer --save</div></pre></td></tr></table></figure></p>
 <h2 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h2><p>使用aplayer<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% dplayer key=value ... %&#125;</div></pre></td></tr></table></figure></p>
 <p>其中，字段key可以是：</p>
@@ -104,9 +103,9 @@
 </ul>
 </blockquote>
 <p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;% dplayer &quot;url=http://devtest.qiniudn.com/若能绽放光芒.mp4&quot; &quot;api=http://dplayer.daoapp.io&quot; &quot;pic=http://devtest.qiniudn.com/若能绽放光芒.png&quot; &quot;id=9E2E3368B56CDBB4&quot; &quot;loop=yes&quot; &quot;theme=#FADFA3&quot; &quot;autoplay=false&quot; &quot;token=tokendemo&quot; %&#125;</div><div class="line">&#123;% dplayer &quot;url=http://devtest.qiniudn.com/若能绽放光芒.mp4&quot; &quot;api=http://dplayer.donot.help/dplayerpy&quot; &quot;pic=http://devtest.qiniudn.com/若能绽放光芒.png&quot; &quot;id=2622668&quot; &quot;loop=yes&quot; &quot;theme=#FADFA3&quot; &quot;autoplay=false&quot; &quot;width=233px&quot; %&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h2><p>视频文件插入效果如下：<br>资源文件夹下的视频文件测试<br><div id="dplayer1" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer1 = new DPlayer({"element":document.getElementById("dplayer1"),"video":{"url":"test.mp4"}});</script></p>
-<p>通过https访问的视频文件测试<br><div id="dplayer2" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer2 = new DPlayer({"element":document.getElementById("dplayer2"),"autoplay":false,"theme":"#FADFA3","loop":true,"video":{"url":"http://devtest.qiniudn.com/若能绽放光芒.mp4","pic":"http://devtest.qiniudn.com/若能绽放光芒.png"},"danmaku":{"api":"http://dplayer.daoapp.io","id":"9E2E3368B56CDBB4","token":"tokendemo"}});</script></p>
-<p>也完全可以去掉弹幕<br><div id="dplayer3" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer3 = new DPlayer({"element":document.getElementById("dplayer3"),"autoplay":false,"theme":"#FADFA3","loop":true,"video":{"url":"http://devtest.qiniudn.com/若能绽放光芒.mp4","pic":"http://devtest.qiniudn.com/若能绽放光芒.png"}});</script></p>
+<h2 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h2><p>资源文件夹下的视频文件测试<br><div id="dplayer0" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer0 = new DPlayer({"element":document.getElementById("dplayer0"),"video":{"url":"test.mp4"}});</script></p>
+<p>通过https访问的视频文件测试<br><div id="dplayer1" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer1 = new DPlayer({"element":document.getElementById("dplayer1"),"autoplay":false,"theme":"#FADFA3","loop":true,"video":{"url":"http://devtest.qiniudn.com/若能绽放光芒.mp4","pic":"http://devtest.qiniudn.com/若能绽放光芒.png"},"danmaku":{"api":"http://dplayer.daoapp.io","id":"9E2E3368B56CDBB4","token":"tokendemo"}});</script></p>
+<p>也完全可以去掉弹幕<br><div id="dplayer2" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer2 = new DPlayer({"element":document.getElementById("dplayer2"),"autoplay":false,"theme":"#FADFA3","loop":true,"video":{"url":"http://devtest.qiniudn.com/若能绽放光芒.mp4","pic":"http://devtest.qiniudn.com/若能绽放光芒.png"}});</script></p>
 <hr>
 <p><strong>感谢阅读，有任何意见或建议欢迎私信我或在评论区留言哦。</strong></p>
 ]]></content>
@@ -114,7 +113,7 @@
     
     <entry>
       <title><![CDATA[Audios and Videos in Hexo - Failed]]></title>
-      <url>http://yoursite.com/%5Bobject%20Object%5D/2016.9.26%20Attainments02%20Audios%20and%20Videos%20in%20Hexo%20-%20Failed/</url>
+      <url>http://yoursite.com/2016/09/26/2016.9.26%20Attainments02%20Audios%20and%20Videos%20in%20Hexo%20-%20Failed/</url>
       <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p><strong>前方<del>高能</del>打脸：这是一次失败的尝试！！！</strong></p>
 <h1 id="先睹为快"><a href="#先睹为快" class="headerlink" title="先睹为快"></a>先睹为快</h1><p>曲目：TARI TARI 心之旋律 钢琴独奏版<br>演奏者：豆沙团子AnDango（这只up主就是博主本人欢迎来勾搭<del>调教</del>）</p>
 <embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="http://static.hdslb.com/miniloader.swf" flashvars="aid=5974935&page=1" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"><br>
@@ -147,10 +146,10 @@
 <h2 id="其他方式"><a href="#其他方式" class="headerlink" title="其他方式"></a>其他方式</h2><h3 id="video标签"><a href="#video标签" class="headerlink" title="video标签"></a>video标签</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;video width=&quot;480&quot; height=&quot;320&quot; controls&gt;</div><div class="line">&lt;source src=&quot;http://mvvideo2.meitudata.com/56ea1220d2ca92407.mp4&quot;&gt;</div><div class="line">&lt;/video&gt;</div></pre></td></tr></table></figure>
 <h3 id="直接添加js代码"><a href="#直接添加js代码" class="headerlink" title="直接添加js代码"></a>直接添加js代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;http://www.xiami.com/widget/player-single?uid=32329501&amp;sid=1776238762&amp;mode=js&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
 <h1 id="本地调试"><a href="#本地调试" class="headerlink" title="本地调试"></a>本地调试</h1><p>最后，附上我在本地服务器端口调试时可以正常播放的截图。</p>
-<img src="/[object%20Object]/2016.9.26%20Attainments02%20Audios%20and%20Videos%20in%20Hexo%20-%20Failed/screenshot1.jpg" alt="使用embed插入的视频播放器" title="使用embed插入的视频播放器">
-<img src="/[object%20Object]/2016.9.26%20Attainments02%20Audios%20and%20Videos%20in%20Hexo%20-%20Failed/screenshot2.jpg" alt="使用embed插入的音频播放器" title="使用embed插入的音频播放器">
-<img src="/[object%20Object]/2016.9.26%20Attainments02%20Audios%20and%20Videos%20in%20Hexo%20-%20Failed/screenshot3.jpg" alt="使用iframe插入的音频播放器" title="使用iframe插入的音频播放器">
-<img src="/[object%20Object]/2016.9.26%20Attainments02%20Audios%20and%20Videos%20in%20Hexo%20-%20Failed/screenshot4.jpg" alt="使用iframe插入的音频播放器" title="使用iframe插入的音频播放器">
+<img src="/2016/09/26/2016.9.26%20Attainments02%20Audios%20and%20Videos%20in%20Hexo%20-%20Failed/screenshot1.jpg" alt="使用embed插入的视频播放器" title="使用embed插入的视频播放器">
+<img src="/2016/09/26/2016.9.26%20Attainments02%20Audios%20and%20Videos%20in%20Hexo%20-%20Failed/screenshot2.jpg" alt="使用embed插入的音频播放器" title="使用embed插入的音频播放器">
+<img src="/2016/09/26/2016.9.26%20Attainments02%20Audios%20and%20Videos%20in%20Hexo%20-%20Failed/screenshot3.jpg" alt="使用iframe插入的音频播放器" title="使用iframe插入的音频播放器">
+<img src="/2016/09/26/2016.9.26%20Attainments02%20Audios%20and%20Videos%20in%20Hexo%20-%20Failed/screenshot4.jpg" alt="使用iframe插入的音频播放器" title="使用iframe插入的音频播放器">
 <h1 id="后续解决方案"><a href="#后续解决方案" class="headerlink" title="后续解决方案"></a>后续解决方案</h1><p>请参见后一篇文章。</p>
 <hr>
 <p><strong>感谢阅读，有任何意见或建议欢迎私信我或在评论区留言哦。</strong></p>
@@ -159,7 +158,7 @@
     
     <entry>
       <title><![CDATA[WeChatApp Introduction and Demo]]></title>
-      <url>http://yoursite.com/%5Bobject%20Object%5D/2016.9.26%20Retweet01%20'WeChatApp'%20Demo/</url>
+      <url>http://yoursite.com/2016/09/26/2016.9.26%20Retweet01%20'WeChatApp'%20Demo/</url>
       <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h1 id="何为小程序？"><a href="#何为小程序？" class="headerlink" title="何为小程序？"></a>何为小程序？</h1><h2 id="推荐博文"><a href="#推荐博文" class="headerlink" title="推荐博文"></a>推荐博文</h2><blockquote><p>作为一个并不是资深的程序员。 从程序员的角度分析一下微信小程序，欢迎指点。</p>
 <footer><strong>于连林520wcf</strong><cite><a href="http://blog.csdn.net/yulianlin/article/details/52621413" target="_blank" rel="external">从程序员的角度分析微信小程序</a></cite></footer></blockquote>
 <h2 id="小程序的实现原理？？？"><a href="#小程序的实现原理？？？" class="headerlink" title="小程序的实现原理？？？"></a>小程序的实现原理？？？</h2><blockquote>
@@ -176,7 +175,7 @@
     
     <entry>
       <title><![CDATA[Introduction to Markdown]]></title>
-      <url>http://yoursite.com/%5Bobject%20Object%5D/2016.9.24%20Attainments01%20Introduction%20to%20Markdown/</url>
+      <url>http://yoursite.com/2016/09/24/2016.9.24%20Attainments01%20Introduction%20to%20Markdown/</url>
       <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h1 id="Markdown标记语言入门"><a href="#Markdown标记语言入门" class="headerlink" title="Markdown标记语言入门"></a>Markdown标记语言入门</h1><h2 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><ul>
 <li>1</li>
 <li>2</li>
@@ -308,7 +307,7 @@
 <p>通过这种方式，图片将会同时出现在文章和主页以及归档页中。</p>
 </blockquote>
 <p>另外，如果把<code>asset_img</code>标签替换为与之语法相似的<code>aplayer</code>和<code>dplayer</code>标签，即可实现把音频/视频文件引入到页面中。具体可以参见我后面的文章 <a href="https://andango.github.io/[object%20Object]/2016.9.27%20Attainments03%20Audios%20and%20Videos%20in%20Hexo%20-%20Fixed/" target="_blank" rel="external">Audios and Videos in Hexo - Fixed</a> 。</p>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="正常图片"><a href="#正常图片" class="headerlink" title="正常图片"></a>正常图片</h3><img src="/[object%20Object]/2016.9.24%20Attainments01%20Introduction%20to%20Markdown/FullSizeImageTest.jpg" alt="面码" title="面码">
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="正常图片"><a href="#正常图片" class="headerlink" title="正常图片"></a>正常图片</h3><img src="/2016/09/24/2016.9.24%20Attainments01%20Introduction%20to%20Markdown/FullSizeImageTest.jpg" alt="面码" title="面码">
 <h3 id="突破容器宽度限制的图片"><a href="#突破容器宽度限制的图片" class="headerlink" title="突破容器宽度限制的图片"></a>突破容器宽度限制的图片</h3><img src="FullSizeImageTest.jpg" class="full-image" alt="alt" title="面码">
 <h2 id="更多标签"><a href="#更多标签" class="headerlink" title="更多标签"></a>更多标签</h2><blockquote><p>标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。</p>
 <footer><strong>Hexo文档</strong><cite><a href="https://hexo.io/zh-cn/docs/tag-plugins.html" target="_blank" rel="external">标签插件（Tag Plugins）</a></cite></footer></blockquote>
