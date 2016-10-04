@@ -280,6 +280,155 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/04/2016.10.4 Database01 Connection Pools in Database Management/" itemprop="url">
+                  Connection Pools in Database Management
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-04T23:48:08+08:00" content="2016-10-04">
+              2016-10-04
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Database/" itemprop="url" rel="index">
+                    <span itemprop="name">Database</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/04/2016.10.4 Database01 Connection Pools in Database Management/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/04/2016.10.4 Database01 Connection Pools in Database Management/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="数据库的“池化管理”"><a href="#数据库的“池化管理”" class="headerlink" title="数据库的“池化管理”"></a>数据库的“池化管理”</h1><p>在<strong>TCP/IP网络编程</strong>课程中，老师提到了<code>池化管理</code>的概念，正好由于在最近的<strong>嵌入式系统课程设计</strong>中使用到了Java开源的数据库连接池<code>C3P0</code>,于是来探索一番池化管理是什么。</p>
+<p>本文探讨的是数据库技术中的池化管理。其他领域（如网络传输协议）中的池化管理会陆续补充。</p>
+<p>定义<br><blockquote><p>数据库连接池负责分配、管理和释放数据库连接，它允许应用程序重复使用一个现有的数据库连接，而不是再重新建立一个；释放空闲时间超过最大空闲时间的数据库连接来避免因为没有释放数据库连接而引起的数据库连接遗漏。这项技术能明显提高对数据库操作的性能。</p>
+<footer><strong>百度百科</strong><cite><a href="http://baike.baidu.com/link?url=JC8_LLM2NVErveyTgcWf8dfhmgRcH_HmQzsDMfW04egXtDOUC6ZBXC5yG2y2zTqSo3KL586q8i_uag-yvYP3R5D34et5pS-HjIGM00ETWe2ACRYCAoVbcAyIUWxi2wPsi6W_-d36diIEr4W24DCzOjOK1Yg7bZA97BphTirssuZJpP3I_nOz4mOo45BTVdhofSiuKjc9Q8xAzQdLXcnbhL8qbouDUoWVmA8OfiSAANm">数据库连接池</a></cite></footer></blockquote></p>
+<h1 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h1><p>连接池基本的思想是在系统初始化的时候，将数据库连接作为对象存储在内存中，当用户需要访问数据库时，并非建立一个新的连接，而是从连接池中取出一个已建立的空闲连接对象。使用完毕后，用户也并非将连接关闭，而是将连接放回连接池中，以供下一个请求访问使用。而连接的建立、断开都由连接池自身来管理。同时，还可以通过设置连接池的参数来控制连接池中的初始连接数、连接的上下限数以及每个连接的最大使用次数、最大空闲时间等等。也可以通过其自身的管理机制来监视数据库连接的数量、使用情况等。</p>
+<h1 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h1><ol>
+<li><p>资源重用<br>由于数据库连接得到重用，避免了频繁创建、释放连接引起的大量性能开销。在减少系统消耗的基础上，另一方面也增进了系统运行环境的平稳性（减少内存碎片以及数据库临时进程/线程的数量）。</p>
+</li>
+<li><p>更快的系统响应速度<br>数据库连接池在初始化过程中，往往已经创建了若干数据库连接置于池中备用。此时连接的初始化工作均已完成。对于业务请求处理而言，直接利用现有可用连接，避免了数据库连接初始化和释放过程的时间开销，从而缩减了系统整体响应时间。</p>
+</li>
+<li><p>新的资源分配手段<br>对于多应用共享同一数据库的系统而言，可在应用层通过数据库连接的配置，实现数据库连接池技术，几年钱也许还是个新鲜话题，对于目前的业务系统而言，如果设计中还没有考虑到连接池的应用，那么…….快在设计文档中加上这部分的内容吧。某一应用最大可用数据库连接数的限制，避免某一应用独占所有数据库资源。</p>
+</li>
+<li><p>统一的连接管理，避免数据库连接泄漏<br>在较为完备的数据库连接池实现中，可根据预先的连接占用超时设定，强制收回被占用连接。从而避免了常规数据库连接操作中可能出现的资源泄漏。一个最小化的数据库连接池实现：</p>
+</li>
+</ol>
+<h1 id="制约因素"><a href="#制约因素" class="headerlink" title="制约因素"></a>制约因素</h1><p>数据库连接池在初始化时将创建一定数量的数据库连接放到连接池中，这些数据库连接的数量是由最小数据库连接数制约。无论这些数据库连接是否被使用，连接池都将一直保证至少拥有这么多的连接数量。连接池的最大数据库连接数量限定了这个连接池能占有的最大连接数，当应用程序向连接池请求的连接数超过最大连接数量时，这些请求将被加入到等待队列中。数据库连接池的最小连接数和最大连接数的设置要考虑到下列几个因素：</p>
+<ol>
+<li>最小连接数<br>是连接池一直保持的数据库连接，所以如果应用程序对数据库连接的使用量不大，将会有大量的数据库连接资源被浪费。</li>
+<li>最大连接数<br>是连接池能申请的最大连接数，如果数据库连接请求超过此数，后面的数据库连接请求将被加入到等待队列中，这会影响之后的数据库操作。</li>
+<li>最小连接数与最大连接数差距<br>最小连接数与最大连接数相差太大，那么最先的连接请求将会获利，之后超过最小连接数量的连接请求等价于建立一个新的数据库连接。不过，这些大于最小连接数的数据库连接在使用完不会马上被释放，它将被放到连接池中等待重复使用或是空闲超时后被释放。</li>
+</ol>
+<h1 id="开源的Java连接池"><a href="#开源的Java连接池" class="headerlink" title="开源的Java连接池"></a>开源的Java连接池</h1><ol>
+<li>C3P0：是一个开放源代码的JDBC连接池，它在lib目录中与Hibernate一起发布，包括了实现jdbc3和jdbc2扩展规范说明的Connection 和Statement 池的DataSources 对象。</li>
+<li>Proxool：是一个Java SQL Driver驱动程序，提供了对选择的其它类型的驱动程序的连接池封装。可以非常简单的移植到现存的代码中，完全可配置，快速、成熟、健壮。可以透明地为现存的JDBC驱动程序增加连接池功能。</li>
+<li>Jakarta DBCP：DBCP是一个依赖Jakartacommons-pool对象池机制的数据库连接池。DBCP可以直接的在应用程序中使用。</li>
+<li>……</li>
+</ol>
+<h1 id="以C3P0为例的连接池应用"><a href="#以C3P0为例的连接池应用" class="headerlink" title="以C3P0为例的连接池应用"></a>以C3P0为例的连接池应用</h1>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/04/2016.10.4 Database01 Connection Pools in Database Management/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/10/02/2016.10.2 Algorithms01 Algorithms/" itemprop="url">
                   Algorithms
                 </a>
@@ -349,7 +498,7 @@
 
       
         
-          <p>博主开坑来记录最近学习算法过程中的体会。</p>
+          <p>开坑来记录最近学习算法过程中的体会。</p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/10/02/2016.10.2 Algorithms01 Algorithms/#more" rel="contents">
               阅读全文 &raquo;
@@ -1071,7 +1220,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1079,7 +1228,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1088,7 +1237,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
