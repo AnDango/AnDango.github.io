@@ -6,7 +6,7 @@
     <entry>
       <title><![CDATA[Connection Pools in Database Management]]></title>
       <url>http://yoursite.com/2016/10/04/2016.10.4%20Database01%20Connection%20Pools%20in%20Database%20Management/</url>
-      <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h1 id="数据库的“池化管理”"><a href="#数据库的“池化管理”" class="headerlink" title="数据库的“池化管理”"></a>数据库的“池化管理”</h1><p>在<strong>TCP/IP网络编程</strong>课程中，我接触到了<strong>池化管理</strong>的概念，正好由于在最近的<strong>嵌入式系统课程设计</strong>中使用到了Java的开源数据库连接池<code>C3P0</code>,于是来探索一番池化管理是什么。<br><em>本文探讨的是数据库技术中的池化管理。其他领域（如网络传输协议）中的池化管理会在后续文章中补充。</em></p>
+      <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><script src="/assets/js/DPlayer.min.js"> </script><h1 id="数据库的“池化管理”"><a href="#数据库的“池化管理”" class="headerlink" title="数据库的“池化管理”"></a>数据库的“池化管理”</h1><p>在<strong>TCP/IP网络编程</strong>课程中，我接触到了<strong>池化管理</strong>的概念，正好由于在最近的<strong>嵌入式系统课程设计</strong>中使用到了Java的开源数据库连接池<code>C3P0</code>,于是来探索一番池化管理是什么。<br><em>本文探讨的是数据库技术中的池化管理。其他领域（如网络传输协议）中的池化管理会在后续文章中补充。</em></p>
 <p>定义<br><blockquote><p>数据库连接池负责分配、管理和释放数据库连接，它允许应用程序重复使用一个现有的数据库连接，而不是再重新建立一个；释放空闲时间超过最大空闲时间的数据库连接来避免因为没有释放数据库连接而引起的数据库连接遗漏。这项技术能明显提高对数据库操作的性能。</p>
 <footer><strong>百度百科</strong><cite><a href="http://baike.baidu.com/link?url=JC8_LLM2NVErveyTgcWf8dfhmgRcH_HmQzsDMfW04egXtDOUC6ZBXC5yG2y2zTqSo3KL586q8i_uag-yvYP3R5D34et5pS-HjIGM00ETWe2ACRYCAoVbcAyIUWxi2wPsi6W_-d36diIEr4W24DCzOjOK1Yg7bZA97BphTirssuZJpP3I_nOz4mOo45BTVdhofSiuKjc9Q8xAzQdLXcnbhL8qbouDUoWVmA8OfiSAANm" target="_blank" rel="external">数据库连接池</a></cite></footer></blockquote><br><br></p>
 <h1 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h1><p>连接池基本的思想是在系统初始化的时候，将数据库连接作为对象存储在内存中，当用户需要访问数据库时，并非建立一个新的连接，而是<strong>从连接池中取出一个已建立的空闲连接对象</strong>。使用完毕后，用户也并非将连接关闭，而是<strong>将连接放回连接池中</strong>，以供下一个请求访问使用。而连接的建立、断开都由连接池自身来管理。另外，也可以通过其自身的管理机制来监视数据库连接的数量、使用情况等。</p>
@@ -56,28 +56,42 @@
       <url>http://yoursite.com/2016/10/02/2016.10.2%20Algorithms01%20Algorithms/</url>
       <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>开坑来记录最近学习算法过程中的体会。</p>
 <a id="more"></a>
-<h1 id="算法初步"><a href="#算法初步" class="headerlink" title="算法初步"></a>算法初步</h1><h2 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h2><p>计算复杂性理论<br><blockquote><p>计算复杂性理论（Computational complexity theory）所研究的资源中最常见的是时间（要通过多少步演算才能解决问题）和空间（在解决问题时需要多少内存）。其他资源亦可考虑，例如在并行计算中，需要多少并行处理器才能解决问题。<br>时间复杂度是指在计算机科学与工程领域完成一个算法所需要的时间，是衡量一个算法优劣的重要参数。时间复杂度越小，说明该算法效率越高，则该算法越有价值。<br>空间复杂度是指计算机科学领域完成一个算法所需要占用的存储空间，一般是输入参数的函数。它是算法优劣的重要度量指标，一般来说，空间复杂度越小，算法越好。我们假设有一个图灵机来解决某一类语言的某一问题，设有X个字（word）属于这个问题，把X放入这个图灵机的输入端，这个图灵机为解决此问题所需要的工作带格子数总和称为空间。<br>复杂度理论和可计算性理论不同，可计算性理论的重心在于问题能否解决，不管需要多少资源。而复杂性理论作为计算理论的分支，某种程度上被认为和算法理论是一种“矛”与“盾”的关系，即算法理论专注于设计有效的算法，而复杂性理论专注于理解为什么对于某类问题，不存在有效的算法。</p>
-<footer><strong>维基百科</strong><cite><a href="https://zh.wikipedia.org/wiki/%E8%A8%88%E7%AE%97%E8%A4%87%E9%9B%9C%E6%80%A7%E7%90%86%E8%AB%96" target="_blank" rel="external">计算复杂性理论</a></cite></footer></blockquote><br><br></p>
-<p>时间复杂度<br><blockquote><p>在计算机科学中，算法的时间复杂度是一个函数，它定量描述了该算法的运行时间。这是一个代表算法输入值的字符串的长度的函数。时间复杂度常用大O符号表述，不包括这个函数的低阶项和首项系数。使用这种方式时，时间复杂度可被称为是渐近的，亦即考察输入值大小趋近无穷时的情况。例如，如果一个算法对于任何大小为 n （必须比 $n_0$ 大）的输入，它至多需要 $5n^3 + 3n$ 的时间运行完毕，那么它的渐近时间复杂度是 O($n^3$)。</p>
-<footer><strong>维基百科</strong><cite><a href="https://zh.wikipedia.org/wiki/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6" target="_blank" rel="external">时间复杂度</a></cite></footer></blockquote><br><br></p>
-<ul>
-<li>意义：在实现之前预估算法所需要的资源</li>
-<li>记号：O</li>
-<li>时间复杂度：基本操作次数/汇编指令条数</li>
-<li>空间复杂度：占用内存字节（byte）数</li>
+<h1 id="算法初步"><a href="#算法初步" class="headerlink" title="算法初步"></a>算法初步</h1><h2 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h2><h3 id="计算复杂性理论"><a href="#计算复杂性理论" class="headerlink" title="计算复杂性理论"></a>计算复杂性理论</h3><blockquote><p>计算复杂性理论（Computational complexity theory）所研究的资源中最常见的是时间（要通过多少步演算才能解决问题）和空间（在解决问题时需要多少内存）。其他资源亦可考虑，例如在并行计算中，需要多少并行处理器才能解决问题。</p>
+<p>时间复杂度是指在计算机科学与工程领域完成一个算法所需要的时间，是衡量一个算法优劣的重要参数。时间复杂度越小，说明该算法效率越高，则该算法越有价值。</p>
+<p>空间复杂度是指计算机科学领域完成一个算法所需要占用的存储空间，一般是输入参数的函数。它是算法优劣的重要度量指标，一般来说，空间复杂度越小，算法越好。我们假设有一个图灵机来解决某一类语言的某一问题，设有X个字（word）属于这个问题，把X放入这个图灵机的输入端，这个图灵机为解决此问题所需要的工作带格子数总和称为空间。</p>
+<p>复杂度理论和可计算性理论不同，可计算性理论的重心在于问题能否解决，不管需要多少资源。而复杂性理论作为计算理论的分支，某种程度上被认为和算法理论是一种“矛”与“盾”的关系，即算法理论专注于设计有效的算法，而复杂性理论专注于理解为什么对于某类问题，不存在有效的算法。</p>
+<footer><strong>维基百科</strong><cite><a href="https://zh.wikipedia.org/wiki/%E8%A8%88%E7%AE%97%E8%A4%87%E9%9B%9C%E6%80%A7%E7%90%86%E8%AB%96" target="_blank" rel="external">计算复杂性理论</a></cite></footer></blockquote>
+<p><br></p>
+<h3 id="时间复杂度的定义"><a href="#时间复杂度的定义" class="headerlink" title="时间复杂度的定义"></a>时间复杂度的定义</h3><blockquote><p>在计算机科学中，算法的时间复杂度是一个函数，它定量描述了该算法的运行时间。这是一个代表算法输入值的字符串的长度的函数。<strong>时间复杂度常用大O符号表述</strong>，不包括这个函数的低阶项和首项系数。使用这种方式时，时间复杂度可被称为是<strong>渐近的</strong>，即考察<strong>输入值大小趋近无穷</strong>时的情况。</p>
+<p>例如，如果一个算法对于任何大小为 n （必须比 $n_0$ 大）的输入，它至多需要 $5n^3 + 3n$ 的时间运行完毕，那么它的渐近时间复杂度是 O($n^3$)。</p>
+<footer><strong>维基百科</strong><cite><a href="https://zh.wikipedia.org/wiki/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6" target="_blank" rel="external">时间复杂度</a></cite></footer></blockquote>
+<p><br></p>
+<h3 id="时间-空间复杂度的联系"><a href="#时间-空间复杂度的联系" class="headerlink" title="时间/空间复杂度的联系"></a>时间/空间复杂度的联系</h3><ul>
+<li>意义：在实现算法之前先估算它的效率/好坏</li>
+<li>时间复杂度的指标：基本操作次数/汇编指令条数</li>
+<li>空间复杂度的指标：占用内存字节（byte）数</li>
 <li>区别：空间可以再利用，时间不可以</li>
 <li>时空互换：哈希表/动态规划，以充分发挥硬件性能</li>
-<li>常见分析方法：数循环次数/均摊分析（KMP）/递归式（快排、归并排序）——主定理</li>
+<li>常见的复杂度分析方法：数循环次数/均摊分析（KMP）/递归式（快排、归并排序）主定理</li>
 </ul>
-<h3 id="常见复杂度"><a href="#常见复杂度" class="headerlink" title="常见复杂度"></a>常见复杂度</h3><h4 id="O-1"><a href="#O-1" class="headerlink" title="O(1)"></a>O(1)</h4><p>加减乘除、模运算、寻址</p>
+<h3 id="常见复杂度对应的算法"><a href="#常见复杂度对应的算法" class="headerlink" title="常见复杂度对应的算法"></a>常见复杂度对应的算法</h3><h4 id="O-1"><a href="#O-1" class="headerlink" title="O(1)"></a>O(1)</h4><p>加减乘除、模运算、寻址</p>
 <h4 id="O-logn"><a href="#O-logn" class="headerlink" title="O($logn$)"></a>O($logn$)</h4><p>二分运算、分治</p>
 <h4 id="O-n-1-2"><a href="#O-n-1-2" class="headerlink" title="O($n^{1/2}$)"></a>O($n^{1/2}$)</h4><p>枚举约数、判断素数</p>
-<h4 id="O-n"><a href="#O-n" class="headerlink" title="O(n)"></a>O(n)</h4><p>线性查找<br>一般是优化算法时间复杂度的<strong>下界</strong>。因为<strong>读入数据</strong>也是需要记录到复杂度中的。</p>
+<h4 id="O-n"><a href="#O-n" class="headerlink" title="O(n)"></a>O(n)</h4><p>线性查找<br>一般是优化算法时间复杂度的<strong>下界</strong>。因为<strong>读入数据</strong>也是需要计入复杂度的。</p>
 <h4 id="O-n-2"><a href="#O-n-2" class="headerlink" title="O($n^2$)"></a>O($n^2$)</h4><p>冒泡、选择排序、朴素最近点对</p>
 <h4 id="O-n-3"><a href="#O-n-3" class="headerlink" title="O($n^3$)"></a>O($n^3$)</h4><p>Floyd最短路径、普通矩阵乘法（可优化）</p>
-<h4 id="O-n-logn"><a href="#O-n-logn" class="headerlink" title="O($n{logn}$)"></a>O($n{logn}$)</h4><p>归并排序、快速排序、堆排序<br>基于<strong>比较</strong>的排序算法的时间复杂度下界。（每次对比两个元素，如果顺序有问题的话就交换）<br>证明：</p>
-<h1 id="栈、队列、并查集、哈希表"><a href="#栈、队列、并查集、哈希表" class="headerlink" title="栈、队列、并查集、哈希表"></a>栈、队列、并查集、哈希表</h1><h1 id="树和堆"><a href="#树和堆" class="headerlink" title="树和堆"></a>树和堆</h1><h1 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h1><h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><h1 id="深度优先和广度优先"><a href="#深度优先和广度优先" class="headerlink" title="深度优先和广度优先"></a>深度优先和广度优先</h1><h1 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a>贪心</h1><h1 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h1><h1 id="并发、大数据、分布式"><a href="#并发、大数据、分布式" class="headerlink" title="并发、大数据、分布式"></a>并发、大数据、分布式</h1><h1 id="博弈论、概率、数论"><a href="#博弈论、概率、数论" class="headerlink" title="博弈论、概率、数论"></a>博弈论、概率、数论</h1><hr>
-<p>最后，感谢<a href="https://www.julyedu.com/" target="_blank" rel="external">七月在线</a>的老师们提供的指导和干货！</p>
+<h4 id="O-n-logn"><a href="#O-n-logn" class="headerlink" title="O($n{logn}$)"></a>O($n{logn}$)</h4><p>归并排序、快速排序、堆排序<br>基于<strong>比较</strong>的排序算法的时间复杂度下界。（每次对比两个元素，如果顺序有问题的话就交换）<br>证明：<br>将1到n的自然数排序，某1次排序结果是$n!$种结果中的某1个；<br>排序过程中，每1次比较，都是在$n!$种结果中排除掉了某些（一半）不可能的答案；<br>1次比较最多可以排除掉的答案数量为：${n!}/2$；<br>假设要比较k次才能过获得正确的排序结果，则有：${2^k}&gt;n!$；<br>两边同时取对数：$k&gt;log(n!)$；<br>${n!}&lt;{n^n}$；<br>右边取对数，$log({n^n})=nlogn$；<br>所以最后得到近似结果：$k_{min}=nlogn$。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><h1 id="栈、队列、并查集、哈希表"><a href="#栈、队列、并查集、哈希表" class="headerlink" title="栈、队列、并查集、哈希表"></a>栈、队列、并查集、哈希表</h1><p>进度待推进。</p>
+<h1 id="树和堆"><a href="#树和堆" class="headerlink" title="树和堆"></a>树和堆</h1><p>进度待推进。</p>
+<h1 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h1><p>进度待推进。</p>
+<h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><p>进度待推进。</p>
+<h1 id="深度优先和广度优先"><a href="#深度优先和广度优先" class="headerlink" title="深度优先和广度优先"></a>深度优先和广度优先</h1><p>进度待推进。</p>
+<h1 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a>贪心</h1><p>进度待推进。</p>
+<h1 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h1><p>进度待推进。</p>
+<h1 id="并发、大数据、分布式"><a href="#并发、大数据、分布式" class="headerlink" title="并发、大数据、分布式"></a>并发、大数据、分布式</h1><p>进度待推进。</p>
+<h1 id="博弈论、概率、数论"><a href="#博弈论、概率、数论" class="headerlink" title="博弈论、概率、数论"></a>博弈论、概率、数论</h1><p>进度待推进。</p>
+<hr>
+<p>最后，感谢<a href="https://www.julyedu.com/" target="_blank" rel="external">七月在线</a>优秀的老师们提供的指导和干货！</p>
 <hr>
 <p><strong>感谢阅读，有任何意见或建议欢迎私信我或在评论区留言哦。</strong></p>
 ]]></content>
@@ -86,7 +100,7 @@
     <entry>
       <title><![CDATA[Image Hosting Service]]></title>
       <url>http://yoursite.com/2016/10/01/2016.10.1%20Attainments04%20Image%20Hosting%20Service/</url>
-      <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h1 id="什么是“网络相册”？"><a href="#什么是“网络相册”？" class="headerlink" title="什么是“网络相册”？"></a>什么是“网络相册”？</h1><h2 id="维基百科描述"><a href="#维基百科描述" class="headerlink" title="维基百科描述"></a>维基百科描述</h2><blockquote><p>网络相册，或叫在线相册，为运行、储存以及翻阅、分享于互联网的相册，由于在线相册不是实质的相册并且容易搜索、查阅以及保管，目前大部分照片为储存于在线相册中。<br>此外，用户还可以使用自己的网络空间以搭建自己的在线相册。由于Flickr这一机制的成功，越来越多的网站开始创建自己的在线相册以获取流量。另外，Flickr推行的利用TAG的内容管理机制也越来越多的被接受以及应用。<br>一般可外链的相册会给免费用户提供较少的月流量，成为付费用户之后，可外链流量将获得提升；也有网站专门提供免费外链服务（此类网站又称图床），不限流量。国外著名的可外链相册有Picasa、Flickr、photobucket、Imageshack；中国大陆的可外链相册有又拍网、Tu6等。</p>
+      <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><script src="/assets/js/DPlayer.min.js"> </script><h1 id="什么是“网络相册”？"><a href="#什么是“网络相册”？" class="headerlink" title="什么是“网络相册”？"></a>什么是“网络相册”？</h1><h2 id="维基百科描述"><a href="#维基百科描述" class="headerlink" title="维基百科描述"></a>维基百科描述</h2><blockquote><p>网络相册，或叫在线相册，为运行、储存以及翻阅、分享于互联网的相册，由于在线相册不是实质的相册并且容易搜索、查阅以及保管，目前大部分照片为储存于在线相册中。<br>此外，用户还可以使用自己的网络空间以搭建自己的在线相册。由于Flickr这一机制的成功，越来越多的网站开始创建自己的在线相册以获取流量。另外，Flickr推行的利用TAG的内容管理机制也越来越多的被接受以及应用。<br>一般可外链的相册会给免费用户提供较少的月流量，成为付费用户之后，可外链流量将获得提升；也有网站专门提供免费外链服务（此类网站又称图床），不限流量。国外著名的可外链相册有Picasa、Flickr、photobucket、Imageshack；中国大陆的可外链相册有又拍网、Tu6等。</p>
 <footer><strong>维基百科</strong><cite><a href="https://en.wikipedia.org/wiki/Image_hosting_service" target="_blank" rel="external">网络相册</a></cite></footer></blockquote>
 <p><br></p>
 <h1 id="为什么要使用网络相册（以下称为图床）？"><a href="#为什么要使用网络相册（以下称为图床）？" class="headerlink" title="为什么要使用网络相册（以下称为图床）？"></a>为什么要使用网络相册（以下称为图床）？</h1><p>其实，对于只写写Hexo博客的我（我们）来说，图床并不是必须的，毕竟博主完全可以把不是很大的图片/音频/视频文件直接丢到<code>/source</code>下面或者每篇文章对应的相对路径下面。<br>但是，<strong>日积月累，这些文件所占用的空间还是非常可观的！</strong>。<br>再加上，GitHub在是属于在翻墙过后食用更佳的网站，如果把图片全堆在自己的repository里，页面加载速度就更慢了。<br>考虑到需要更快的访问速度，同时也为了便于博客的迁移，图床是一个推荐的解决方案。</p>
@@ -104,7 +118,7 @@
     <entry>
       <title><![CDATA[Audios and Videos in Hexo - Fixed]]></title>
       <url>http://yoursite.com/2016/09/27/2016.9.27%20Attainments03%20Audios%20and%20Videos%20in%20Hexo%20-%20Fixed/</url>
-      <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在前一篇文章中，我尝试通过类似于下面这种方式来在我的Hexo页面中添加外链播放器：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">iframe</span> </span></div><div class="line">    <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> </div><div class="line">    <span class="attr">width</span>=<span class="string">298</span> <span class="attr">height</span>=<span class="string">52</span> </div><div class="line">    <span class="attr">src</span>=<span class="string">"http://music.163.com/outchain/player?type=2&amp;id=29744802&amp;auto=0&amp;height=32"</span>&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></div></pre></td></tr></table></figure></p>
+      <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><script src="/assets/js/DPlayer.min.js"> </script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在前一篇文章中，我尝试通过类似于下面这种方式来在我的Hexo页面中添加外链播放器：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">iframe</span> </span></div><div class="line">    <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> </div><div class="line">    <span class="attr">width</span>=<span class="string">298</span> <span class="attr">height</span>=<span class="string">52</span> </div><div class="line">    <span class="attr">src</span>=<span class="string">"http://music.163.com/outchain/player?type=2&amp;id=29744802&amp;auto=0&amp;height=32"</span>&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>在本地服务器端口<code>http://localhost:4000/</code>中测试时是完全正常的。<br>但是很可惜，由于</p>
 <blockquote>
 <p>gh-pages强制访问https，而<del>网易云音乐的外链播放器不支持https</del>（知乎能全信吗？）通过插入Html语言（使用flash）的方式中大部分是不支持https访问的。</p>
@@ -194,7 +208,7 @@
     <entry>
       <title><![CDATA[Audios and Videos in Hexo - Failed]]></title>
       <url>http://yoursite.com/2016/09/26/2016.9.26%20Attainments02%20Audios%20and%20Videos%20in%20Hexo%20-%20Failed/</url>
-      <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>声明：<strong>前方<del>高能</del>打脸：这是一次失败的尝试！！！</strong></p>
+      <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><script src="/assets/js/DPlayer.min.js"> </script><p>声明：<strong>前方<del>高能</del>打脸：这是一次失败的尝试！！！</strong></p>
 <h1 id="先睹为快"><a href="#先睹为快" class="headerlink" title="先睹为快"></a>先睹为快</h1><p>曲目：TARI TARI 心之旋律 钢琴独奏版<br>演奏者：豆沙团子AnDango（这只up主就是博主本人欢迎来勾搭<del>调教</del>）</p>
 <a id="more"></a>
 <embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="http://static.hdslb.com/miniloader.swf" flashvars="aid=5974935&page=1" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"><br>
@@ -240,7 +254,7 @@
     <entry>
       <title><![CDATA[Introduction to WeChatApp]]></title>
       <url>http://yoursite.com/2016/09/26/2016.9.26%20Retweet01%20Introduction%20to%20WeChatApp/</url>
-      <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h1 id="什么是微信应用号（小程序）"><a href="#什么是微信应用号（小程序）" class="headerlink" title="什么是微信应用号（小程序）"></a>什么是微信应用号（小程序）</h1><h2 id="推荐博文"><a href="#推荐博文" class="headerlink" title="推荐博文"></a>推荐博文</h2><blockquote><p>作为一个并不是资深的程序员。 从程序员的角度分析一下微信小程序，欢迎指点。</p>
+      <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><script src="/assets/js/DPlayer.min.js"> </script><h1 id="什么是微信应用号（小程序）"><a href="#什么是微信应用号（小程序）" class="headerlink" title="什么是微信应用号（小程序）"></a>什么是微信应用号（小程序）</h1><h2 id="推荐博文"><a href="#推荐博文" class="headerlink" title="推荐博文"></a>推荐博文</h2><blockquote><p>作为一个并不是资深的程序员。 从程序员的角度分析一下微信小程序，欢迎指点。</p>
 <footer><strong>于连林520wcf</strong><cite><a href="http://blog.csdn.net/yulianlin/article/details/52621413" target="_blank" rel="external">从程序员的角度分析微信小程序</a></cite></footer></blockquote>
 <h2 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h2><blockquote>
 <p>小程序原理就是用JS调用底层native组件，和React Native非常类似。恰恰又证明了，凡是能用JS开发的最终都会用JS开发。</p>
@@ -257,7 +271,7 @@
     <entry>
       <title><![CDATA[Introduction to Markdown]]></title>
       <url>http://yoursite.com/2016/09/24/2016.9.24%20Attainments01%20Introduction%20to%20Markdown/</url>
-      <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h1 id="Markdown标记语言入门"><a href="#Markdown标记语言入门" class="headerlink" title="Markdown标记语言入门"></a>Markdown标记语言入门</h1><h2 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><ul>
+      <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><script src="/assets/js/DPlayer.min.js"> </script><h1 id="Markdown标记语言入门"><a href="#Markdown标记语言入门" class="headerlink" title="Markdown标记语言入门"></a>Markdown标记语言入门</h1><h2 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><ul>
 <li>1</li>
 <li>2</li>
 <li>3</li>

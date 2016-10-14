@@ -94,7 +94,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/10/02/2016.10.2 Algorithms01 Algorithms/index.html">
 <meta property="og:site_name" content="AnDango's Home">
 <meta property="og:description" content="开坑来记录最近学习算法过程中的体会。">
-<meta property="og:updated_time" content="2016-10-13T17:11:51.806Z">
+<meta property="og:updated_time" content="2016-10-14T10:50:16.932Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Algorithms">
 <meta name="twitter:description" content="开坑来记录最近学习算法过程中的体会。">
@@ -351,28 +351,42 @@
       
         <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><p>开坑来记录最近学习算法过程中的体会。</p>
 <a id="more"></a>
-<h1 id="算法初步"><a href="#算法初步" class="headerlink" title="算法初步"></a>算法初步</h1><h2 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h2><p>计算复杂性理论<br><blockquote><p>计算复杂性理论（Computational complexity theory）所研究的资源中最常见的是时间（要通过多少步演算才能解决问题）和空间（在解决问题时需要多少内存）。其他资源亦可考虑，例如在并行计算中，需要多少并行处理器才能解决问题。<br>时间复杂度是指在计算机科学与工程领域完成一个算法所需要的时间，是衡量一个算法优劣的重要参数。时间复杂度越小，说明该算法效率越高，则该算法越有价值。<br>空间复杂度是指计算机科学领域完成一个算法所需要占用的存储空间，一般是输入参数的函数。它是算法优劣的重要度量指标，一般来说，空间复杂度越小，算法越好。我们假设有一个图灵机来解决某一类语言的某一问题，设有X个字（word）属于这个问题，把X放入这个图灵机的输入端，这个图灵机为解决此问题所需要的工作带格子数总和称为空间。<br>复杂度理论和可计算性理论不同，可计算性理论的重心在于问题能否解决，不管需要多少资源。而复杂性理论作为计算理论的分支，某种程度上被认为和算法理论是一种“矛”与“盾”的关系，即算法理论专注于设计有效的算法，而复杂性理论专注于理解为什么对于某类问题，不存在有效的算法。</p>
-<footer><strong>维基百科</strong><cite><a href="https://zh.wikipedia.org/wiki/%E8%A8%88%E7%AE%97%E8%A4%87%E9%9B%9C%E6%80%A7%E7%90%86%E8%AB%96" target="_blank" rel="external">计算复杂性理论</a></cite></footer></blockquote><br><br></p>
-<p>时间复杂度<br><blockquote><p>在计算机科学中，算法的时间复杂度是一个函数，它定量描述了该算法的运行时间。这是一个代表算法输入值的字符串的长度的函数。时间复杂度常用大O符号表述，不包括这个函数的低阶项和首项系数。使用这种方式时，时间复杂度可被称为是渐近的，亦即考察输入值大小趋近无穷时的情况。例如，如果一个算法对于任何大小为 n （必须比 $n_0$ 大）的输入，它至多需要 $5n^3 + 3n$ 的时间运行完毕，那么它的渐近时间复杂度是 O($n^3$)。</p>
-<footer><strong>维基百科</strong><cite><a href="https://zh.wikipedia.org/wiki/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6" target="_blank" rel="external">时间复杂度</a></cite></footer></blockquote><br><br></p>
-<ul>
-<li>意义：在实现之前预估算法所需要的资源</li>
-<li>记号：O</li>
-<li>时间复杂度：基本操作次数/汇编指令条数</li>
-<li>空间复杂度：占用内存字节（byte）数</li>
+<h1 id="算法初步"><a href="#算法初步" class="headerlink" title="算法初步"></a>算法初步</h1><h2 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度"></a>复杂度</h2><h3 id="计算复杂性理论"><a href="#计算复杂性理论" class="headerlink" title="计算复杂性理论"></a>计算复杂性理论</h3><blockquote><p>计算复杂性理论（Computational complexity theory）所研究的资源中最常见的是时间（要通过多少步演算才能解决问题）和空间（在解决问题时需要多少内存）。其他资源亦可考虑，例如在并行计算中，需要多少并行处理器才能解决问题。</p>
+<p>时间复杂度是指在计算机科学与工程领域完成一个算法所需要的时间，是衡量一个算法优劣的重要参数。时间复杂度越小，说明该算法效率越高，则该算法越有价值。</p>
+<p>空间复杂度是指计算机科学领域完成一个算法所需要占用的存储空间，一般是输入参数的函数。它是算法优劣的重要度量指标，一般来说，空间复杂度越小，算法越好。我们假设有一个图灵机来解决某一类语言的某一问题，设有X个字（word）属于这个问题，把X放入这个图灵机的输入端，这个图灵机为解决此问题所需要的工作带格子数总和称为空间。</p>
+<p>复杂度理论和可计算性理论不同，可计算性理论的重心在于问题能否解决，不管需要多少资源。而复杂性理论作为计算理论的分支，某种程度上被认为和算法理论是一种“矛”与“盾”的关系，即算法理论专注于设计有效的算法，而复杂性理论专注于理解为什么对于某类问题，不存在有效的算法。</p>
+<footer><strong>维基百科</strong><cite><a href="https://zh.wikipedia.org/wiki/%E8%A8%88%E7%AE%97%E8%A4%87%E9%9B%9C%E6%80%A7%E7%90%86%E8%AB%96" target="_blank" rel="external">计算复杂性理论</a></cite></footer></blockquote>
+<p><br></p>
+<h3 id="时间复杂度的定义"><a href="#时间复杂度的定义" class="headerlink" title="时间复杂度的定义"></a>时间复杂度的定义</h3><blockquote><p>在计算机科学中，算法的时间复杂度是一个函数，它定量描述了该算法的运行时间。这是一个代表算法输入值的字符串的长度的函数。<strong>时间复杂度常用大O符号表述</strong>，不包括这个函数的低阶项和首项系数。使用这种方式时，时间复杂度可被称为是<strong>渐近的</strong>，即考察<strong>输入值大小趋近无穷</strong>时的情况。</p>
+<p>例如，如果一个算法对于任何大小为 n （必须比 $n_0$ 大）的输入，它至多需要 $5n^3 + 3n$ 的时间运行完毕，那么它的渐近时间复杂度是 O($n^3$)。</p>
+<footer><strong>维基百科</strong><cite><a href="https://zh.wikipedia.org/wiki/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6" target="_blank" rel="external">时间复杂度</a></cite></footer></blockquote>
+<p><br></p>
+<h3 id="时间-空间复杂度的联系"><a href="#时间-空间复杂度的联系" class="headerlink" title="时间/空间复杂度的联系"></a>时间/空间复杂度的联系</h3><ul>
+<li>意义：在实现算法之前先估算它的效率/好坏</li>
+<li>时间复杂度的指标：基本操作次数/汇编指令条数</li>
+<li>空间复杂度的指标：占用内存字节（byte）数</li>
 <li>区别：空间可以再利用，时间不可以</li>
 <li>时空互换：哈希表/动态规划，以充分发挥硬件性能</li>
-<li>常见分析方法：数循环次数/均摊分析（KMP）/递归式（快排、归并排序）——主定理</li>
+<li>常见的复杂度分析方法：数循环次数/均摊分析（KMP）/递归式（快排、归并排序）主定理</li>
 </ul>
-<h3 id="常见复杂度"><a href="#常见复杂度" class="headerlink" title="常见复杂度"></a>常见复杂度</h3><h4 id="O-1"><a href="#O-1" class="headerlink" title="O(1)"></a>O(1)</h4><p>加减乘除、模运算、寻址</p>
+<h3 id="常见复杂度对应的算法"><a href="#常见复杂度对应的算法" class="headerlink" title="常见复杂度对应的算法"></a>常见复杂度对应的算法</h3><h4 id="O-1"><a href="#O-1" class="headerlink" title="O(1)"></a>O(1)</h4><p>加减乘除、模运算、寻址</p>
 <h4 id="O-logn"><a href="#O-logn" class="headerlink" title="O($logn$)"></a>O($logn$)</h4><p>二分运算、分治</p>
 <h4 id="O-n-1-2"><a href="#O-n-1-2" class="headerlink" title="O($n^{1/2}$)"></a>O($n^{1/2}$)</h4><p>枚举约数、判断素数</p>
-<h4 id="O-n"><a href="#O-n" class="headerlink" title="O(n)"></a>O(n)</h4><p>线性查找<br>一般是优化算法时间复杂度的<strong>下界</strong>。因为<strong>读入数据</strong>也是需要记录到复杂度中的。</p>
+<h4 id="O-n"><a href="#O-n" class="headerlink" title="O(n)"></a>O(n)</h4><p>线性查找<br>一般是优化算法时间复杂度的<strong>下界</strong>。因为<strong>读入数据</strong>也是需要计入复杂度的。</p>
 <h4 id="O-n-2"><a href="#O-n-2" class="headerlink" title="O($n^2$)"></a>O($n^2$)</h4><p>冒泡、选择排序、朴素最近点对</p>
 <h4 id="O-n-3"><a href="#O-n-3" class="headerlink" title="O($n^3$)"></a>O($n^3$)</h4><p>Floyd最短路径、普通矩阵乘法（可优化）</p>
-<h4 id="O-n-logn"><a href="#O-n-logn" class="headerlink" title="O($n{logn}$)"></a>O($n{logn}$)</h4><p>归并排序、快速排序、堆排序<br>基于<strong>比较</strong>的排序算法的时间复杂度下界。（每次对比两个元素，如果顺序有问题的话就交换）<br>证明：</p>
-<h1 id="栈、队列、并查集、哈希表"><a href="#栈、队列、并查集、哈希表" class="headerlink" title="栈、队列、并查集、哈希表"></a>栈、队列、并查集、哈希表</h1><h1 id="树和堆"><a href="#树和堆" class="headerlink" title="树和堆"></a>树和堆</h1><h1 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h1><h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><h1 id="深度优先和广度优先"><a href="#深度优先和广度优先" class="headerlink" title="深度优先和广度优先"></a>深度优先和广度优先</h1><h1 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a>贪心</h1><h1 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h1><h1 id="并发、大数据、分布式"><a href="#并发、大数据、分布式" class="headerlink" title="并发、大数据、分布式"></a>并发、大数据、分布式</h1><h1 id="博弈论、概率、数论"><a href="#博弈论、概率、数论" class="headerlink" title="博弈论、概率、数论"></a>博弈论、概率、数论</h1><hr>
-<p>最后，感谢<a href="https://www.julyedu.com/" target="_blank" rel="external">七月在线</a>的老师们提供的指导和干货！</p>
+<h4 id="O-n-logn"><a href="#O-n-logn" class="headerlink" title="O($n{logn}$)"></a>O($n{logn}$)</h4><p>归并排序、快速排序、堆排序<br>基于<strong>比较</strong>的排序算法的时间复杂度下界。（每次对比两个元素，如果顺序有问题的话就交换）<br>证明：<br>将1到n的自然数排序，某1次排序结果是$n!$种结果中的某1个；<br>排序过程中，每1次比较，都是在$n!$种结果中排除掉了某些（一半）不可能的答案；<br>1次比较最多可以排除掉的答案数量为：${n!}/2$；<br>假设要比较k次才能过获得正确的排序结果，则有：${2^k}&gt;n!$；<br>两边同时取对数：$k&gt;log(n!)$；<br>${n!}&lt;{n^n}$；<br>右边取对数，$log({n^n})=nlogn$；<br>所以最后得到近似结果：$k_{min}=nlogn$。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><h1 id="栈、队列、并查集、哈希表"><a href="#栈、队列、并查集、哈希表" class="headerlink" title="栈、队列、并查集、哈希表"></a>栈、队列、并查集、哈希表</h1><p>进度待推进。</p>
+<h1 id="树和堆"><a href="#树和堆" class="headerlink" title="树和堆"></a>树和堆</h1><p>进度待推进。</p>
+<h1 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h1><p>进度待推进。</p>
+<h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><p>进度待推进。</p>
+<h1 id="深度优先和广度优先"><a href="#深度优先和广度优先" class="headerlink" title="深度优先和广度优先"></a>深度优先和广度优先</h1><p>进度待推进。</p>
+<h1 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a>贪心</h1><p>进度待推进。</p>
+<h1 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h1><p>进度待推进。</p>
+<h1 id="并发、大数据、分布式"><a href="#并发、大数据、分布式" class="headerlink" title="并发、大数据、分布式"></a>并发、大数据、分布式</h1><p>进度待推进。</p>
+<h1 id="博弈论、概率、数论"><a href="#博弈论、概率、数论" class="headerlink" title="博弈论、概率、数论"></a>博弈论、概率、数论</h1><p>进度待推进。</p>
+<hr>
+<p>最后，感谢<a href="https://www.julyedu.com/" target="_blank" rel="external">七月在线</a>优秀的老师们提供的指导和干货！</p>
 <hr>
 <p><strong>感谢阅读，有任何意见或建议欢迎私信我或在评论区留言哦。</strong></p>
 
@@ -608,7 +622,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#算法初步"><span class="nav-number">1.</span> <span class="nav-text">算法初步</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#复杂度"><span class="nav-number">1.1.</span> <span class="nav-text">复杂度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常见复杂度"><span class="nav-number">1.1.1.</span> <span class="nav-text">常见复杂度</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#O-1"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">O(1)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#O-logn"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">O($logn$)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#O-n-1-2"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">O($n^{1/2}$)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#O-n"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">O(n)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#O-n-2"><span class="nav-number">1.1.1.5.</span> <span class="nav-text">O($n^2$)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#O-n-3"><span class="nav-number">1.1.1.6.</span> <span class="nav-text">O($n^3$)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#O-n-logn"><span class="nav-number">1.1.1.7.</span> <span class="nav-text">O($n{logn}$)</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#栈、队列、并查集、哈希表"><span class="nav-number">2.</span> <span class="nav-text">栈、队列、并查集、哈希表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#树和堆"><span class="nav-number">3.</span> <span class="nav-text">树和堆</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图论"><span class="nav-number">4.</span> <span class="nav-text">图论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#递归"><span class="nav-number">5.</span> <span class="nav-text">递归</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#深度优先和广度优先"><span class="nav-number">6.</span> <span class="nav-text">深度优先和广度优先</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#贪心"><span class="nav-number">7.</span> <span class="nav-text">贪心</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#动态规划"><span class="nav-number">8.</span> <span class="nav-text">动态规划</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#并发、大数据、分布式"><span class="nav-number">9.</span> <span class="nav-text">并发、大数据、分布式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#博弈论、概率、数论"><span class="nav-number">10.</span> <span class="nav-text">博弈论、概率、数论</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#算法初步"><span class="nav-number">1.</span> <span class="nav-text">算法初步</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#复杂度"><span class="nav-number">1.1.</span> <span class="nav-text">复杂度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#计算复杂性理论"><span class="nav-number">1.1.1.</span> <span class="nav-text">计算复杂性理论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时间复杂度的定义"><span class="nav-number">1.1.2.</span> <span class="nav-text">时间复杂度的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#时间-空间复杂度的联系"><span class="nav-number">1.1.3.</span> <span class="nav-text">时间/空间复杂度的联系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见复杂度对应的算法"><span class="nav-number">1.1.4.</span> <span class="nav-text">常见复杂度对应的算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#O-1"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">O(1)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#O-logn"><span class="nav-number">1.1.4.2.</span> <span class="nav-text">O($logn$)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#O-n-1-2"><span class="nav-number">1.1.4.3.</span> <span class="nav-text">O($n^{1/2}$)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#O-n"><span class="nav-number">1.1.4.4.</span> <span class="nav-text">O(n)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#O-n-2"><span class="nav-number">1.1.4.5.</span> <span class="nav-text">O($n^2$)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#O-n-3"><span class="nav-number">1.1.4.6.</span> <span class="nav-text">O($n^3$)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#O-n-logn"><span class="nav-number">1.1.4.7.</span> <span class="nav-text">O($n{logn}$)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">1.1.5.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#栈、队列、并查集、哈希表"><span class="nav-number">2.</span> <span class="nav-text">栈、队列、并查集、哈希表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#树和堆"><span class="nav-number">3.</span> <span class="nav-text">树和堆</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图论"><span class="nav-number">4.</span> <span class="nav-text">图论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#递归"><span class="nav-number">5.</span> <span class="nav-text">递归</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#深度优先和广度优先"><span class="nav-number">6.</span> <span class="nav-text">深度优先和广度优先</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#贪心"><span class="nav-number">7.</span> <span class="nav-text">贪心</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#动态规划"><span class="nav-number">8.</span> <span class="nav-text">动态规划</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#并发、大数据、分布式"><span class="nav-number">9.</span> <span class="nav-text">并发、大数据、分布式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#博弈论、概率、数论"><span class="nav-number">10.</span> <span class="nav-text">博弈论、概率、数论</span></a></li></ol></div>
             
           </div>
         </section>
