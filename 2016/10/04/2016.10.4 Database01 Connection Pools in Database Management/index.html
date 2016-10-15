@@ -352,7 +352,7 @@
       
 
       
-        <script src="/assets/js/APlayer.min.js"> </script><script src="/assets/js/DPlayer.min.js"> </script><h1 id="数据库的“池化管理”"><a href="#数据库的“池化管理”" class="headerlink" title="数据库的“池化管理”"></a>数据库的“池化管理”</h1><p>在<strong>TCP/IP网络编程</strong>课程中，我接触到了<strong>池化管理</strong>的概念，正好由于在最近的<strong>嵌入式系统课程设计</strong>中使用到了Java的开源数据库连接池<code>C3P0</code>,于是来探索一番池化管理是什么。<br><em>本文探讨的是数据库技术中的池化管理。其他领域（如网络传输协议）中的池化管理会在后续文章中补充。</em></p>
+        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h1 id="数据库的“池化管理”"><a href="#数据库的“池化管理”" class="headerlink" title="数据库的“池化管理”"></a>数据库的“池化管理”</h1><p>在<strong>TCP/IP网络编程</strong>课程中，我接触到了<strong>池化管理</strong>的概念，正好由于在最近的<strong>嵌入式系统课程设计</strong>中使用到了Java的开源数据库连接池<code>C3P0</code>,于是来探索一番池化管理是什么。<br><em>本文探讨的是数据库技术中的池化管理。其他领域（如网络传输协议）中的池化管理会在后续文章中补充。</em></p>
 <p>定义<br><blockquote><p>数据库连接池负责分配、管理和释放数据库连接，它允许应用程序重复使用一个现有的数据库连接，而不是再重新建立一个；释放空闲时间超过最大空闲时间的数据库连接来避免因为没有释放数据库连接而引起的数据库连接遗漏。这项技术能明显提高对数据库操作的性能。</p>
 <footer><strong>百度百科</strong><cite><a href="http://baike.baidu.com/link?url=JC8_LLM2NVErveyTgcWf8dfhmgRcH_HmQzsDMfW04egXtDOUC6ZBXC5yG2y2zTqSo3KL586q8i_uag-yvYP3R5D34et5pS-HjIGM00ETWe2ACRYCAoVbcAyIUWxi2wPsi6W_-d36diIEr4W24DCzOjOK1Yg7bZA97BphTirssuZJpP3I_nOz4mOo45BTVdhofSiuKjc9Q8xAzQdLXcnbhL8qbouDUoWVmA8OfiSAANm" target="_blank" rel="external">数据库连接池</a></cite></footer></blockquote><br><br></p>
 <h1 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h1><p>连接池基本的思想是在系统初始化的时候，将数据库连接作为对象存储在内存中，当用户需要访问数据库时，并非建立一个新的连接，而是<strong>从连接池中取出一个已建立的空闲连接对象</strong>。使用完毕后，用户也并非将连接关闭，而是<strong>将连接放回连接池中</strong>，以供下一个请求访问使用。而连接的建立、断开都由连接池自身来管理。另外，也可以通过其自身的管理机制来监视数据库连接的数量、使用情况等。</p>
@@ -643,7 +643,7 @@
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv">访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人</span>
+    <span class="site-uv">总访客数<span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人</span>
   
 
   
