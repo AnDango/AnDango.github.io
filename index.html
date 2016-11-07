@@ -280,8 +280,135 @@
             
               
                 
-                <a class="post-title-link" href="/2016/10/04/2016.10.4 Database01 Connection Pools in Database Management/" itemprop="url">
-                  Connection Pools in Database Management
+                <a class="post-title-link" href="/2016/11/07/2016.11.7 OperatingSystem01 Thread Pools/" itemprop="url">
+                  Thread Pools
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-07T22:13:00+08:00" content="2016-11-07">
+              2016-11-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Operating-System/" itemprop="url" rel="index">
+                    <span itemprop="name">Operating System</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/07/2016.11.7 OperatingSystem01 Thread Pools/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/07/2016.11.7 OperatingSystem01 Thread Pools/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="多线程程序设计中的“池化管理”"><a href="#多线程程序设计中的“池化管理”" class="headerlink" title="多线程程序设计中的“池化管理”"></a>多线程程序设计中的“池化管理”</h1><p>紧接着上一篇，本文来探讨多线程程序设计中的“线程池”。<br><em>这一技术，在网络程序设计中也有着非常重要的地位。</em></p>
+<p>定义<br><blockquote><p>线程池是一种多线程处理形式，处理过程中将任务添加到队列，然后在创建线程后自动启动这些任务。线程池线程都是后台线程。每个线程都使用默认的堆栈大小，以默认的优先级运行，并处于多线程单元中。如果某个线程在托管代码中空闲（如正在等待某个事件）,则线程池将插入另一个辅助线程来使所有处理器保持繁忙。如果所有线程池线程都始终保持繁忙，但队列中包含挂起的工作，则线程池将在一段时间后创建另一个辅助线程但线程的数目永远不会超过最大值。超过最大值的线程可以排队，但他们要等到其他线程完成后才启动。</p>
+<footer><strong>百度百科</strong><cite><a href="http://baike.baidu.com/link?url=x1yw-zgRvU_zA_Xschb1AGOK6SCP6WAenkycnSNgQoihPBGJ2m-1MMq9JoP5eTSK9F5ORjynXCKXCsEgikGgFlzUNEaPT3swJ-_mdHeWy3yKEcOch0J6USXH7EzloF8t">线程池</a></cite></footer></blockquote><br><br/></p>
+<h1 id="深究“资源池化”这一思想的技术背景"><a href="#深究“资源池化”这一思想的技术背景" class="headerlink" title="深究“资源池化”这一思想的技术背景"></a>深究“资源池化”这一思想的技术背景</h1><p>在<strong>面向对象编程</strong>中，创建和销毁对象是很费时间的，因为创建一个对象要获取内存资源或者其它更多资源。在Java中更是如此，虚拟机将试图跟踪每一个对象，以便能够在对象销毁后进行垃圾回收。所以<strong>提高服务程序效率的一个手段就是尽可能减少创建和销毁对象的次数，特别是一些很耗资源的对象创建和销毁</strong>。<br>如何利用已有对象来服务就是一个需要解决的关键问题，其实这就是一些”池化资源”技术产生的原因。</p>
+<h1 id="多线程技术"><a href="#多线程技术" class="headerlink" title="多线程技术"></a>多线程技术</h1><p>多线程技术主要解决处理器单元内多个线程执行的问题，它可以显著减少处理器单元的闲置时间，增加处理器单元的吞吐能力。<br>假设一个服务器完成一项任务所需时间分为3个部分——<strong>T1：创建线程时间</strong>，<strong>T2：在线程中执行任务的时间</strong>，<strong>T3：销毁线程时间</strong>。<br>如果：<strong>T1 + T3 远大于 T2</strong>，则可以采用线程池，以提高服务器性能。</p>
+<h1 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h1><p>线程池技术正是关注如何缩短或调整T1以及T3时间的技术，从而提高服务器程序性能的。<br>它<strong>把T1和T3分别安排在服务器程序的启动和结束的时间段或者一些空闲的时间段</strong>，这样在服务器程序处理客户请求时，便不会有T1和T3的开销了。</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/11/07/2016.11.7 OperatingSystem01 Thread Pools/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/10/04/2016.10.4 Database01 Database Connection Pools/" itemprop="url">
+                  Database Connection Pools
                 </a>
               
             
@@ -324,8 +451,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/10/04/2016.10.4 Database01 Connection Pools in Database Management/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/04/2016.10.4 Database01 Connection Pools in Database Management/" itemprop="commentsCount"></span>
+                <a href="/2016/10/04/2016.10.4 Database01 Database Connection Pools/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/04/2016.10.4 Database01 Database Connection Pools/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -349,7 +476,7 @@
 
       
         
-          <h1 id="数据库的“池化管理”"><a href="#数据库的“池化管理”" class="headerlink" title="数据库的“池化管理”"></a>数据库的“池化管理”</h1><p>在<strong>TCP/IP网络编程</strong>课程中，我接触到了<strong>池化管理</strong>的概念，正好由于在最近的<strong>嵌入式系统课程设计</strong>中使用到了Java的开源数据库连接池<code>C3P0</code>,于是来探索一番池化管理是什么。<br><em>本文探讨的是数据库技术中的池化管理。其他领域（如网络传输协议）中的池化管理会在后续文章中补充。</em></p>
+          <h1 id="数据库的“池化管理”"><a href="#数据库的“池化管理”" class="headerlink" title="数据库的“池化管理”"></a>数据库的“池化管理”</h1><p>池化管理，是程序设计中一个非常重要的思想。目前我了解到的池化管理有数据库的<strong>连接池</strong>、多线程程序设计中的<strong>线程池</strong>。<br><em>本文探讨的是数据库的池化管理，其他会在后续的文章中补充。</em></p>
 <p>定义<br><blockquote><p>数据库连接池负责分配、管理和释放数据库连接，它允许应用程序重复使用一个现有的数据库连接，而不是再重新建立一个；释放空闲时间超过最大空闲时间的数据库连接来避免因为没有释放数据库连接而引起的数据库连接遗漏。这项技术能明显提高对数据库操作的性能。</p>
 <footer><strong>百度百科</strong><cite><a href="http://baike.baidu.com/link?url=JC8_LLM2NVErveyTgcWf8dfhmgRcH_HmQzsDMfW04egXtDOUC6ZBXC5yG2y2zTqSo3KL586q8i_uag-yvYP3R5D34et5pS-HjIGM00ETWe2ACRYCAoVbcAyIUWxi2wPsi6W_-d36diIEr4W24DCzOjOK1Yg7bZA97BphTirssuZJpP3I_nOz4mOo45BTVdhofSiuKjc9Q8xAzQdLXcnbhL8qbouDUoWVmA8OfiSAANm">数据库连接池</a></cite></footer></blockquote><br><br/></p>
 <h1 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h1><p>连接池基本的思想是在系统初始化的时候，将数据库连接作为对象存储在内存中，当用户需要访问数据库时，并非建立一个新的连接，而是<strong>从连接池中取出一个已建立的空闲连接对象</strong>。使用完毕后，用户也并非将连接关闭，而是<strong>将连接放回连接池中</strong>，以供下一个请求访问使用。而连接的建立、断开都由连接池自身来管理。另外，也可以通过其自身的管理机制来监视数据库连接的数量、使用情况等。</p>
@@ -361,7 +488,7 @@
 <li>最大空闲时间</li>
 </ul>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/10/04/2016.10.4 Database01 Connection Pools in Database Management/#more" rel="contents">
+            <a class="btn" href="/2016/10/04/2016.10.4 Database01 Database Connection Pools/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -766,129 +893,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/26/2016.9.26 Attainments02 Audios and Videos in Hexo - Failed/" itemprop="url">
-                  Audios and Videos in Hexo - Failed
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-26T22:43:21+08:00" content="2016-09-26">
-              2016-09-26
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Attainments/" itemprop="url" rel="index">
-                    <span itemprop="name">Attainments</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/26/2016.9.26 Attainments02 Audios and Videos in Hexo - Failed/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/26/2016.9.26 Attainments02 Audios and Videos in Hexo - Failed/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>声明：<strong>前方<del>高能</del>打脸：这是一次失败的尝试！！！</strong></p>
-<h1 id="先睹为快"><a href="#先睹为快" class="headerlink" title="先睹为快"></a>先睹为快</h1><p>曲目：TARI TARI 心之旋律 钢琴独奏版<br>演奏者：豆沙团子AnDango（这只up主就是博主本人欢迎来勾搭<del>调教</del>）</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/09/26/2016.9.26 Attainments02 Audios and Videos in Hexo - Failed/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -934,7 +938,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -942,7 +946,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -951,7 +955,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
