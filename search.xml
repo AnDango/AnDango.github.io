@@ -4,6 +4,16 @@
   
     
     <entry>
+      <title><![CDATA[GitHub入门手册]]></title>
+      <url>http://yoursite.com/2017/03/05/2017.3.5%20Attainments05%20GitHub%E5%85%A5%E9%97%A8%E6%89%8B%E5%86%8C/</url>
+      <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>用了快一年的GitHub，只是搭建一个blog，没有<strong>真正意义</strong>上地使用过任何核心功能。所以，今天来入坑，听说这能激励自己高产代码？</p>
+<h1 id="GitHub简介"><a href="#GitHub简介" class="headerlink" title="GitHub简介"></a>GitHub简介</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<hr>
+<p><strong>感谢阅读，有任何意见或建议欢迎私信我或在评论区留言哦。</strong></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[数据库池化管理]]></title>
       <url>http://yoursite.com/2016/10/04/2016.10.4%20Database01%20%E6%95%B0%E6%8D%AE%E5%BA%93%E6%B1%A0%E5%8C%96%E7%AE%A1%E7%90%86/</url>
       <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h1 id="数据库的“池化管理”"><a href="#数据库的“池化管理”" class="headerlink" title="数据库的“池化管理”"></a>数据库的“池化管理”</h1><p>池化管理，是程序设计中一个非常重要的思想。目前我了解到的池化管理有数据库的<strong>连接池</strong>、多线程程序设计中的<strong>线程池</strong>。<br><em>本文探讨的是数据库的池化管理，其他会在后续的文章中补充。</em></p>

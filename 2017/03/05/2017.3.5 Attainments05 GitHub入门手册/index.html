@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="视频,音频,外链播放器,前端," />
+  <meta name="keywords" content="GitHub,Git,版本控制,开源项目," />
 
 
 
@@ -88,16 +88,25 @@
 
 
 
-<meta name="description" content="前言在前一篇文章中，我尝试通过类似于下面这种方式来在我的Hexo页面中添加外链播放器：12345&amp;lt;iframe     frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot;     width=298 height=52     src=&quot;http://music.163.com/outchain/player?type=2">
+<meta name="description" content="写在前面用了快一年的GitHub，只是搭建一个blog，没有真正意义上地使用过任何核心功能。所以，今天来入坑，听说这能激励自己高产代码？
+GitHub简介12
+
+感谢阅读，有任何意见或建议欢迎私信我或在评论区留言哦。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo中的音频与视频 - 修复">
-<meta property="og:url" content="http://yoursite.com/2016/09/27/2016.9.27 Attainments03 Hexo中的音频与视频 - 修复/index.html">
+<meta property="og:title" content="GitHub入门手册">
+<meta property="og:url" content="http://yoursite.com/2017/03/05/2017.3.5 Attainments05 GitHub入门手册/index.html">
 <meta property="og:site_name" content="AnDango's Blog">
-<meta property="og:description" content="前言在前一篇文章中，我尝试通过类似于下面这种方式来在我的Hexo页面中添加外链播放器：12345&amp;lt;iframe     frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot;     width=298 height=52     src=&quot;http://music.163.com/outchain/player?type=2">
-<meta property="og:updated_time" content="2017-03-05T08:23:17.141Z">
+<meta property="og:description" content="写在前面用了快一年的GitHub，只是搭建一个blog，没有真正意义上地使用过任何核心功能。所以，今天来入坑，听说这能激励自己高产代码？
+GitHub简介12
+
+感谢阅读，有任何意见或建议欢迎私信我或在评论区留言哦。">
+<meta property="og:updated_time" content="2017-03-05T08:53:01.381Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo中的音频与视频 - 修复">
-<meta name="twitter:description" content="前言在前一篇文章中，我尝试通过类似于下面这种方式来在我的Hexo页面中添加外链播放器：12345&amp;lt;iframe     frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot;     width=298 height=52     src=&quot;http://music.163.com/outchain/player?type=2">
+<meta name="twitter:title" content="GitHub入门手册">
+<meta name="twitter:description" content="写在前面用了快一年的GitHub，只是搭建一个blog，没有真正意义上地使用过任何核心功能。所以，今天来入坑，听说这能激励自己高产代码？
+GitHub简介12
+
+感谢阅读，有任何意见或建议欢迎私信我或在评论区留言哦。">
 
 
 
@@ -115,7 +124,7 @@
   };
 </script>
 
-  <title> Hexo中的音频与视频 - 修复 | AnDango's Blog </title>
+  <title> GitHub入门手册 | AnDango's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -278,7 +287,7 @@
             
             
               
-                Hexo中的音频与视频 - 修复
+                GitHub入门手册
               
             
           </h1>
@@ -290,8 +299,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-27T12:37:21+08:00" content="2016-09-27">
-              2016-09-27
+            <time itemprop="dateCreated" datetime="2017-03-05T16:49:08+08:00" content="2017-03-05">
+              2017-03-05
             </time>
           </span>
 
@@ -320,8 +329,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/09/27/2016.9.27 Attainments03 Hexo中的音频与视频 - 修复/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/27/2016.9.27 Attainments03 Hexo中的音频与视频 - 修复/" itemprop="commentsCount"></span>
+                <a href="/2017/03/05/2017.3.5 Attainments05 GitHub入门手册/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/05/2017.3.5 Attainments05 GitHub入门手册/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -349,88 +358,8 @@
       
 
       
-        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在前一篇文章中，我尝试通过类似于下面这种方式来在我的Hexo页面中添加外链播放器：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">iframe</span> </span></div><div class="line">    <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> </div><div class="line">    <span class="attr">width</span>=<span class="string">298</span> <span class="attr">height</span>=<span class="string">52</span> </div><div class="line">    <span class="attr">src</span>=<span class="string">"http://music.163.com/outchain/player?type=2&amp;id=29744802&amp;auto=0&amp;height=32"</span>&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>在本地服务器端口<code>http://localhost:4000/</code>中测试时是完全正常的。<br>但是很可惜，由于</p>
-<blockquote>
-<p>gh-pages强制访问https，而<del>网易云音乐的外链播放器不支持https</del>（知乎能全信吗？）通过插入Html语言（使用flash）的方式中大部分是不支持https访问的。</p>
-</blockquote>
-<p>所以导致部署到GitHub后不能正常播放。</p>
-<p>具体的原理待补充。</p>
-<a id="more"></a>
-<h1 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h1><h2 id="参考思路1"><a href="#参考思路1" class="headerlink" title="参考思路1"></a>参考思路1</h2><p><a href="https://www.zhihu.com/question/50741481/answer/122554583" target="_blank" rel="external">知乎解答 @唐门很太</a></p>
-<ol>
-<li>安装<a href="https://github.com/grzhan/hexo-tag-aplayer" target="_blank" rel="external">GitHub - grzhan/hexo-tag-aplayer: Embed aplayer in Hexo posts/pages</a>插件；</li>
-<li>调用<a href="https://github.com/YUX-IO/163music-APlayer-you-get-docker" target="_blank" rel="external">GitHub - YUX-IO/163music-APlayer-you-get-docker: A Flask Music Project. Demo:</a><br>项目。<br>第2步中的项目，我还没有成功调用到它的API。于是watch了一下，看以后有没有空再研究吧。</li>
-</ol>
-<h2 id="参考思路2"><a href="#参考思路2" class="headerlink" title="参考思路2"></a>参考思路2</h2><p><a href="http://login926.top/2016/07/20/HexoMedia/" target="_blank" rel="external">Hexo博客中插入音乐/视频</a><br>无意中看到这位博主的文章，里面很详细地展示了若干种在页面中插入音频/视频的方法，推荐一读。<del>（其实我在前一篇文章中也用教训全部展示过了）</del></p>
-<p>小结：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">项目</th>
-<th style="text-align:center">使用难度</th>
-<th style="text-align:center">是否支持https</th>
-<th style="text-align:center">是否使用html5</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">插入Html语言</td>
-<td style="text-align:center">简单</td>
-<td style="text-align:center">大部分不支持</td>
-<td style="text-align:center">否，多为使用flash</td>
-</tr>
-<tr>
-<td style="text-align:left">使用Hexo插件</td>
-<td style="text-align:center">中等</td>
-<td style="text-align:center">支持</td>
-<td style="text-align:center">是</td>
-</tr>
-</tbody>
-</table>
-<p>于是我愉快地决定采用两款插件基于 <code>DIYgod</code> 编写的 <code>html5</code> 播放器 <code>APlayer</code> 和 <code>DPlayer</code> 。</p>
-<p><a href="https://github.com/grzhan/hexo-tag-aplayer#upstream-issue" target="_blank" rel="external">hexo-tag-aplayer</a><br><a href="https://github.com/NextMoe/hexo-tag-dplayer" target="_blank" rel="external">hexo-tag-dplayer</a></p>
-<h1 id="hexo-tag-aplayer"><a href="#hexo-tag-aplayer" class="headerlink" title="hexo-tag-aplayer"></a>hexo-tag-aplayer</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>安装<code>hexo-tag-aplayer</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save hexo-tag-aplayer</div></pre></td></tr></table></figure></p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>使用aplayer<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% aplayer title author url [picture_url, narrow, autoplay, width:xxx, lrc:xxx] %&#125;</div></pre></td></tr></table></figure></p>
-<blockquote>
-<ul>
-<li>title : music title 音乐标题</li>
-<li>author: music author 音乐作者</li>
-<li>url: music file url 音乐文件url</li>
-<li>picture_url: optional, music picture url 可选，音乐封面图片文件url</li>
-<li>narrow: optional, narrow style 可选</li>
-<li>autoplay: optional, autoplay music, not supported by mobile browsers 可选，自动播放</li>
-<li>width:xxx: optional, prefix width:, player’s width (default: 100%) 可选，前缀宽度，播放器宽度</li>
-<li>lrc:xxx: optional, prefix lrc:, LRC file url 可选，前缀歌词，歌词文件url</li>
-</ul>
-</blockquote>
-<p>另外，也可以使用<code>aplayerlrc</code>标签来显示歌词。（本文对歌词暂时不做测试）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% aplayerlrc &quot;title&quot; &quot;author&quot; &quot;url&quot; &quot;autoplay&quot; %&#125;</div><div class="line">[00:00.00]lrc here</div><div class="line">&#123;% endaplayerlrc %&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>通过https访问的音频文件测试<br><div id="aplayer1" class="aplayer" style="margin-bottom: 20px;"></div><script>var aplayer1 = new APlayer({element: document.getElementById("aplayer1"),narrow: false,autoplay: false,showlrc: 0,music : {title: "晴天",author: "刘瑞琦",url: "http://p2.music.126.net/oxP2XaJFDscDuGhGnO7beA==/7768049650386454.mp3",pic: "http://p4.music.126.net/obZy1mbYWFJtbyr26Q6Smg==/7749357952693832.jpg"}});aplayer1.init();</script></p>
-<h1 id="hexo-tag-dplayer"><a href="#hexo-tag-dplayer" class="headerlink" title="hexo-tag-dplayer"></a>hexo-tag-dplayer</h1><h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><p>安装<code>hexo-tag-aplayer</code>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-tag-dplayer --save</div></pre></td></tr></table></figure></p>
-<h2 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h2><p>使用aplayer<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% dplayer key=value ... %&#125;</div></pre></td></tr></table></figure></p>
-<p>其中，字段key可以是：</p>
-<blockquote>
-<ul>
-<li>‘autoplay’: autoplay video, not supported by mobile browsers 自动播放</li>
-<li>‘theme’: theme color, default: #b7daff 主体颜色（默认为浅蓝色）</li>
-<li>‘loop’: loop play music, default: true 循环播放（默认为是）</li>
-<li>‘lang’: language, <code>zh</code> for Chinese, <code>en</code> for English, default: Navigator language 语言</li>
-<li>‘screenshot’:  enable screenshot function, default: false, NOTICE: if set it to true, video and video poster must enable Cross-Origin 是否允许截图</li>
-<li>‘hotkey’: binding hot key, including left right and Space, default: true 绑定快捷键控制播放器（默认为是）</li>
-<li>‘preload’: ‘auto’, the way to load music, can be ‘none’ ‘metadata’ ‘auto’, default: ‘auto’ 预装载</li>
-<li>‘url’: Required, video url 视频url</li>
-<li>‘pic’: video cover picture 视频封面文件url</li>
-<li>‘api’: DPlayer danmaku backend url dplayer的弹幕文件后端url</li>
-<li>‘id’: see <a href="https://github.com/DIYgod/DPlayer" target="_blank" rel="external">https://github.com/DIYgod/DPlayer</a></li>
-<li>‘token’: see <a href="https://github.com/DIYgod/DPlayer" target="_blank" rel="external">https://github.com/DIYgod/DPlayer</a></li>
-<li>‘maximum’: maximum quantity of danmaku 弹幕最大数量</li>
-<li>‘width’ maximum width of the dplayer wraper 播放器最大宽度</li>
-<li>‘height’ maximum height of the dplayer wraper, you can use this like “height=233px” 播放器最大高度</li>
-</ul>
-</blockquote>
-<p>实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&#123;% dplayer &quot;url=http://devtest.qiniudn.com/若能绽放光芒.mp4&quot; &quot;api=http://dplayer.daoapp.io&quot; &quot;pic=http://devtest.qiniudn.com/若能绽放光芒.png&quot; &quot;id=9E2E3368B56CDBB4&quot; &quot;loop=yes&quot; &quot;theme=#FADFA3&quot; &quot;autoplay=false&quot; &quot;token=tokendemo&quot; %&#125;</div><div class="line">&#123;% dplayer &quot;url=http://devtest.qiniudn.com/若能绽放光芒.mp4&quot; &quot;api=http://dplayer.donot.help/dplayerpy&quot; &quot;pic=http://devtest.qiniudn.com/若能绽放光芒.png&quot; &quot;id=2622668&quot; &quot;loop=yes&quot; &quot;theme=#FADFA3&quot; &quot;autoplay=false&quot; &quot;width=233px&quot; %&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h2><p>资源文件夹下的视频文件测试<br><div id="dplayer1" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer1 = new DPlayer({"element":document.getElementById("dplayer1"),"video":{"url":"test.mp4"}});</script></p>
-<p>通过https访问的视频文件测试<br><div id="dplayer2" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer2 = new DPlayer({"element":document.getElementById("dplayer2"),"autoplay":false,"theme":"#FADFA3","loop":true,"video":{"url":"http://devtest.qiniudn.com/若能绽放光芒.mp4","pic":"http://devtest.qiniudn.com/若能绽放光芒.png"},"danmaku":{"api":"http://dplayer.daoapp.io","id":"9E2E3368B56CDBB4","token":"tokendemo"}});</script></p>
+        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>用了快一年的GitHub，只是搭建一个blog，没有<strong>真正意义</strong>上地使用过任何核心功能。所以，今天来入坑，听说这能激励自己高产代码？</p>
+<h1 id="GitHub简介"><a href="#GitHub简介" class="headerlink" title="GitHub简介"></a>GitHub简介</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
 <hr>
 <p><strong>感谢阅读，有任何意见或建议欢迎私信我或在评论区留言哦。</strong></p>
 
@@ -454,13 +383,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/视频/" rel="tag">#视频</a>
+            <a href="/tags/GitHub/" rel="tag">#GitHub</a>
           
-            <a href="/tags/音频/" rel="tag">#音频</a>
+            <a href="/tags/Git/" rel="tag">#Git</a>
           
-            <a href="/tags/外链播放器/" rel="tag">#外链播放器</a>
+            <a href="/tags/版本控制/" rel="tag">#版本控制</a>
           
-            <a href="/tags/前端/" rel="tag">#前端</a>
+            <a href="/tags/开源项目/" rel="tag">#开源项目</a>
           
         </div>
       
@@ -469,17 +398,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/26/2016.9.26 Attainments02 Hexo中的音频与视频 - 失败/" rel="next" title="Hexo中的音频与视频 - 失败">
-                <i class="fa fa-chevron-left"></i> Hexo中的音频与视频 - 失败
+              <a href="/2016/10/04/2016.10.4 Database01 数据库池化管理/" rel="next" title="数据库池化管理">
+                <i class="fa fa-chevron-left"></i> 数据库池化管理
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/10/01/2016.10.1 Attainments04 图床/" rel="prev" title="图床">
-                图床 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -494,10 +419,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/09/27/2016.9.27 Attainments03 Hexo中的音频与视频 - 修复/"
-     data-title="Hexo中的音频与视频 - 修复"
+        <div class="ds-share flat" data-thread-key="2017/03/05/2017.3.5 Attainments05 GitHub入门手册/"
+     data-title="GitHub入门手册"
      data-content=""
-     data-url="http://yoursite.com/2016/09/27/2016.9.27 Attainments03 Hexo中的音频与视频 - 修复/">
+     data-url="http://yoursite.com/2017/03/05/2017.3.5 Attainments05 GitHub入门手册/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -524,8 +449,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/09/27/2016.9.27 Attainments03 Hexo中的音频与视频 - 修复/"
-           data-title="Hexo中的音频与视频 - 修复" data-url="http://yoursite.com/2016/09/27/2016.9.27 Attainments03 Hexo中的音频与视频 - 修复/">
+      <div class="ds-thread" data-thread-key="2017/03/05/2017.3.5 Attainments05 GitHub入门手册/"
+           data-title="GitHub入门手册" data-url="http://yoursite.com/2017/03/05/2017.3.5 Attainments05 GitHub入门手册/">
       </div>
     
   </div>
@@ -636,7 +561,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决思路"><span class="nav-number">2.</span> <span class="nav-text">解决思路</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#参考思路1"><span class="nav-number">2.1.</span> <span class="nav-text">参考思路1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考思路2"><span class="nav-number">2.2.</span> <span class="nav-text">参考思路2</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo-tag-aplayer"><span class="nav-number">3.</span> <span class="nav-text">hexo-tag-aplayer</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">3.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">3.2.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">3.3.</span> <span class="nav-text">测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo-tag-dplayer"><span class="nav-number">4.</span> <span class="nav-text">hexo-tag-dplayer</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-1"><span class="nav-number">4.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-1"><span class="nav-number">4.2.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试-1"><span class="nav-number">4.3.</span> <span class="nav-text">测试</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GitHub简介"><span class="nav-number">2.</span> <span class="nav-text">GitHub简介</span></a></li></ol></div>
             
           </div>
         </section>
