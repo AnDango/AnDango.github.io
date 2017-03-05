@@ -91,14 +91,14 @@
 <meta name="description" content="数据库的“池化管理”池化管理，是程序设计中一个非常重要的思想。目前我了解到的池化管理有数据库的连接池、多线程程序设计中的线程池。本文探讨的是数据库的池化管理，其他会在后续的文章中补充。
 定义数据库连接池负责分配、管理和释放数据库连接，它允许应用程序重复使用一个现有的数据库连接，而不是再重新建立一个；释放空闲时间超过最大空闲时间的数据库连接来避免因为没有释放数据库连接而引起的数据库连接遗漏。这项技术">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Database Connection Pools">
-<meta property="og:url" content="http://yoursite.com/2016/10/04/2016.10.4 Database01 Database Connection Pools/index.html">
-<meta property="og:site_name" content="AnDango's Home">
+<meta property="og:title" content="数据库池化管理">
+<meta property="og:url" content="http://yoursite.com/2016/10/04/2016.10.4 Database01 数据库池化管理/index.html">
+<meta property="og:site_name" content="AnDango's Blog">
 <meta property="og:description" content="数据库的“池化管理”池化管理，是程序设计中一个非常重要的思想。目前我了解到的池化管理有数据库的连接池、多线程程序设计中的线程池。本文探讨的是数据库的池化管理，其他会在后续的文章中补充。
 定义数据库连接池负责分配、管理和释放数据库连接，它允许应用程序重复使用一个现有的数据库连接，而不是再重新建立一个；释放空闲时间超过最大空闲时间的数据库连接来避免因为没有释放数据库连接而引起的数据库连接遗漏。这项技术">
-<meta property="og:updated_time" content="2016-11-07T14:17:17.159Z">
+<meta property="og:updated_time" content="2017-03-05T08:21:55.489Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Database Connection Pools">
+<meta name="twitter:title" content="数据库池化管理">
 <meta name="twitter:description" content="数据库的“池化管理”池化管理，是程序设计中一个非常重要的思想。目前我了解到的池化管理有数据库的连接池、多线程程序设计中的线程池。本文探讨的是数据库的池化管理，其他会在后续的文章中补充。
 定义数据库连接池负责分配、管理和释放数据库连接，它允许应用程序重复使用一个现有的数据库连接，而不是再重新建立一个；释放空闲时间超过最大空闲时间的数据库连接来避免因为没有释放数据库连接而引起的数据库连接遗漏。这项技术">
 
@@ -108,7 +108,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"always"},
+    sidebar: {"position":"left","display":"always","暂无":null},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -118,7 +118,7 @@
   };
 </script>
 
-  <title> Database Connection Pools | AnDango's Home </title>
+  <title> 数据库池化管理 | AnDango's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -149,7 +149,7 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">AnDango's Home</span>
+      <span class="site-title">AnDango's Blog</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -281,7 +281,7 @@
             
             
               
-                Database Connection Pools
+                数据库池化管理
               
             
           </h1>
@@ -323,8 +323,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/10/04/2016.10.4 Database01 Database Connection Pools/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/04/2016.10.4 Database01 Database Connection Pools/" itemprop="commentsCount"></span>
+                <a href="/2016/10/04/2016.10.4 Database01 数据库池化管理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/04/2016.10.4 Database01 数据库池化管理/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -401,11 +401,6 @@
     <div>
       
         
-<div id="wechat_subscriber" style="display: block； padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="AnDango - wumy wechat" style="width: 200px; max-width: 100%;"/>
-    <div>扫一扫或在微信中识别此二维码，轻松关注我的订阅号哦！</div>
-</div>
-
       
     </div>
 
@@ -431,17 +426,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/02/2016.10.2 Algorithms01 Algorithms/" rel="next" title="Algorithms">
-                <i class="fa fa-chevron-left"></i> Algorithms
+              <a href="/2016/10/02/2016.10.2 Algorithms01 算法和数据结构的学习（1）/" rel="next" title="算法和数据结构的学习（1）">
+                <i class="fa fa-chevron-left"></i> 算法和数据结构的学习（1）
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/11/07/2016.11.7 OperatingSystem01 Thread Pools/" rel="prev" title="Thread Pools">
-                Thread Pools <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -456,10 +447,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/10/04/2016.10.4 Database01 Database Connection Pools/"
-     data-title="Database Connection Pools"
+        <div class="ds-share flat" data-thread-key="2016/10/04/2016.10.4 Database01 数据库池化管理/"
+     data-title="数据库池化管理"
      data-content=""
-     data-url="http://yoursite.com/2016/10/04/2016.10.4 Database01 Database Connection Pools/">
+     data-url="http://yoursite.com/2016/10/04/2016.10.4 Database01 数据库池化管理/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -486,8 +477,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/04/2016.10.4 Database01 Database Connection Pools/"
-           data-title="Database Connection Pools" data-url="http://yoursite.com/2016/10/04/2016.10.4 Database01 Database Connection Pools/">
+      <div class="ds-thread" data-thread-key="2016/10/04/2016.10.4 Database01 数据库池化管理/"
+           data-title="数据库池化管理" data-url="http://yoursite.com/2016/10/04/2016.10.4 Database01 数据库池化管理/">
       </div>
     
   </div>
@@ -527,12 +518,12 @@
                src="/images/avatar.jpg"
                alt="AnDango - wumy" />
           <p class="site-author-name" itemprop="name">AnDango - wumy</p>
-          <p class="site-description motion-element" itemprop="description">Welcome to AnDango's home!</p>
+          <p class="site-description motion-element" itemprop="description">Welcome to AnDango's blog!</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -540,7 +531,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -549,7 +540,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -587,20 +578,6 @@
         
 
         
-        
-          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
-            <div class="links-of-blogroll-title">
-              <i class="fa  fa-fw fa-globe"></i>
-              友情链接
-            </div>
-            <ul class="links-of-blogroll-list">
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://space.bilibili.com/16883265" title="博主的黑历史" target="_blank">博主的黑历史</a>
-                </li>
-              
-            </ul>
-          </div>
         
 
       </section>

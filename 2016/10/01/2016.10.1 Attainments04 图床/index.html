@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="微信应用号,小程序," />
+  <meta name="keywords" content="图床,网络相册," />
 
 
 
@@ -88,25 +88,18 @@
 
 
 
-<meta name="description" content="什么是微信应用号（小程序）推荐博文作为一个并不是资深的程序员。 从程序员的角度分析一下微信小程序，欢迎指点。
-于连林520wcf从程序员的角度分析微信小程序
-实现原理
-小程序原理就是用JS调用底层native组件，和React Native非常类似。恰恰又证明了，凡是能用JS开发的最终都会用JS开发。">
+<meta name="description" content="什么是“网络相册”？维基百科描述网络相册，或叫在线相册，为运行、储存以及翻阅、分享于互联网的相册，由于在线相册不是实质的相册并且容易搜索、查阅以及保管，目前大部分照片为储存于在线相册中。此外，用户还可以使用自己的网络空间以搭建自己的在线相册。由于Flickr这一机制的成功，越来越多的网站开始创建自己的在线相册以获取流量。另外，Flickr推行的利用TAG的内容管理机制也越来越多的被接受以及应用。一">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Introduction to WeChatApp">
-<meta property="og:url" content="http://yoursite.com/2016/09/26/2016.9.26 Retweet01 Introduction to WeChatApp/index.html">
-<meta property="og:site_name" content="AnDango's Home">
-<meta property="og:description" content="什么是微信应用号（小程序）推荐博文作为一个并不是资深的程序员。 从程序员的角度分析一下微信小程序，欢迎指点。
-于连林520wcf从程序员的角度分析微信小程序
-实现原理
-小程序原理就是用JS调用底层native组件，和React Native非常类似。恰恰又证明了，凡是能用JS开发的最终都会用JS开发。">
-<meta property="og:updated_time" content="2016-10-13T17:11:30.639Z">
+<meta property="og:title" content="图床">
+<meta property="og:url" content="http://yoursite.com/2016/10/01/2016.10.1 Attainments04 图床/index.html">
+<meta property="og:site_name" content="AnDango's Blog">
+<meta property="og:description" content="什么是“网络相册”？维基百科描述网络相册，或叫在线相册，为运行、储存以及翻阅、分享于互联网的相册，由于在线相册不是实质的相册并且容易搜索、查阅以及保管，目前大部分照片为储存于在线相册中。此外，用户还可以使用自己的网络空间以搭建自己的在线相册。由于Flickr这一机制的成功，越来越多的网站开始创建自己的在线相册以获取流量。另外，Flickr推行的利用TAG的内容管理机制也越来越多的被接受以及应用。一">
+<meta property="og:image" content="http://oebw3bs16.bkt.clouddn.com/%E9%9D%A2%E7%A0%81.jpg">
+<meta property="og:updated_time" content="2017-03-05T08:22:50.227Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Introduction to WeChatApp">
-<meta name="twitter:description" content="什么是微信应用号（小程序）推荐博文作为一个并不是资深的程序员。 从程序员的角度分析一下微信小程序，欢迎指点。
-于连林520wcf从程序员的角度分析微信小程序
-实现原理
-小程序原理就是用JS调用底层native组件，和React Native非常类似。恰恰又证明了，凡是能用JS开发的最终都会用JS开发。">
+<meta name="twitter:title" content="图床">
+<meta name="twitter:description" content="什么是“网络相册”？维基百科描述网络相册，或叫在线相册，为运行、储存以及翻阅、分享于互联网的相册，由于在线相册不是实质的相册并且容易搜索、查阅以及保管，目前大部分照片为储存于在线相册中。此外，用户还可以使用自己的网络空间以搭建自己的在线相册。由于Flickr这一机制的成功，越来越多的网站开始创建自己的在线相册以获取流量。另外，Flickr推行的利用TAG的内容管理机制也越来越多的被接受以及应用。一">
+<meta name="twitter:image" content="http://oebw3bs16.bkt.clouddn.com/%E9%9D%A2%E7%A0%81.jpg">
 
 
 
@@ -114,7 +107,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"always"},
+    sidebar: {"position":"left","display":"always","暂无":null},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -124,7 +117,7 @@
   };
 </script>
 
-  <title> Introduction to WeChatApp | AnDango's Home </title>
+  <title> 图床 | AnDango's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -155,7 +148,7 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">AnDango's Home</span>
+      <span class="site-title">AnDango's Blog</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -287,7 +280,7 @@
             
             
               
-                Introduction to WeChatApp
+                图床
               
             
           </h1>
@@ -299,8 +292,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-26T02:26:21+08:00" content="2016-09-26">
-              2016-09-26
+            <time itemprop="dateCreated" datetime="2016-10-01T01:16:21+08:00" content="2016-10-01">
+              2016-10-01
             </time>
           </span>
 
@@ -313,20 +306,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/WeChatApp/" itemprop="url" rel="index">
-                    <span itemprop="name">WeChatApp</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/WeChatApp/Retweet/" itemprop="url" rel="index">
-                    <span itemprop="name">Retweet</span>
+                  <a href="/categories/Attainments/" itemprop="url" rel="index">
+                    <span itemprop="name">Attainments</span>
                   </a>
                 </span>
 
@@ -341,8 +322,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/09/26/2016.9.26 Retweet01 Introduction to WeChatApp/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/26/2016.9.26 Retweet01 Introduction to WeChatApp/" itemprop="commentsCount"></span>
+                <a href="/2016/10/01/2016.10.1 Attainments04 图床/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/01/2016.10.1 Attainments04 图床/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -370,15 +351,16 @@
       
 
       
-        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h1 id="什么是微信应用号（小程序）"><a href="#什么是微信应用号（小程序）" class="headerlink" title="什么是微信应用号（小程序）"></a>什么是微信应用号（小程序）</h1><h2 id="推荐博文"><a href="#推荐博文" class="headerlink" title="推荐博文"></a>推荐博文</h2><blockquote><p>作为一个并不是资深的程序员。 从程序员的角度分析一下微信小程序，欢迎指点。</p>
-<footer><strong>于连林520wcf</strong><cite><a href="http://blog.csdn.net/yulianlin/article/details/52621413" target="_blank" rel="external">从程序员的角度分析微信小程序</a></cite></footer></blockquote>
-<h2 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h2><blockquote>
-<p>小程序原理就是用JS调用底层native组件，和React Native非常类似。恰恰又证明了，凡是能用JS开发的最终都会用JS开发。</p>
-</blockquote>
+        <script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h1 id="什么是“网络相册”？"><a href="#什么是“网络相册”？" class="headerlink" title="什么是“网络相册”？"></a>什么是“网络相册”？</h1><h2 id="维基百科描述"><a href="#维基百科描述" class="headerlink" title="维基百科描述"></a>维基百科描述</h2><blockquote><p>网络相册，或叫在线相册，为运行、储存以及翻阅、分享于互联网的相册，由于在线相册不是实质的相册并且容易搜索、查阅以及保管，目前大部分照片为储存于在线相册中。<br>此外，用户还可以使用自己的网络空间以搭建自己的在线相册。由于Flickr这一机制的成功，越来越多的网站开始创建自己的在线相册以获取流量。另外，Flickr推行的利用TAG的内容管理机制也越来越多的被接受以及应用。<br>一般可外链的相册会给免费用户提供较少的月流量，成为付费用户之后，可外链流量将获得提升；也有网站专门提供免费外链服务（此类网站又称图床），不限流量。国外著名的可外链相册有Picasa、Flickr、photobucket、Imageshack；中国大陆的可外链相册有又拍网、Tu6等。</p>
+<footer><strong>维基百科</strong><cite><a href="https://en.wikipedia.org/wiki/Image_hosting_service" target="_blank" rel="external">网络相册</a></cite></footer></blockquote>
+<p><br></p>
+<h1 id="为什么要使用网络相册（以下称为图床）？"><a href="#为什么要使用网络相册（以下称为图床）？" class="headerlink" title="为什么要使用网络相册（以下称为图床）？"></a>为什么要使用网络相册（以下称为图床）？</h1><p>其实，对于只写写Hexo博客的我（我们）来说，图床并不是必须的，毕竟博主完全可以把不是很大的图片/音频/视频文件直接丢到<code>/source</code>下面或者每篇文章对应的相对路径下面。<br>但是，<strong>日积月累，这些文件所占用的空间还是非常可观的！</strong>。<br>再加上，GitHub在是属于在翻墙过后食用更佳的网站，如果把图片全堆在自己的repository里，页面加载速度就更慢了。<br>考虑到需要更快的访问速度，同时也为了便于博客的迁移，图床是一个推荐的解决方案。</p>
 <a id="more"></a>
-<h1 id="小程序的demo分享（都不是博主写的）"><a href="#小程序的demo分享（都不是博主写的）" class="headerlink" title="小程序的demo分享（都不是博主写的）"></a>小程序的demo分享（都不是博主写的）</h1><h2 id="知乎日报"><a href="#知乎日报" class="headerlink" title="知乎日报"></a>知乎日报</h2><p><a href="https://github.com/myronliu347/wechat-app-zhihudaily" target="_blank" rel="external">微信小程序-知乎日报</a></p>
-<h2 id="豆瓣电影"><a href="#豆瓣电影" class="headerlink" title="豆瓣电影"></a>豆瓣电影</h2><p><a href="https://github.com/zce/weapp-demo" target="_blank" rel="external">微信小程序-豆瓣电影</a></p>
-<h1 id="博主感想"><a href="#博主感想" class="headerlink" title="博主感想"></a>博主感想</h1><p>尽快把前端学好、学精，并且做好一辈子都有学不完的新技术的准备。</p>
+<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>以下测试用例全部通过https访问。</p>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p><img src="http://oebw3bs16.bkt.clouddn.com/%E9%9D%A2%E7%A0%81.jpg" alt="面码"></p>
+<h2 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h2><div id="aplayer0" class="aplayer" style="margin-bottom: 20px;"></div><script>var aplayer0 = new APlayer({element: document.getElementById("aplayer0"),narrow: false,autoplay: false,showlrc: 0,music : {title: "黑键变白键",author: "周杰伦",url: "http://oebw3bs16.bkt.clouddn.com/%E9%BB%91%E9%94%AE%E5%8F%98%E7%99%BD%E9%94%AE.mp3",pic: ""}});aplayer0.init();</script>
+<h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><div id="dplayer0" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer0 = new DPlayer({"element":document.getElementById("dplayer0"),"autoplay":false,"theme":"#FADFA3","loop":false,"video":{"url":"http://oebw3bs16.bkt.clouddn.com/%E5%90%9B%E5%98%98%233%E8%8A%82%E9%80%89.mp4"}});</script>
+<p>很好很强大，在我后面的博客中，对于所有引用到的<strong>截图、演示图片、演示视频、背景音乐</strong>等等，我都将使用图床的方式来实现。</p>
 <hr>
 <p><strong>感谢阅读，有任何意见或建议欢迎私信我或在评论区留言哦。</strong></p>
 
@@ -388,11 +370,6 @@
     <div>
       
         
-<div id="wechat_subscriber" style="display: block； padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="AnDango - wumy wechat" style="width: 200px; max-width: 100%;"/>
-    <div>扫一扫或在微信中识别此二维码，轻松关注我的订阅号哦！</div>
-</div>
-
       
     </div>
 
@@ -407,9 +384,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/微信应用号/" rel="tag">#微信应用号</a>
+            <a href="/tags/图床/" rel="tag">#图床</a>
           
-            <a href="/tags/小程序/" rel="tag">#小程序</a>
+            <a href="/tags/网络相册/" rel="tag">#网络相册</a>
           
         </div>
       
@@ -418,16 +395,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/24/2016.9.24 Attainments01 Introduction to Markdown/" rel="next" title="Introduction to Markdown">
-                <i class="fa fa-chevron-left"></i> Introduction to Markdown
+              <a href="/2016/09/27/2016.9.27 Attainments03 Hexo中的音频与视频 - 修复/" rel="next" title="Hexo中的音频与视频 - 修复">
+                <i class="fa fa-chevron-left"></i> Hexo中的音频与视频 - 修复
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/09/26/2016.9.26 Attainments02 Audios and Videos in Hexo - Failed/" rel="prev" title="Audios and Videos in Hexo - Failed">
-                Audios and Videos in Hexo - Failed <i class="fa fa-chevron-right"></i>
+              <a href="/2016/10/02/2016.10.2 Algorithms01 算法和数据结构的学习（1）/" rel="prev" title="算法和数据结构的学习（1）">
+                算法和数据结构的学习（1） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -443,10 +420,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/09/26/2016.9.26 Retweet01 Introduction to WeChatApp/"
-     data-title="Introduction to WeChatApp"
+        <div class="ds-share flat" data-thread-key="2016/10/01/2016.10.1 Attainments04 图床/"
+     data-title="图床"
      data-content=""
-     data-url="http://yoursite.com/2016/09/26/2016.9.26 Retweet01 Introduction to WeChatApp/">
+     data-url="http://yoursite.com/2016/10/01/2016.10.1 Attainments04 图床/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -473,8 +450,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/09/26/2016.9.26 Retweet01 Introduction to WeChatApp/"
-           data-title="Introduction to WeChatApp" data-url="http://yoursite.com/2016/09/26/2016.9.26 Retweet01 Introduction to WeChatApp/">
+      <div class="ds-thread" data-thread-key="2016/10/01/2016.10.1 Attainments04 图床/"
+           data-title="图床" data-url="http://yoursite.com/2016/10/01/2016.10.1 Attainments04 图床/">
       </div>
     
   </div>
@@ -514,12 +491,12 @@
                src="/images/avatar.jpg"
                alt="AnDango - wumy" />
           <p class="site-author-name" itemprop="name">AnDango - wumy</p>
-          <p class="site-description motion-element" itemprop="description">Welcome to AnDango's home!</p>
+          <p class="site-description motion-element" itemprop="description">Welcome to AnDango's blog!</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -527,7 +504,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -536,7 +513,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -575,20 +552,6 @@
 
         
         
-          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
-            <div class="links-of-blogroll-title">
-              <i class="fa  fa-fw fa-globe"></i>
-              友情链接
-            </div>
-            <ul class="links-of-blogroll-list">
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://space.bilibili.com/16883265" title="博主的黑历史" target="_blank">博主的黑历史</a>
-                </li>
-              
-            </ul>
-          </div>
-        
 
       </section>
 
@@ -599,7 +562,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是微信应用号（小程序）"><span class="nav-number">1.</span> <span class="nav-text">什么是微信应用号（小程序）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐博文"><span class="nav-number">1.1.</span> <span class="nav-text">推荐博文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现原理"><span class="nav-number">1.2.</span> <span class="nav-text">实现原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#小程序的demo分享（都不是博主写的）"><span class="nav-number">2.</span> <span class="nav-text">小程序的demo分享（都不是博主写的）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#知乎日报"><span class="nav-number">2.1.</span> <span class="nav-text">知乎日报</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#豆瓣电影"><span class="nav-number">2.2.</span> <span class="nav-text">豆瓣电影</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#博主感想"><span class="nav-number">3.</span> <span class="nav-text">博主感想</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是“网络相册”？"><span class="nav-number">1.</span> <span class="nav-text">什么是“网络相册”？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#维基百科描述"><span class="nav-number">1.1.</span> <span class="nav-text">维基百科描述</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么要使用网络相册（以下称为图床）？"><span class="nav-number">2.</span> <span class="nav-text">为什么要使用网络相册（以下称为图床）？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#测试"><span class="nav-number">3.</span> <span class="nav-text">测试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#图片"><span class="nav-number">3.1.</span> <span class="nav-text">图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#音频"><span class="nav-number">3.2.</span> <span class="nav-text">音频</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#视频"><span class="nav-number">3.3.</span> <span class="nav-text">视频</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
