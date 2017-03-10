@@ -8,9 +8,18 @@
       <url>http://yoursite.com/2017/03/05/2017.3.5%20Attainments05%20Git%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%85%A5%E9%97%A8%E6%89%8B%E5%86%8C/</url>
       <content type="html"><![CDATA[<script src="/assets/js/DPlayer.min.js"> </script><script src="/assets/js/APlayer.min.js"> </script><h1 id="Git与GitHub简介"><a href="#Git与GitHub简介" class="headerlink" title="Git与GitHub简介"></a>Git与GitHub简介</h1><ul>
 <li>Git是用于Linux内核开发的版本控制工具。与CVS、Subversion一类的集中式版本控制工具不同，它采用了分布式版本库的作法，不需要服务器端软件，就可以运作版本控制，使得源代码的发布和交流极其方便。Git的速度很快，这对于诸如Linux内核这样的大项目来说自然很重要。Git最为出色的是它的合并追踪（merge tracing）能力。</li>
-<li>GitHub是一个通过Git进行版本控制的软件源代码托管服务，是全球最大的代~（同）~码~（性）~存~（交）~放~（友）~网站和开源社区。</li>
+<li>GitHub是一个通过Git进行版本控制的软件源代码托管服务，是全球最大的代<del>（同）</del>码<del>（性）</del>存<del>（交）</del>放<del>（友）</del>网站和开源社区。</li>
 </ul>
-<h1 id="使用GitHub"><a href="#使用GitHub" class="headerlink" title="使用GitHub"></a>使用GitHub</h1><h2 id="浏览器端"><a href="#浏览器端" class="headerlink" title="浏览器端"></a>浏览器端</h2><h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><h1 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h1><h1 id="团队协作流程"><a href="#团队协作流程" class="headerlink" title="团队协作流程"></a>团队协作流程</h1><h1 id="开源项目的贡献流程"><a href="#开源项目的贡献流程" class="headerlink" title="开源项目的贡献流程"></a>开源项目的贡献流程</h1><h1 id="GitHub-Issues"><a href="#GitHub-Issues" class="headerlink" title="GitHub Issues"></a>GitHub Issues</h1><h1 id="GitHub的一些彩蛋"><a href="#GitHub的一些彩蛋" class="headerlink" title="GitHub的一些彩蛋"></a>GitHub的一些彩蛋</h1><hr>
+<h1 id="使用GitHub"><a href="#使用GitHub" class="headerlink" title="使用GitHub"></a>使用GitHub</h1><h2 id="一些术语"><a href="#一些术语" class="headerlink" title="一些术语"></a>一些术语</h2><ol>
+<li>Repository：当一个“项目”（Project）通过Git进行版本控制之后，就可以称作“仓库”，简称repo。</li>
+<li>commit：本义“执行某项操作”，在这里指<strong>提交版本/加入版本控制</strong>。1个commit中包含的内容：谁在什么时间出于什么理由做了什么内容的修改。每一个版本有一个版本号。在底层实现上，Git在保存版本的时候会保存它当前和它的“父版本”（Parent）的版本号。</li>
+</ol>
+<h2 id="客户端的使用"><a href="#客户端的使用" class="headerlink" title="客户端的使用"></a>客户端的使用</h2><ol>
+<li>Add：</li>
+<li>Create：</li>
+<li>Clone：</li>
+</ol>
+<h1 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h1><h1 id="团队协作流程"><a href="#团队协作流程" class="headerlink" title="团队协作流程"></a>团队协作流程</h1><h1 id="开源项目的贡献流程"><a href="#开源项目的贡献流程" class="headerlink" title="开源项目的贡献流程"></a>开源项目的贡献流程</h1><h1 id="GitHub-Issues"><a href="#GitHub-Issues" class="headerlink" title="GitHub Issues"></a>GitHub Issues</h1><h1 id="GitHub的一些彩蛋"><a href="#GitHub的一些彩蛋" class="headerlink" title="GitHub的一些彩蛋"></a>GitHub的一些彩蛋</h1><hr>
 <p><strong>感谢阅读，有任何意见或建议欢迎私信我或在评论区留言哦。</strong></p>
 ]]></content>
     </entry>
